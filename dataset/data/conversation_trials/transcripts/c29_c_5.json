@@ -1,0 +1,219 @@
+{
+  "conversation_id": 29,
+  "session_code": "c100",
+  "scenario": 5,
+  "mentioned_items": [
+    26,
+    32
+  ],
+  "gt_items": [
+    32
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "17:06:30",
+      "content": {
+        "utterances": [
+          "Okay, good afternoon.",
+          "How can I help you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "17:06:34",
+      "content": {
+        "utterances": [
+          "I'm looking for shoes that are kind of multifunctional.",
+          "Um, something that looks good, but will work for, like, long days of walking.",
+          "Uh, it's kind of... something that keeps me kind of warm, but not too warm."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IQ"
+          ],
+          [
+            "PEP",
+            "PCT"
+          ],
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "17:06:55",
+      "content": {
+        "utterances": [
+          "Okay, okay.",
+          "Um, they probably need light ones since you mentioned you need a long day working.",
+          "For that... How about Item26?",
+          "This one is particularly lightweight, with the mesh upper for breathability.",
+          "This is probably the best sale we have.",
+          "A lot of customers like this.",
+          "Um, it's been black-colored, and... you can machine wash this.",
+          "This is very important.",
+          "So, are you using for, like, daily use, everyday use?",
+          "Are you going to the office?",
+          "What is the scenario you're trying to use this?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EP",
+            "EAI"
+          ],
+          [
+            "PER"
+          ],
+          [
+            "PER"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PER"
+          ],
+          [
+            "RC"
+          ],
+          [
+            "RC"
+          ],
+          [
+            "RC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "17:07:44",
+      "content": {
+        "utterances": [
+          "Kind of, like, I'm just exploring the city on a long day out, so I'm going to many different places."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "17:07:52",
+      "content": {
+        "utterances": [
+          "Yeah, then Item26 is definitely suitable for you.",
+          "If you're not too into the black ones, check out Item32, too?",
+          "This is a famous brand.",
+          "It has this midsole, their technique is AMPLIFOAM, which is for better cushioning.",
+          "So, this... feels softer and more comfortable than Item26.",
+          "And it has this mesh upper with improved breathability.",
+          "Uh, the only thing with this one is this is not water resistant.",
+          "Yeah, so it depends on your needs, I would say...Item26 or Item32?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "PER"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "PER"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PCM"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "17:08:42",
+      "content": {
+        "utterances": [
+          "Yeah, I think those are both... could probably...",
+          "It's not raining, so probably Item32 if I was choosing."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "NR"
+          ],
+          [
+            "PCT",
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "17:08:53",
+      "content": {
+        "utterances": [
+          "Yeah, yeah, that's a good choice.",
+          "It's very comfort, trust me.",
+          "I had one of those.",
+          "Okay, Okay."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "PER"
+          ],
+          [
+            "PEX"
+          ],
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "c"
+}

@@ -1,0 +1,338 @@
+{
+  "conversation_id": 55,
+  "session_code": "a001",
+  "scenario": 1,
+  "mentioned_items": [
+    1,
+    2,
+    5,
+    6,
+    10,
+    11
+  ],
+  "gt_items": [
+    6
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "18:24:41",
+      "content": {
+        "utterances": [
+          "Okay, what can I help you find today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "18:24:45",
+      "content": {
+        "utterances": [
+          "No, I'm not ready."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "18:24:48",
+      "content": {
+        "utterances": [
+          "Oh, not already, sorry.",
+          "Take your time."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "18:25:15",
+      "content": {
+        "utterances": [
+          "Okay, I'm ready.",
+          "I will go to a farm in early fall, and I will... I might get dirty to participate in the activities like picking fruits and getting through the dirt.",
+          "But, um, and the weather might change from cloudy to raining, so I want something waterproof.",
+          "Yeah, so I don't like Item11, Item10.",
+          "I think Item10 is not very durable, like it might get scratched.",
+          "I also don't like Item05.",
+          "I like Item02, Item01, and yeah, I'm choosing between Item02 and Item01.",
+          "I want to know if Item02 have a hoodie so I can...have a hood, so I can put it on you."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT",
+            "PEP"
+          ],
+          [
+            "PIP"
+          ],
+          [
+            "PIP"
+          ],
+          [
+            "PIP"
+          ],
+          [
+            "PIP"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "18:26:46",
+      "content": {
+        "utterances": [
+          "Yeah, for sure.",
+          "So, yeah, so Item02 and Item01, right?",
+          "Um, Item02 does have a hood, and it is fully... it has a waterproof exterior.",
+          "So, it's really good if you're going to be, like, under the rain, or if it's just very... what... where you're going to?",
+          "Um, it's also very breathable, despite it being waterproof, so maybe if you're visiting a farm and you're doing a lot of physical activity, you can still, like, kind of like, comfortably breathe through this fabric.",
+          "Um, it's also very durable, so I would recommend it for, like, if you were to, like, scratch it up in the field or something like that.",
+          "Um, for Item01, I think... It would be a little less waterproof because there's also no hood to it, so if it rains, it's gonna fall on your head.",
+          "Also, it is made out of cotton, so you might get wet with that one.",
+          "But it's up to you.",
+          "Let me know if you have any more questions."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACK"
+          ],
+          [
+            "ANS"
+          ],
+          [
+            "PCN",
+            "RC"
+          ],
+          [
+            "EAI",
+            "PCN"
+          ],
+          [
+            "EAI",
+            "PER"
+          ],
+          [
+            "PCM"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "OTH"
+          ],
+          [
+            "EF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "18:28:01",
+      "content": {
+        "utterances": [
+          "Is there any other option that is waterproof?",
+          "I don't need a hood necessarily, but is there any other options?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "CON"
+          ],
+          [
+            "RP",
+            "CON"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "18:28:12",
+      "content": {
+        "utterances": [
+          "Um, so you mentioned you don't want Item10, but that one is water resistant.",
+          "Um, but it might get scratched up.",
+          "I would say Item02 is your best option, because our options are mostly not waterproof."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PER"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "18:28:30",
+      "content": {
+        "utterances": [
+          "Can you tell me more about Item06?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "18:28:38",
+      "content": {
+        "utterances": [
+          "Yeah, Item06 is actually made out of cotton.",
+          "Um, and the lining is polyester, so there's not that much waterproof.",
+          "But if you're just looking for something warm and comfortable, definitely you can go with that one.",
+          "But yeah, there's also no hood, but it is more comfortable and warm."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EP",
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "18:28:58",
+      "content": {
+        "utterances": [
+          "Yeah, then I think I will choose Item06, because I don't know if it'll rain or not.",
+          "If it's gonna ring and it's probably gonna be a light rain.",
+          "Um, but Item06 looks more farmer style.",
+          "Um, I don't know. I'm gonna..."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT",
+            "EXP"
+          ],
+          [
+            "EXP"
+          ],
+          [
+            "EXP"
+          ],
+          [
+            "NR"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "18:29:17",
+      "content": {
+        "utterances": [
+          "Okay, yeah, for sure. Yeah, uh, just be careful.",
+          "it is... machine wash is okay.",
+          "Um... so, there's also a lot of pockets, if you want to put things inside."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "18:29:32",
+      "content": {
+        "utterances": [
+          "Yeah, I don't want the microplastics.",
+          "I don't know, like, not the microplastic, something from the water resistance thing getting into the soil, so Item06 would be my final choice."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "EXP"
+          ],
+          [
+            "EXP",
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "18:29:48",
+      "content": {
+        "utterances": [
+          "Sounds good."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "a"
+}

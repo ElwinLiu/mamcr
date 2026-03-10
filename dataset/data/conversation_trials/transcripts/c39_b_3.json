@@ -1,0 +1,340 @@
+{
+  "conversation_id": 39,
+  "session_code": "b010",
+  "scenario": 3,
+  "mentioned_items": [
+    15,
+    18,
+    19,
+    22
+  ],
+  "gt_items": [
+    18
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "18:16:46",
+      "content": {
+        "utterances": [
+          "Okay. Uh... What kind of tops are you looking for?",
+          "Do you want to have a zipper in front?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ],
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "18:16:57",
+      "content": {
+        "utterances": [
+          "Mmm, yeah, give me some time...",
+          "Let me think about it, alright?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "18:17:02",
+      "content": {
+        "utterances": [
+          "Okay."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "18:17:13",
+      "content": {
+        "utterances": [
+          "Yeah, so for this scenario, it's kind of different than last scenario.",
+          "So, this time, I think I'll be working the next day, so I will choose clothes that's more suitable for working.",
+          "But also, you know, as nowadays in the summer, we have heavy air conditionings in the indoors, and my office is pretty cold indoors.",
+          "So I may need to wear something that's warmer to stay warm.",
+          "Otherwise, I'll get a cold.",
+          "But also at the same time, even though it's working, I want to dress more comfortably.",
+          "You know, when every day you go to work, and you wear very not comfortable clothes, you won't be in a good mood.",
+          "So, so pretty, pretty much like sloppy, overfitting, uh, comfortable clothing will be good for me.",
+          "But also, like, there needs to be some business casual involved in this clothing style, because I'm going to wear this in the office.",
+          "And so, based on this, what would you be able to give me as an assistant?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "IQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "18:18:50",
+      "content": {
+        "utterances": [
+          "Uh, okay, so... I think you need a warm top, as you mentioned, but it shouldn't be too hot, because you mentioned you want it for the summer season.",
+          "I think items... both Item15 and Item19 are good for this purpose.",
+          "They both look professional, but not too formal, especially Item19, it's not too formal and uh...What do you think about it?",
+          "Item19 also is, more in... I mean, it could be easily taken off if you want to, because it has buttons in front, so...you can take it off when you're inside and when you get warm.",
+          "So, between, I think, Item19 and Item15, which one do you prefer more?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK",
+            "EP"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EP",
+            "A"
+          ],
+          [
+            "EAI",
+            "PCN"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "18:19:43",
+      "content": {
+        "utterances": [
+          "Hmm... Hi, I'm worrying about Item19.",
+          "Will it look like... not that... not that formal?",
+          "Would you give me another option?",
+          "I think Item15 is..."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "NR"
+          ],
+          [
+            "IF"
+          ],
+          [
+            "CON"
+          ],
+          [
+            "INT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "18:20:00",
+      "content": {
+        "utterances": [
+          "Okay."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "18:20:02",
+      "content": {
+        "utterances": [
+          "Pretty good. So... Yeah."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "INT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "18:20:06",
+      "content": {
+        "utterances": [
+          "Yeah, so, okay, you want something to be more formal, so I think item... let me see...",
+          "I think Item18 is also good, because it looks formal.",
+          "It also has a zipper so it can be easily taken off.",
+          "And also, it has a formal look, so... it is also a turtleneck.",
+          "Um... And along with Item15, I think both of them are formal.",
+          "And also Item22, has also, like the two previous suggestions, Item18 and Item15, Item22 also has a formal look.",
+          "It also has a turtleneck collar, which looks professional.",
+          "So, among Item18, Item15 and Item22, you can choose."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK",
+            "IP"
+          ],
+          [
+            "RS",
+            "EP"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EP",
+            "EAI"
+          ],
+          [
+            "PCM"
+          ],
+          [
+            "RS",
+            "PCM"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "18:21:18",
+      "content": {
+        "utterances": [
+          "Yeah, for me, I will... I will choose Item18.",
+          "Because first of all, as you mentioned, it got... It has a zipper, so, in case it's too hot, I can unzip it.",
+          "Or in case I want to take off the jacket for some reason, I can feel free to do so.",
+          "Like, for example, if I get off work, and I'm going outside.",
+          "The temperature is hot again, I can take this off and just carry it in my bag or something.",
+          "And also it has the turtleneck style as well, and I think it's pretty... It has the business casual style as well in the clothes.",
+          "So, if I wear this in my work, it will be comfortable, and it will also be pretty formal and appropriate in the office, in which I'll be able to have a happy day in the office.",
+          "Thank you."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ],
+          [
+            "EXP"
+          ],
+          [
+            "EXP"
+          ],
+          [
+            "EXP"
+          ],
+          [
+            "EXP"
+          ],
+          [
+            "EXP"
+          ],
+          [
+            "EXP"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "18:22:31",
+      "content": {
+        "utterances": [
+          "Yeah, okay, sounds great.",
+          "I think you have made the perfect choice for your workplace."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "PER"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "18:22:38",
+      "content": {
+        "utterances": [
+          "Yeah, sounds good.",
+          "I will definitely buy this one."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "b"
+}

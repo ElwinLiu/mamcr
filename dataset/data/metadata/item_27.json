@@ -1,0 +1,33 @@
+{
+  "id": 27,
+  "catalogue": "c",
+  "categories": [
+    "Clothing, Shoes & Accessories",
+    "Men",
+    "Shoes",
+    "Fashion Sneakers"
+  ],
+  "product_name": "Columbia Camper",
+  "product_brand": "Visit the Columbia Store",
+  "product_rating": "4.4",
+  "product_description": [
+    "Comfortable clothing and gear for all weather.",
+    "Built for comfort and protection.",
+    "Sustainable cushioning from bio-based materials.",
+    "Key words: clothing, gear, comfort, protection, sustainability"
+  ],
+  "about_product": [
+    "Non-marking traction rubber for safety.",
+    "Molded rubber outsole for durability.",
+    "Techlite cushioning for lightweight support.",
+    "Suede upper with stretch for easy wear.",
+    "Key words: traction, durability, cushioning, suede"
+  ],
+  "product_detail": {
+    "Care instructions": "Hand Wash Only",
+    "Sole material": "Synthetic Rubber",
+    "Outer material": "Rubber",
+    "Closure type": "Pull-On"
+  },
+  "reviews": "Overall, the reviews highlight the comfort and quality of the shoes, with many users praising their fit and construction. However, some customers noted issues with width and quality inconsistencies, leading to mixed experiences."
+}

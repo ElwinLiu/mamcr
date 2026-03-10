@@ -1,0 +1,33 @@
+{
+  "id": 25,
+  "catalogue": "c",
+  "categories": [
+    "Clothing, Shoes & Accessories",
+    "Men",
+    "Shoes",
+    "Athletic",
+    "Fitness & Cross Training"
+  ],
+  "product_name": "New Balance Mens 608 V5 Casual Comfort",
+  "product_brand": "Visit the New Balance Store",
+  "product_rating": "4.5",
+  "product_description": [
+    "Classic trainer with premium PU insert for comfort.",
+    "ABZORB midsole absorbs impact effectively.",
+    "IMEVA midsole offers firm yet flexible cushioning.",
+    "Key words: trainer, comfort, support, durable"
+  ],
+  "about_product": [
+    "Available in 3 widths.",
+    "Internal midsole shank for added support.",
+    "Leather upper for durability.",
+    "Key words: cushioning, support, stability, quality"
+  ],
+  "product_detail": {
+    "Fabric type": "100% Leather",
+    "Care instructions": "Machine Wash",
+    "Sole material": "Rubber",
+    "Shaft height": "Low-top"
+  },
+  "reviews": "Overall, the reviews highlight the comfort and support of the shoes, with many users praising their fit and durability. Some mention the narrow fit, recommending wider sizes for better comfort. The shoes are generally seen as a good value for daily wear, especially for those who walk frequently."
+}

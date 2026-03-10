@@ -1,0 +1,321 @@
+{
+  "conversation_id": 1,
+  "session_code": "a000",
+  "scenario": 1,
+  "mentioned_items": [
+    2,
+    7,
+    9
+  ],
+  "gt_items": [
+    2
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "00:06:34",
+      "content": {
+        "utterances": [
+          "Hi, how can I help you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "00:06:36",
+      "content": {
+        "utterances": [
+          "Yeah, so I want to choose a right outerwear for a fall visit to a farm.",
+          "So do you have any recommendations for me?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT"
+          ],
+          [
+            "IQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "00:06:47",
+      "content": {
+        "utterances": [
+          "Yeah, for sure.",
+          "So you're visiting a farm in the fall, is that correct?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "00:06:53",
+      "content": {
+        "utterances": [
+          "Yes, and then it will be in the afternoon."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS",
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "00:06:57",
+      "content": {
+        "utterances": [
+          "Ah, okay, so where is this farm going to be?",
+          "Do you think it's going to be cold, or is it in a hotter area?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK",
+            "RC"
+          ],
+          [
+            "RC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "00:07:08",
+      "content": {
+        "utterances": [
+          "The weather is cool with a chance of light rain."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "00:07:15",
+      "content": {
+        "utterances": [
+          "Okay, Yeah.",
+          "So something, I would recommend something that is, you know, warm and comfortable, and also maybe waterproof.",
+          "So I would suggest you taking a look at Item02, Item07, and Item09.",
+          "So I can tell you more about them if you'd like."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "00:07:48",
+      "content": {
+        "utterances": [
+          "Yeah.",
+          "So are those all waterproof?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "00:07:52",
+      "content": {
+        "utterances": [
+          "So not all of them are.",
+          "So Item02 is specifically designed for waterproof.",
+          "It's more of a hiking jacket.",
+          "The other two though, Item07 and Item09, are a little bit more comfortable with maybe more suited for like a fall vibe."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "00:08:17",
+      "content": {
+        "utterances": [
+          "Oh, I see.",
+          "Because I'm going to be outdoors for a few hours and then I will be walking through grassy fields and then some dirt path.",
+          "So I need something that maybe can be, like. waterproof and then can separate the dust."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "00:08:43",
+      "content": {
+        "utterances": [
+          "Yeah, sure.",
+          "May I ask, like, what is the purpose of this?",
+          "Are you working there or are you visiting?",
+          "Like, is it for fun or is it like..."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RC"
+          ],
+          [
+            "CQ"
+          ],
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "00:08:53",
+      "content": {
+        "utterances": [
+          "Yeah, it will just be for fun and then for like, so for several hours."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS",
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "00:08:58",
+      "content": {
+        "utterances": [
+          "Okay.",
+          "Yeah, in that case, I would recommend... probably Item02 will be your best bet.",
+          "Because it is a really highly rated item, and it is very waterproof and weatherproof, and it's also very breathable, so, you know, perfect for a sustained period being outdoors.",
+          "So what do you think about that?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EP",
+            "EAI"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "00:09:24",
+      "content": {
+        "utterances": [
+          "Yeah, yeah, I think I will go with Item02."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "00:09:29",
+      "content": {
+        "utterances": [
+          "Okay, cool.",
+          "Sounds good."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "a"
+}

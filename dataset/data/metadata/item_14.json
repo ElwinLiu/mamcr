@@ -1,0 +1,33 @@
+{
+  "id": 14,
+  "catalogue": "b",
+  "categories": [
+    "Clothing, Shoes & Accessories",
+    "Men",
+    "Clothing",
+    "Hoodies & Sweatshirts",
+    "Hoodies"
+  ],
+  "product_name": "Hanes Men’s Ultimate Cotton Heavyweight Pullover Hoodie SweatshirtHoody",
+  "product_brand": "Visit the Hanes Store",
+  "product_rating": "4.2",
+  "product_description": [
+    "Soft and cozy pullover for casual wear.",
+    "Double-needle stitching for durability.",
+    "Features ribbed cuffs, hem, and kangaroo pocket.",
+    "Key words: pullover, fleece, warm, layering"
+  ],
+  "about_product": [
+    "EcoSmart fleece made from up to 5% recycled fibers.",
+    "Classic hoodie design for a sporty look.",
+    "Pill-resistant fleece stays warm and cozy.",
+    "Key words: fleece, hoodie, durable, comfortable, EcoSmart"
+  ],
+  "product_detail": {
+    "Fabric type": "50% Cotton, 50% Polyester",
+    "Care instructions": "Machine Wash",
+    "Closure type": "Pull On",
+    "Neck style": "Hooded Neck"
+  },
+  "reviews": "Overall, the product receives positive feedback for its comfort and quality, with many users appreciating its warmth and durability. However, some reviews mention sizing issues, particularly that it may fit smaller than expected. A few customers expressed dissatisfaction with the material not matching the description."
+}

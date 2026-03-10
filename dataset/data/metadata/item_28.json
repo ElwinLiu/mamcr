@@ -1,0 +1,34 @@
+{
+  "id": 28,
+  "catalogue": "c",
+  "categories": [
+    "Clothing, Shoes & Accessories",
+    "Men",
+    "Shoes",
+    "Outdoor",
+    "Trekking & Hiking",
+    "Shoes"
+  ],
+  "product_name": "Salomon Mens Speedcross Hiking Shoe",
+  "product_brand": "Brand: Salomon",
+  "product_rating": "4.5",
+  "product_description": [
+    "Next-gen SPEEDCROSS enhances grip and performance.",
+    "Dynamic upper improves fit and stability.",
+    "Welded upper moves naturally with your foot.",
+    "Key words: trail running, hiking, performance, stability"
+  ],
+  "about_product": [
+    "Larger lugs provide better grip on all surfaces.",
+    "Heel unit ensures stability and clean foot strike.",
+    "Welded upper enhances comfort and natural movement.",
+    "Key words: outdoor gear, innovative, comfort, grip"
+  ],
+  "product_detail": {
+    "Care instructions": "Hand Wash Only",
+    "Sole material": "Rubber",
+    "Shaft height": "Ankle",
+    "Outer material": "Mesh"
+  },
+  "reviews": "Overall, customers highly recommend these shoes for their excellent grip and comfort on various terrains. Many users noted their perfect fit and performance during trail runs, expressing satisfaction with the durability and stability provided. The positive feedback highlights the shoes' effectiveness in muddy and rocky conditions, making them a favorite for outdoor activities."
+}

@@ -1,0 +1,346 @@
+{
+  "conversation_id": 19,
+  "session_code": "a011",
+  "scenario": 1,
+  "mentioned_items": [
+    2,
+    5,
+    10
+  ],
+  "gt_items": [
+    2
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "15:41:15",
+      "content": {
+        "utterances": [
+          "Awesome.",
+          "Hello, what can I get you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "15:41:22",
+      "content": {
+        "utterances": [
+          "Hello.",
+          "Just one minute please."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "15:41:25",
+      "content": {
+        "utterances": [
+          "Yeah, no worries."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "15:41:43",
+      "content": {
+        "utterances": [
+          "I'm looking for an outwear that's more of like on the comfortable end, but then like it's stylish enough for photos.",
+          "And then I'm hoping it could be a little bit warm and water resistant."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PEP"
+          ],
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "15:42:10",
+      "content": {
+        "utterances": [
+          "Warm and water-resistant.",
+          "Okay, give me one second.",
+          "What season are you wearing this in?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACK"
+          ],
+          [
+            "RC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "15:42:14",
+      "content": {
+        "utterances": [
+          "Early fall."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "15:42:20",
+      "content": {
+        "utterances": [
+          "Okay.",
+          "So you mentioned water-resistant, the only options we have that are somewhat water-resistant are Item02, Item10, and Item05.",
+          "So are you looking for, so obviously these have quite differing styles, you know, you mentioned you want to wear this for photos and stuff.",
+          "Item10 is... a little bit more of a practical wear.",
+          "It's sort of like a quilted vest.",
+          "It's pretty good for really cold conditions.",
+          "I'm not sure if it would be suitable, but just giving you that option.",
+          "Item02 is more of a roomy, you know, waterproof wear.",
+          "It is supposed to be completely waterproof out of shell, polyester.",
+          "Again, not the most fashionable piece of clothing, but it gets the job done.",
+          "Users appreciate its design, its pocket placement, and its functionality.",
+          "As for Item05, so this, users say, has some great qualities to it in terms of style and fit.",
+          "It is fully machine washable, and it's quite comfortable on the inside.",
+          "It's a blend between polyester and cotton, but it is supposed to be windproof and water-resistant.",
+          "So do any of these sort of options stand out to you?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "CQ"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "PCN"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "PCN"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI",
+            "EP"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "15:44:15",
+      "content": {
+        "utterances": [
+          "I think Item05 and Item02.",
+          "I am comparing each of them, and then I'm wondering which one you think is more comfortable."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "INT"
+          ],
+          [
+            "CC",
+            "IA"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "15:44:26",
+      "content": {
+        "utterances": [
+          "Comfortable.",
+          "Okay, give me a second here.",
+          "They're both quite comfortable.",
+          "I mean, Item05 is built for casual wear and, you know, for travel, uh, and outdoor activities, um, can be worn indoors as well.",
+          "Well, however, Item05 doesn't have a hood, and Item02 does have a hood.",
+          "Does that make any difference to you at all?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "IP"
+          ],
+          [
+            "ANS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PCM"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "15:44:29",
+      "content": {
+        "utterances": [
+          "Yeah, I think a hood might be good, because there's a chance that it will rain."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "RP",
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "15:45:14",
+      "content": {
+        "utterances": [
+          "Oh, I see. Okay.",
+          "So yeah, Item02 definitely does the job for blocking out rain with the hood.",
+          "And yeah, overall, it looks pretty decent.",
+          "Yeah, so really, the options with the hood, Item02 and Item10.",
+          "As you mentioned, you know, you're mainly considering between Item05 and Item02.",
+          "So I think Item02 would probably be a good fit for you.",
+          "Is any questions you have about the product?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "PER"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "ACK"
+          ],
+          [
+            "PER"
+          ],
+          [
+            "EF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "15:45:44",
+      "content": {
+        "utterances": [
+          "I think I'll go with Item02.",
+          "It seems good."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ],
+          [
+            "EXP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "15:45:47",
+      "content": {
+        "utterances": [
+          "Item02?",
+          "Okay, great, thank you."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "a"
+}

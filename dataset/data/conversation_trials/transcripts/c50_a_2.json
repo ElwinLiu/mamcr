@@ -1,0 +1,239 @@
+{
+  "conversation_id": 50,
+  "session_code": "a010",
+  "scenario": 2,
+  "mentioned_items": [
+    3,
+    5,
+    6,
+    8,
+    11,
+    12
+  ],
+  "gt_items": [
+    5
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "11:32:16",
+      "content": {
+        "utterances": [
+          "Okay, just give me a second.",
+          "Hi there, I'm looking for a jacket, probably outdoors and I don't want to be, like, more... I don't want to be way chunky and it's probably for the weather in late March."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "IQ",
+            "PCT",
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "11:33:04",
+      "content": {
+        "utterances": [
+          "Okay, great.",
+          "Um, are you looking for something like outdoor in terms of outdoor in a city, or something more, you know, outdoor, like when you're going out hiking?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "11:33:18",
+      "content": {
+        "utterances": [
+          "Yeah, it's more like in the city for the daily outfit within the campus, like university campus sorry.",
+          "So probably nothing too business formal, like Item11.",
+          "I'll probably avoid Item11 and Item12."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS",
+            "PCT"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "PIP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "11:33:40",
+      "content": {
+        "utterances": [
+          "Okay, great.",
+          "How about Item03 and Item06?",
+          "So both are pretty good for the weather.",
+          "Item03 is a little bit lighter, but Item06 is warmer.",
+          "These are both pretty good casual outfits for, you know, outdoor, if you're walking around the campus."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "PCM"
+          ],
+          [
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "11:34:02",
+      "content": {
+        "utterances": [
+          "Hmm... feels like Item03, the color for Item03... it's just like the texture doesn't look too good to me.",
+          "And for Item06 it looks a little bit, I don't know, it's a little bit too warm for like a late March weather.",
+          "I do like Item08 and Item05, though.",
+          "What's your recommendation between those?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "CF"
+          ],
+          [
+            "CF"
+          ],
+          [
+            "INT"
+          ],
+          [
+            "CC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "11:34:31",
+      "content": {
+        "utterances": [
+          "Okay, great.",
+          "So I think Item08 has a little bit more casual looking.",
+          "Item05, it's a little bit more formal, more stylish.",
+          "Really depends on the preference of style.",
+          "In terms of warmth, they are pretty much the same, but Item05 is a coat so it will cover a little bit more of your body, so it's better for the winter, for windy weathers?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "PCM"
+          ],
+          [
+            "PCM"
+          ],
+          [
+            "PCN"
+          ],
+          [
+            "PCM",
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "11:35:02",
+      "content": {
+        "utterances": [
+          "Yeah, that makes sense.",
+          "Uh, I think Toronto is quite windy, though.",
+          "And I do like Item05? Yeah, and also go with, like, different kinds of layering pieces.",
+          "If I wear a hoodie, it would probably be more casual.",
+          "Yeah, I'll probably go with Item05."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "ACT",
+            "EXP"
+          ],
+          [
+            "EXP"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "11:35:19",
+      "content": {
+        "utterances": [
+          "Okay, great.",
+          "I'll just wrap up Item05 for you."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "11:35:22",
+      "content": {
+        "utterances": [
+          "Thank you."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "a"
+}

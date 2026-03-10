@@ -1,0 +1,451 @@
+{
+  "conversation_id": 46,
+  "session_code": "b100",
+  "scenario": 4,
+  "mentioned_items": [
+    13,
+    17,
+    22,
+    24
+  ],
+  "gt_items": [
+    13
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "12:38:13",
+      "content": {
+        "utterances": [
+          "Hi, how can I help you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "12:38:16",
+      "content": {
+        "utterances": [
+          "Yeah, I would like to find an indoor shirt or clothes that is comfortable.",
+          "That would be the main consideration and also, to the best, it will be fashion."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IQ",
+            "PEP"
+          ],
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "12:38:38",
+      "content": {
+        "utterances": [
+          "Okay.",
+          "Um, sure, let me take a look at what we have.",
+          "Do you have any preferences on material?",
+          "Like, a cotton sweater versus polyester or linen?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "IP"
+          ],
+          [
+            "RP"
+          ],
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "12:39:25",
+      "content": {
+        "utterances": [
+          "Um... that can be one consideration, so polyester will be more desired, but cotton is still acceptable."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS",
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "12:39:40",
+      "content": {
+        "utterances": [
+          "Okay."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "12:39:41",
+      "content": {
+        "utterances": [
+          "The main consideration is still comfortable, and the second one would be fashion."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "12:39:46",
+      "content": {
+        "utterances": [
+          "Okay.",
+          "Maybe let's take a look at Item22.",
+          "Customers that have purchased Item22 have found it to be very comfortable, and that's one of the things that they like the most about it.",
+          "Um, so how do you like that sort of style?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "12:40:37",
+      "content": {
+        "utterances": [
+          "Yeah, I see that one might be pretty good, but I don't think I'm like strong enough to hold this structure, if you know what I mean."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "CF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "12:40:49",
+      "content": {
+        "utterances": [
+          "Okay, Sure, let's take a look.",
+          "And what type of style?",
+          "You said fashion is your second consideration so What type of style are you looking for?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RP"
+          ],
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "12:41:36",
+      "content": {
+        "utterances": [
+          "Um... Um...It's hard to describe, so I want to be sort of unique."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "12:41:54",
+      "content": {
+        "utterances": [
+          "Unique, okay. Um..."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "12:41:56",
+      "content": {
+        "utterances": [
+          "Yeah."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "12:41:59",
+      "content": {
+        "utterances": [
+          "How about Item17?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "12:42:05",
+      "content": {
+        "utterances": [
+          "It's, you know, lightweight, cotton, and very comfortable and stylish, if that's the style you like."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "EP",
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "12:42:23",
+      "content": {
+        "utterances": [
+          "Oh, and... is it an indoor wear?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 16,
+      "timestamp": "12:42:30",
+      "content": {
+        "utterances": [
+          "Yes.",
+          "Yeah, it's good for casual wear and various different occasions."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 17,
+      "timestamp": "12:42:53",
+      "content": {
+        "utterances": [
+          "Okay, so... uh, I'm thinking about Item24 and Item13."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PIP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 18,
+      "timestamp": "12:43:03",
+      "content": {
+        "utterances": [
+          "Okay."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 19,
+      "timestamp": "12:43:04",
+      "content": {
+        "utterances": [
+          "Any ideas?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 20,
+      "timestamp": "12:43:09",
+      "content": {
+        "utterances": [
+          "Um... Yeah, so the fabric type for Item24 is acrylic whereas Item13 is 100% cotton.",
+          "Item13 gets slightly better reviews from customers.",
+          "Although, and yeah, so Item24 also has the risk of being a bit itchier.",
+          "So if comfort's your main consideration, then I definitely recommend Item13 over Item24."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "PCM"
+          ],
+          [
+            "PCM"
+          ],
+          [
+            "PCM",
+            "EAI"
+          ],
+          [
+            "EP",
+            "PER"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 21,
+      "timestamp": "12:43:51",
+      "content": {
+        "utterances": [
+          "Wait, can you repeat the part related to comfort?",
+          "So, I'm not that familiar with the material for Item24."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "AC"
+          ],
+          [
+            "AC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 22,
+      "timestamp": "12:44:03",
+      "content": {
+        "utterances": [
+          "Yeah, so it's like knitted material.",
+          "And some customers have found it to feel a bit scratchy or, like, itchy.",
+          "Yeah, so to customers who really are focused on comfort, such as yourself, I think, would prefer Item13 because it's known for its comfort."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EP",
+            "PER"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 23,
+      "timestamp": "12:44:39",
+      "content": {
+        "utterances": [
+          "Yeah, I see.",
+          "In that case, I might choose Item13."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 24,
+      "timestamp": "12:44:47",
+      "content": {
+        "utterances": [
+          "Okay, sounds good."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "b"
+}

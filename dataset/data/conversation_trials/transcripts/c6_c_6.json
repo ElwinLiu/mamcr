@@ -1,0 +1,306 @@
+{
+  "conversation_id": 6,
+  "session_code": "c100",
+  "scenario": 6,
+  "mentioned_items": [
+    27,
+    28,
+    29,
+    31,
+    32
+  ],
+  "gt_items": [
+    32
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "00:35:41",
+      "content": {
+        "utterances": [
+          "Hello, how can I help you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "00:35:44",
+      "content": {
+        "utterances": [
+          "Yeah, so I'm going to a park, and then it's after rain, and then the weather will be warm, but since it rained earlier, so the ground maybe still have a lot of water in it.",
+          "And then I think since I'm going to the park, I think I will be walking a lot, and then I might have some stop at a cafe or some public area along the way.",
+          "So do you have any recommendation for the shoes that I would like to wear?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "IQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "00:36:28",
+      "content": {
+        "utterances": [
+          "Yeah, for sure.",
+          "So you're going to the park after the rain... it has rained, so something probably not too breathable because it might get wet easily.",
+          "So let me... so take a look at items, Item31, Item32, and Item28.",
+          "These are all designed to be comfortable outdoor use.",
+          "Item31 and Item32 are waterproof.",
+          "No. Item31 is waterproof and Item32 is water-resistant.",
+          "Item28 is not specifically waterproof, but it is designed for hiking and durable trail use.",
+          "So it can also handle the outdoors kind of scenario.",
+          "Let me know which one you would like to learn more about."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PCN"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "00:37:44",
+      "content": {
+        "utterances": [
+          "Yeah, so I'm just wondering, like, what is the meaning of waterproof and water-resistant?",
+          "What's the difference between?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "AC"
+          ],
+          [
+            "AC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "00:37:51",
+      "content": {
+        "utterances": [
+          "Okay, yeah.",
+          "So I would say waterproof is one level above water-resistant.",
+          "So waterproof is, you know, heavier, wading across like some puddles, whereas water resistance, you don't want to be too, you know, too heavy the water is yeah.",
+          "So maybe in your case, if it's not raining right now, then you don't need to go the full waterproof. Yeah."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ANS"
+          ],
+          [
+            "ANS"
+          ],
+          [
+            "PCN"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "00:38:37",
+      "content": {
+        "utterances": [
+          "So for water resistance, so Item32 is water resistant, what else?",
+          "Is it the only item that is water resistant?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "CON"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "00:38:50",
+      "content": {
+        "utterances": [
+          "It...let me see.",
+          "So, Item27 and Item29 are also weather...suited for all weathers.",
+          "So It is maybe not exactly waterproof, but you know in your case, if there's not a lot of water, I think they'll still be fairly useful."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ANS"
+          ],
+          [
+            "EP",
+            "PCN"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "00:39:30",
+      "content": {
+        "utterances": [
+          "I see, okay.",
+          "So I'm a little bit interested in Item32.",
+          "Can you tell me more about the functionality it has."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "INT"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "00:39:43",
+      "content": {
+        "utterances": [
+          "Sure.",
+          "So it's designed for the outdoors, and it's very comfortable, and it's decently reviewed.",
+          "People say that it's, you know, very comfortable, and it's very versatile for outdoor activities like hiking.",
+          "So yeah, it's a pretty popular outdoors shoes."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PER"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "00:40:15",
+      "content": {
+        "utterances": [
+          "I see.",
+          "Okay yeah, I think I'll go with Item32."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "00:40:20",
+      "content": {
+        "utterances": [
+          "Okay."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "00:40:21",
+      "content": {
+        "utterances": [
+          "Thank you."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "00:40:22",
+      "content": {
+        "utterances": [
+          "Thanks."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "c"
+}

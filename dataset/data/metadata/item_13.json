@@ -1,0 +1,32 @@
+{
+  "id": 13,
+  "catalogue": "b",
+  "categories": [
+    "Clothing, Shoes & Accessories",
+    "Men",
+    "Clothing",
+    "Sweaters",
+    "Pullovers"
+  ],
+  "product_name": "Amazon Essentials Mens Long-Sleeve 100% Cotton Fisherman Cable Crewneck Sweater",
+  "product_brand": "Brand: Amazon Essentials",
+  "product_rating": "4.5",
+  "product_description": [
+    "Fine-tuned for comfort and quality.",
+    "Durable and long-lasting for families.",
+    "Affordable without compromising on quality. Key words: quality, durable, affordable, family"
+  ],
+  "about_product": [
+    "Comfortable fit through shoulders and chest.",
+    "100% cotton yarn for softness and stretch.",
+    "Timeless crew neck design for layering.",
+    "Ribbed details for added comfort. Key words: comfortable, cotton, crew neck, layering"
+  ],
+  "product_detail": {
+    "Fabric type": "100% Cotton",
+    "Care instructions": "Machine Wash",
+    "Closure type": "Pull On",
+    "Weave type": "Knit"
+  },
+  "reviews": "Overall, customers express high satisfaction with the sweater's quality, comfort, and value. Many appreciate its softness and durability, with several noting it as a great buy for layering. Some reviews mention minor fit issues, particularly with sleeve length, but overall, the sentiment is overwhelmingly positive."
+}

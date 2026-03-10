@@ -1,0 +1,442 @@
+{
+  "conversation_id": 11,
+  "session_code": "c010",
+  "scenario": 5,
+  "mentioned_items": [
+    25,
+    26,
+    35
+  ],
+  "gt_items": [
+    35
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "11:33:05",
+      "content": {
+        "utterances": [
+          "Hi there, are you looking for everyday shoes, or something sporty, or more dressier shoes?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "11:33:15",
+      "content": {
+        "utterances": [
+          "Um, hi, I'm looking for shoes that I can wear outdoors."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "11:33:22",
+      "content": {
+        "utterances": [
+          "Um, okay.",
+          "Are you looking for something for trail running or hiking?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "11:33:38",
+      "content": {
+        "utterances": [
+          "Just you know, just normal.",
+          "I'm just walking on a normal street, so like sidewalks or stores, in-store floors, just regular flooring."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ],
+          [
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "11:34:04",
+      "content": {
+        "utterances": [
+          "Then I would like to recommend you Item26 since it is specially built for its comfort, so it's perfect for everyday activities.",
+          "And since the upper is made with mesh, the shoe is very lightweight."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RS",
+            "EP"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "11:34:29",
+      "content": {
+        "utterances": [
+          "I think Item26 is a running shoe.",
+          "Um... I think I'm not looking for running shoes.",
+          "Maybe some casual footwear that I can, um that can be more stylish."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "CF"
+          ],
+          [
+            "RP"
+          ],
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "11:35:04",
+      "content": {
+        "utterances": [
+          "And how about Item25?",
+          "Item25 is also perfect for everyday activities.",
+          "And it is a classic trainer with a classic design."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RS"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "11:35:16",
+      "content": {
+        "utterances": [
+          "Yeah, I think Item25 looks great.",
+          "Do you have anything similar?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "INT"
+          ],
+          [
+            "CON"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "11:35:24",
+      "content": {
+        "utterances": [
+          "Yeah, sure.",
+          "Um, if you like Item25, Item35 may be a good option.",
+          "It is quite comfortable, and many people say it is perfect for people who have wide feet.",
+          "Since it has a wide fit, you will feel quite comfortable with it.",
+          "And it is also lightweight, so It is easy to wear in everyday styling."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "11:35:54",
+      "content": {
+        "utterances": [
+          "Yeah, I think, um... Item35 looks great, but you said it is for wide feet, right?",
+          "I think my feet are pretty normal, or even more narrow than usual."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "INT",
+            "IF"
+          ],
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "11:36:09",
+      "content": {
+        "utterances": [
+          "But even though you have normal feet, the wide fit would make your feet more comfortable, because it would allow you more space.",
+          "So, I think you may also like these shoes."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "PER"
+          ],
+          [
+            "PER"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "11:36:24",
+      "content": {
+        "utterances": [
+          "Okay, um... So, which is more lightweight, Item25 or Item35?",
+          "Or can I just try them on? Or..."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IF"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "11:36:41",
+      "content": {
+        "utterances": [
+          "Yeah, you can try them on, and usually Item35 is more lightweight than Item25"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS",
+            "PCM"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "11:36:52",
+      "content": {
+        "utterances": [
+          "Uh, okay, Got it.",
+          "Um, I would try on Item35."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "INT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "11:37:00",
+      "content": {
+        "utterances": [
+          "Sure, um, is there any shoes are you looking for?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "EF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 16,
+      "timestamp": "11:37:07",
+      "content": {
+        "utterances": [
+          "Uh, not really, or... is there anything on sale?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS",
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 17,
+      "timestamp": "11:37:13",
+      "content": {
+        "utterances": [
+          "Sorry?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 18,
+      "timestamp": "11:37:14",
+      "content": {
+        "utterances": [
+          "Is there anything on sale?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 19,
+      "timestamp": "11:37:17",
+      "content": {
+        "utterances": [
+          "Um, not really."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 20,
+      "timestamp": "11:37:20",
+      "content": {
+        "utterances": [
+          "Okay, thank you for letting me know.",
+          "I think Item35 looks great.",
+          "Do you have it in any other color?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK",
+            "OTH"
+          ],
+          [
+            "ACT"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 21,
+      "timestamp": "11:37:30",
+      "content": {
+        "utterances": [
+          "Yeah, it has brown, navy, gray, and black."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 22,
+      "timestamp": "11:37:40",
+      "content": {
+        "utterances": [
+          "Actually, I think white looks good.",
+          "I will go ahead with Item35 in white."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PEP"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 23,
+      "timestamp": "11:37:49",
+      "content": {
+        "utterances": [
+          "Great."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "c"
+}

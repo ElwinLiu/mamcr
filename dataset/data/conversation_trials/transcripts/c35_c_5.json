@@ -1,0 +1,211 @@
+{
+  "conversation_id": 35,
+  "session_code": "c000",
+  "scenario": 5,
+  "mentioned_items": [
+    28,
+    29,
+    30
+  ],
+  "gt_items": [
+    30
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "16:24:54",
+      "content": {
+        "utterances": [
+          "Okay, hello, what sort of shoes are you looking for today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "16:24:59",
+      "content": {
+        "utterances": [
+          "Um, I'm looking for a warm and walkable shoes that it's city appropriate.",
+          "I'm looking for something that would support me for a long-distance city walk for a day in the winter."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PEP"
+          ],
+          [
+            "PCT",
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "16:25:14",
+      "content": {
+        "utterances": [
+          "Great.",
+          "So... What do you think about, for example, leather boots?",
+          "Like, for example, I'm thinking of Item29 which is a pretty lightweight and durable outside shoes that can fit for, you know, everyday city walks, and it's also weatherproof and can fit for winter weather.",
+          "What do you think of it?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "A"
+          ],
+          [
+            "RS",
+            "EP",
+            "EAI"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "16:25:42",
+      "content": {
+        "utterances": [
+          "Yeah, I really like Item29, because it's also very stylish.",
+          "That's good for some pictures."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "INT"
+          ],
+          [
+            "CF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "16:25:50",
+      "content": {
+        "utterances": [
+          "Sounds great.",
+          "I would also suggest looking at Item28.",
+          "Wow, that's a pretty different kind of shoes.",
+          "It's... but it's also good for, you know, trail running and hiking.",
+          "It's also very highly rated item in our collection and just in case you would like to consider that."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "OTH"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "16:26:22",
+      "content": {
+        "utterances": [
+          "Um, what... I actually feel like...boots would be a better choice.",
+          "What about Item30?",
+          "Is it also something similar to my description?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "RJT"
+          ],
+          [
+            "IA"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "16:26:31",
+      "content": {
+        "utterances": [
+          "It is, it actually is.",
+          "It's also a very, you know, highly rated boots that can fit for your purposes",
+          "For any sort of outdoor activity, it can actually fit.",
+          "And it's also waterproof, and we have lots of good comments from the previous customers that say that it's actually durable, and they're very satisfied with it."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ],
+          [
+            "EP",
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "16:27:04",
+      "content": {
+        "utterances": [
+          "Yeah, I... out of the three items that we discussed, I would say I prefer Item30."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "16:27:10",
+      "content": {
+        "utterances": [
+          "Awesome, sounds great."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "c"
+}

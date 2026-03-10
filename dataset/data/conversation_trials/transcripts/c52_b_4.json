@@ -1,0 +1,239 @@
+{
+  "conversation_id": 52,
+  "session_code": "b010",
+  "scenario": 4,
+  "mentioned_items": [
+    13,
+    15,
+    19,
+    21
+  ],
+  "gt_items": [
+    21
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "11:21:33",
+      "content": {
+        "utterances": [
+          "Sorry, just give me one sec.",
+          "Okay, um, hi there, I'm looking for an outfit for the small dinner party?",
+          "Do you have any recommendations?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "OTH",
+            "PCT"
+          ],
+          [
+            "IQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "11:22:15",
+      "content": {
+        "utterances": [
+          "Sure, I can help you.",
+          "Are you looking for something more indoor or outdoor?",
+          "Is the party inside, or is this going to be out in the open?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RC"
+          ],
+          [
+            "RC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "11:22:27",
+      "content": {
+        "utterances": [
+          "Um... I want to say it's probably mostly indoors, and I might help around in the kitchen a little bit, yeah, and probably an indoor scenario.",
+          "And I want to be more clean and not try too much, so..."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS",
+            "PCT"
+          ],
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "11:22:47",
+      "content": {
+        "utterances": [
+          "Okay, great.",
+          "I think...how about Item13 and Item19?",
+          "It's not very formal, but it's formal enough for a casual party, and then the styles are fairly minimal.",
+          "I think it's going to be good for your scenario."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EP",
+            "EAI"
+          ],
+          [
+            "PCN"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "11:23:15",
+      "content": {
+        "utterances": [
+          "I'm looking for something with, like, a lighter color, if that's...",
+          "And I think, like, the Item... did you just say, like, Item13 and Item19, right?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "RP"
+          ],
+          [
+            "AC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "11:23:21",
+      "content": {
+        "utterances": [
+          "Yes, I did."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "11:23:23",
+      "content": {
+        "utterances": [
+          "Yeah, I think those two colors are a little bit too dark and formal, so I'm probably looking, like, more of a casual layering piece of wear, so..."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "CF",
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "11:23:38",
+      "content": {
+        "utterances": [
+          "Okay, how about Item15 and Item21?",
+          "These two are lighter colors, and I think, well, you can wear them both formally, or casually?",
+          "I think you said you're going to help around the kitchen a bit, maybe Item21 would be a fit.",
+          "It is a vest, so it will give you more freedom to your arms."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK",
+            "RS"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "PCN"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "11:24:06",
+      "content": {
+        "utterances": [
+          "Yeah, sure.",
+          "I think Item21 looks good to me."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "11:24:11",
+      "content": {
+        "utterances": [
+          "Okay, I'll just wrap up Item21 for you."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "11:24:14",
+      "content": {
+        "utterances": [
+          "Thank you."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "b"
+}

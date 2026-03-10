@@ -1,0 +1,32 @@
+{
+  "id": 30,
+  "catalogue": "c",
+  "categories": [
+    "Clothing, Shoes & Accessories",
+    "Men",
+    "Shoes",
+    "Boots"
+  ],
+  "product_name": "Timberland Men's 6in Premium Fashion Boots, Wheat, 11 M US",
+  "product_brand": "Visit the Timberland Store",
+  "product_rating": "4.6",
+  "product_description": [
+    "Iconic 6\" timberland silhouette",
+    "Leader in sustainable footwear design",
+    "Supports civic and social projects",
+    "Key words: premium, craftsmanship, outdoor, responsibility"
+  ],
+  "about_product": [
+    "Premium leather upper from LWG silver-rated tannery",
+    "Seam-sealed for waterproof protection",
+    "400 grams of Primaloft insulation",
+    "Key words: waterproof, durable, insulated, comfortable"
+  ],
+  "product_detail": {
+    "Fabric type": "Leather",
+    "Care instructions": "Wipe with a damp cloth",
+    "Sole material": "Rubber",
+    "Shaft height": "6.25"
+  },
+  "reviews": "Overall, customers express high satisfaction with the boots, highlighting their comfort and quality. Many appreciate the fit and insulation, making them suitable for various conditions."
+}

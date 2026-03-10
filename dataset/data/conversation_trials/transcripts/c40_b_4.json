@@ -1,0 +1,362 @@
+{
+  "conversation_id": 40,
+  "session_code": "b011",
+  "scenario": 4,
+  "mentioned_items": [
+    13,
+    14,
+    16
+  ],
+  "gt_items": [
+    14
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "18:08:41",
+      "content": {
+        "utterances": [
+          "Okay, so what kind of tops are you looking for?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "18:08:49",
+      "content": {
+        "utterances": [
+          "For tops, I look for a wider jacket, more like an overfit style because I don't want it...I am not a very skinny person.",
+          "So I don't want the jacket to be too tight, which will definitely tighten my stomach and it doesn't look good.",
+          "Also, I want to be comfortable.",
+          "And if it can have a little bit of style, that would be very good, but that's not the priority requirement for me."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PEP"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "18:09:31",
+      "content": {
+        "utterances": [
+          "Okay, yeah. Yeah, so I think about items... both Item14 and Item13."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK",
+            "RS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "18:09:35",
+      "content": {
+        "utterances": [
+          "Yeah."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "18:09:41",
+      "content": {
+        "utterances": [
+          "They could be good options, because both of them are, like... I mean, Item14 is a cozy pullover, and it's casual.",
+          "Uh, I think it fits for the purpose of a little bit overfit for you as you mentioned.",
+          "Also, Item13 is fine-tuned for comfort and quality, so I think this option is also a good one."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "EAI"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EAI",
+            "PER"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "18:10:11",
+      "content": {
+        "utterances": [
+          "Yeah. Uh... Can you repeat which of the items that you chose?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "AC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "18:10:20",
+      "content": {
+        "utterances": [
+          "I... yeah, Item14 and Item13, both of them are good.",
+          "So, which one do you prefer?",
+          "What do you think?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ],
+          [
+            "A"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "18:10:29",
+      "content": {
+        "utterances": [
+          "So in this time, after you gave me the two options, I personally prefer Item14 more compared to Item13.",
+          "And would you be interested about the reason why?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "18:11:05",
+      "content": {
+        "utterances": [
+          "Sorry, I... you know, what was your question?",
+          "I didn't get it."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "18:11:10",
+      "content": {
+        "utterances": [
+          "Oh, so, yeah this time, I'll prefer item 03 more compared to Item13.",
+          "Like, are you interested in the reason behind the choice?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "18:11:17",
+      "content": {
+        "utterances": [
+          "Yeah, I think Item14 is because it's a... it's also warm compared to Item13.",
+          "I mean, it's warmer, it has hats, so I think Item14...also, it has a sporty look.",
+          "So, I think it's a better option compared to Item13."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "PCM"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PER"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "18:11:48",
+      "content": {
+        "utterances": [
+          "Yes.",
+          "And it perfectly fits my preference, as I described before, right?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ],
+          [
+            "IA"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "18:11:58",
+      "content": {
+        "utterances": [
+          "Yeah."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "18:12:04",
+      "content": {
+        "utterances": [
+          "And, yeah, what's the motivation that you chose Item14 and Item13 out of..."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "18:12:11",
+      "content": {
+        "utterances": [
+          "Because you had mentioned that you want to, I mean, feel loose, and you want to have an oversize fit for you, so...",
+          "Also, Item16 has the same feature, like, it's a loose one so that is also a good option.",
+          "But I chose Item14 or Item13 because I thought maybe they are warmer and they are more casual.",
+          "That's why I chose them.",
+          "But Item16 is also... good option, because it's comfortable, and also overfitting."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "EP"
+          ],
+          [
+            "EAI",
+            "RS"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "ACK"
+          ],
+          [
+            "EAI",
+            "PER"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 16,
+      "timestamp": "18:12:57",
+      "content": {
+        "utterances": [
+          "Yeah. I think that's...all for this scenario.",
+          "Do you have any further questions for me?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 17,
+      "timestamp": "18:13:10",
+      "content": {
+        "utterances": [
+          "So the final choice was Item14, right?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "EF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 18,
+      "timestamp": "18:13:14",
+      "content": {
+        "utterances": [
+          "Yeah."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "b"
+}

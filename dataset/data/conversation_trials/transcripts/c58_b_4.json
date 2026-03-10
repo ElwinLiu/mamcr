@@ -1,0 +1,208 @@
+{
+  "conversation_id": 58,
+  "session_code": "b000",
+  "scenario": 4,
+  "mentioned_items": [
+    14,
+    17,
+    19,
+    21,
+    23
+  ],
+  "gt_items": [
+    19
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "18:55:34",
+      "content": {
+        "utterances": [
+          "Hi, what can I help you get?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "18:55:48",
+      "content": {
+        "utterances": [
+          "Yeah, I want to find a layering piece for a dinner party hosted by my friends, that will be hosted at my friends' house.",
+          "And I am choosing between Item19, Item23, Item17, Item21 and Item14."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IQ",
+            "PCT"
+          ],
+          [
+            "PIP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "18:56:26",
+      "content": {
+        "utterances": [
+          "Um, is it an in-house party?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "18:56:28",
+      "content": {
+        "utterances": [
+          "Yeah."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "18:56:29",
+      "content": {
+        "utterances": [
+          "Are you looking for some... is there a dress code?",
+          "Are you looking for something casual?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RC"
+          ],
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "18:56:31",
+      "content": {
+        "utterances": [
+          "No, no dress code, just casual."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS",
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "18:56:37",
+      "content": {
+        "utterances": [
+          "Okay, uh, I think a hoodie could be the way to go, so Item14.",
+          "If you're just hanging out with friends, it's comfortable.",
+          "It keeps you warm",
+          "If you wear a t-shirt under, you can take it off easily, too.",
+          "Um, it's also probably cheaper for... if you're not looking for something expensive.",
+          "Um, it's easy to clean.",
+          "But if you want something a little nicer, the sweater, Item19 would be a good option, too.",
+          "It's also machine washable.",
+          "Um, the party's a little more fancy, you can also layer clothes above or under.",
+          "Um, it's comfortable and warm.",
+          "Depends on what you want."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RS"
+          ],
+          [
+            "PCN"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PCN"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "18:57:23",
+      "content": {
+        "utterances": [
+          "Yeah, I feel like Item 01 would be great, because I don't know how others is going to dress.",
+          "So to be safe, I choose Item 01, so that's my final decision."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT",
+            "EXP"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "18:57:42",
+      "content": {
+        "utterances": [
+          "Okay."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "b"
+}

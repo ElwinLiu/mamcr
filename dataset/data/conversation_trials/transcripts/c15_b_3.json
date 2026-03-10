@@ -1,0 +1,380 @@
+{
+  "conversation_id": 15,
+  "session_code": "b100",
+  "scenario": 3,
+  "mentioned_items": [
+    17,
+    19,
+    24
+  ],
+  "gt_items": [
+    19
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "14:29:10",
+      "content": {
+        "utterances": [
+          "Hi, are you looking for something specific?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "14:29:25",
+      "content": {
+        "utterances": [
+          "Hi, yes.",
+          "So I'm looking for something to wear, like to work, because I'm wondering like, because like every Friday is like a more casual day for our office.",
+          "So I want to wear something relaxed than the other weekdays, but also I still want to look polished.",
+          "And because our office is kind of chilly, so I don't really want to wear something with a short sleeve.",
+          "So, and also like during Fridays, I usually have meetings, but also, meanwhile, I want to be like comfy after work, because I may have some other plans after work.",
+          "So, do you have any recommendations for that?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "PCT",
+            "PEP"
+          ],
+          [
+            "PCT",
+            "PEP"
+          ],
+          [
+            "IQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "14:30:28",
+      "content": {
+        "utterances": [
+          "Uhm... I would recommend Item17,",
+          "Cause it's, first, it's good for like various occasions and for, like, both business and, like, a bit casual, and also it's stylish.",
+          "So, what do you think about Item17?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RS"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "14:30:48",
+      "content": {
+        "utterances": [
+          "Yeah, I think Item17 looks good, but I'm just wondering what can I wear inside, because I think it's a, it's kind of like a jacket without a zipper, so, so I have to wear something inside, right?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "NR",
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "14:31:06",
+      "content": {
+        "utterances": [
+          "Yes. Maybe... do you think like wear a shirt inside?",
+          "Like, so when you have meetings or something, you can take it off, take the jacket off."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS",
+            "A"
+          ],
+          [
+            "PCN"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "14:31:23",
+      "content": {
+        "utterances": [
+          "Mm-hmm.",
+          "Yeah, I think it's good.",
+          "I also saw that you guys have... like... a shirt for, like, Item24, and also have, like, a v-neck shirt in Item19.",
+          "Do you think they are also a good choice for me?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "NR"
+          ],
+          [
+            "PIP"
+          ],
+          [
+            "IA"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "14:31:57",
+      "content": {
+        "utterances": [
+          "Yes, Item24 is good for, like, both business and casual wear, but like it is hand wash only.",
+          "Do you mind?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS",
+            "EAI"
+          ],
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "14:32:07",
+      "content": {
+        "utterances": [
+          "That will be a little bit inconvenient for me.",
+          "What about Item19 and Item17 you just mentioned?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "CF"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "14:32:17",
+      "content": {
+        "utterances": [
+          "Uh, yeah, Item19 is machine wash, and it's really comfortable and warm, and I also think it is good for a business and casual wear."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS",
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "14:32:42",
+      "content": {
+        "utterances": [
+          "Yes, I think Item19 and Item17 are all good choices for me because I don't want something with a large logo or patterns on it.",
+          "But what's the material of Item17 and Item19?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "INT",
+            "CF"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "14:33:01",
+      "content": {
+        "utterances": [
+          "Umm... Item17 is cotton, and Item19 is a mix of wool, nylon, and polyester."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "14:33:17",
+      "content": {
+        "utterances": [
+          "Okay, uhm, because I'm looking for some items that... that are not too easy to get wrinkled.",
+          "Because I usually wear shirts to go to work, um, and they are... very easy to get wrinkles.",
+          "So I want an item that is easy to handle and easy to wear without getting wrinkles, so which one do you recommend?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK",
+            "PEP"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "RP",
+            "CON"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "14:33:44",
+      "content": {
+        "utterances": [
+          "Uhm... then maybe I would recommend Item19 cause a lot of customers appreciate its quality.",
+          "I think it would be a better fit based on your needs."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RS",
+            "EAI"
+          ],
+          [
+            "PER"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "14:34:26",
+      "content": {
+        "utterances": [
+          "OK. Sure.",
+          "I think Item19 sounds good for me.",
+          "Can I get a beige one for Item19?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "NR"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "14:34:32",
+      "content": {
+        "utterances": [
+          "Uh... yes."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 16,
+      "timestamp": "14:34:42",
+      "content": {
+        "utterances": [
+          "Do you have, like, a color beige?",
+          "Yes?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IF"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 17,
+      "timestamp": "14:34:43",
+      "content": {
+        "utterances": [
+          "Yes."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 18,
+      "timestamp": "14:34:44",
+      "content": {
+        "utterances": [
+          "OK, yeah, I will get that one.",
+          "Thank you."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "b"
+}

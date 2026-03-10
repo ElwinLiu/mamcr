@@ -1,0 +1,514 @@
+{
+  "conversation_id": 3,
+  "session_code": "b000",
+  "scenario": 3,
+  "mentioned_items": [
+    15,
+    19,
+    22,
+    24
+  ],
+  "gt_items": [
+    19
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "00:16:44",
+      "content": {
+        "utterances": [
+          "Hi, how may I help you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "00:16:45",
+      "content": {
+        "utterances": [
+          "Yeah, so I want to attend a business meeting and then I want it to be casual.",
+          "So I need something that is appropriate for the office."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT",
+            "PEP"
+          ],
+          [
+            "PEP",
+            "IQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "00:17:04",
+      "content": {
+        "utterances": [
+          "Okay, so you're looking for something more business casual for the work setting?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "00:17:11",
+      "content": {
+        "utterances": [
+          "Yes, and then the workplace will be slightly cold, indoor temperature, and then the dress code is business casual."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS",
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "00:17:23",
+      "content": {
+        "utterances": [
+          "Yeah, okay, so something warm and business casual.",
+          "Okay, so let me...so is it an indoor event or an outdoor event?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "00:17:38",
+      "content": {
+        "utterances": [
+          "Yeah, it's an indoor event."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "00:17:40",
+      "content": {
+        "utterances": [
+          "Okay, it's an indoor event, but still you will want to have it slightly warm, right?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK",
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "00:17:51",
+      "content": {
+        "utterances": [
+          "Yeah, and I need to attend a few meetings, so I need to, like be around with my co-workers."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS",
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "00:17:58",
+      "content": {
+        "utterances": [
+          "Okay, so let me...show you...",
+          "Take a look at items, Item19, Item24, and Item22, so these are a little bit more formal, and they're all pretty warm and made out of cotton.",
+          "And Item19 is made of 20% wool.",
+          "But can you let me know if the style suits you, or if that's something, you're looking for something a little different?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "IP"
+          ],
+          [
+            "RS",
+            "EAI",
+            "EP"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "00:18:53",
+      "content": {
+        "utterances": [
+          "So, I want to dress comfortably, yeah.",
+          "Is the Item24 comfortable?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PEP"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "00:19:02",
+      "content": {
+        "utterances": [
+          "Uh..."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "00:19:05",
+      "content": {
+        "utterances": [
+          "Will Item15 be more comfortable?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "00:19:10",
+      "content": {
+        "utterances": [
+          "One second.",
+          "So, okay, so Item24 is very comfortable.",
+          "Our customer's review says that it is pretty comfortable.",
+          "Item15 is more specifically designed for comfort, so if you're thinking of just on the comfort metric, I would say Item15 is a little better.",
+          "And Item15 is also pretty good for the formal setting.",
+          "So that's...so if Item15 is more of your style, I would say it would be a good choice."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "IP"
+          ],
+          [
+            "ANS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "ANS",
+            "PCM"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "RS",
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "00:19:54",
+      "content": {
+        "utterances": [
+          "Is Item15 100% wool?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "00:19:58",
+      "content": {
+        "utterances": [
+          "It's polyester.",
+          "It's 100% polyester."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ],
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 16,
+      "timestamp": "00:20:01",
+      "content": {
+        "utterances": [
+          "Oh. I see.",
+          "I'm looking for something made by wool."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK",
+            "RJT"
+          ],
+          [
+            "RP",
+            "CF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 17,
+      "timestamp": "00:20:09",
+      "content": {
+        "utterances": [
+          "Okay. Let me see.",
+          "So I would then say Item19 would be a good choice for wool.",
+          "It's a wool cardigan, and it's pretty comfortable.",
+          "It's warm, and it's pretty versatile so you can wear it for the formal like business casual settings for sure.",
+          "It's about 20% wool and 50% polyester."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "IP"
+          ],
+          [
+            "RS",
+            "EP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 18,
+      "timestamp": "00:20:47",
+      "content": {
+        "utterances": [
+          "Oh, so we don't have items that are made of 100% wool?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 19,
+      "timestamp": "00:20:52",
+      "content": {
+        "utterances": [
+          "So unfortunately, nah, we don't have one that is 100% wool."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 20,
+      "timestamp": "00:20:58",
+      "content": {
+        "utterances": [
+          "I see."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 21,
+      "timestamp": "00:20:59",
+      "content": {
+        "utterances": [
+          "But this one... It's not bad, 20%."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "PER"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 22,
+      "timestamp": "00:21:05",
+      "content": {
+        "utterances": [
+          "Okay, sure.",
+          "So for Item19, what color do we have instead of black?",
+          "Do we have other colors?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "IF"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 23,
+      "timestamp": "00:21:13",
+      "content": {
+        "utterances": [
+          "What color are you looking for?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 24,
+      "timestamp": "00:21:16",
+      "content": {
+        "utterances": [
+          "I'm looking for gray."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 25,
+      "timestamp": "00:21:18",
+      "content": {
+        "utterances": [
+          "Okay, yeah, we have gray."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 26,
+      "timestamp": "00:21:20",
+      "content": {
+        "utterances": [
+          "Okay, yeah, sure.",
+          "I will purchase Item19 in gray color."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 27,
+      "timestamp": "00:21:25",
+      "content": {
+        "utterances": [
+          "Okay, cool. Sounds good."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "b"
+}

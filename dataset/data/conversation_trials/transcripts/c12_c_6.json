@@ -1,0 +1,319 @@
+{
+  "conversation_id": 12,
+  "session_code": "c001",
+  "scenario": 6,
+  "mentioned_items": [
+    26,
+    28,
+    31,
+    32
+  ],
+  "gt_items": [
+    31
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "11:39:34",
+      "content": {
+        "utterances": [
+          "Hi, welcome in.",
+          "We have shoes for outdoor, everyday wear and boots, and more classic wear.",
+          "Any specific shoes you're looking for?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "OTH"
+          ],
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "11:39:47",
+      "content": {
+        "utterances": [
+          "Yes, so I'm looking for shoes that I can wear in a warm humid day.",
+          "And I want to wear them to like scenic spots, so there might be like trails."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IQ",
+            "PCT"
+          ],
+          [
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "11:40:09",
+      "content": {
+        "utterances": [
+          "I see.",
+          "If the weather is warm and humid, I think I would like to recommend you choose with some breathability.",
+          "And for those choices, Item32 and Item26 would be a perfect recommendation for you since they have a component with mesh.",
+          "So it has a great breathability and both are great for outdoor activities."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "PCN"
+          ],
+          [
+            "RS",
+            "PCN"
+          ],
+          [
+            "EAI",
+            "PCN"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "11:40:48",
+      "content": {
+        "utterances": [
+          "Uh, you said Item32 and Item26?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "AC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "11:40:51",
+      "content": {
+        "utterances": [
+          "Yeah, Item32 and Item26."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "11:40:54",
+      "content": {
+        "utterances": [
+          "Um, I don't think Item32 and Item26 are for outdoors.",
+          "I think they are not waterproof and they are, um, not durable.",
+          "They're running shoes."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "RJT"
+          ],
+          [
+            "CF"
+          ],
+          [
+            "CF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "11:41:28",
+      "content": {
+        "utterances": [
+          "If you're looking for more waterproof and dirt-proof hiking shoes, I can recommend you Item31 since it has a waterproof protection for rainy days."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RS",
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "11:41:43",
+      "content": {
+        "utterances": [
+          "Yes, um, I think Item31 looks a lot more like what I'm looking for.",
+          "Um, do you have something similar?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "NR"
+          ],
+          [
+            "CON"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "11:42:26",
+      "content": {
+        "utterances": [
+          "Yeah, sure, um, I can recommend you Item28.",
+          "And Item28 is a hiking shoes, perfect for outdoor activities, and many people say that it is very stable in rocky, and muddy conditions."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK",
+            "RS"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "11:42:46",
+      "content": {
+        "utterances": [
+          "Okay, so which one is more durable?",
+          "Item31 or Item28?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IF"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "11:43:25",
+      "content": {
+        "utterances": [
+          "The durability is similar for both shoes, so I think you can choose them whether you have more emphasis on waterproof or dirt-proof."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS",
+            "PCM",
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "11:43:39",
+      "content": {
+        "utterances": [
+          "Okay, I see.",
+          "Um...So I think...can you explain what a... what do you mean by dirt proof?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "11:43:55",
+      "content": {
+        "utterances": [
+          "So, the strengths of Item31 is waterproof.",
+          "So you can wear these shoes in more rainy days, or you have to cross some ponds.",
+          "And for Item28, the positive feedback of these items were usually on muddy, rocky conditions.",
+          "So, you can choose these shoes whether your trail would be more muddy and rocky, or the weather will be rainy."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PCM",
+            "PCN"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "11:44:29",
+      "content": {
+        "utterances": [
+          "Oh, I see.",
+          "Yeah, that's really helpful.",
+          "I think, for me, it's more like, maybe more contact with water, like maybe a damp area or like as you said, like a pond, so I'll go with Item31."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "OTH"
+          ],
+          [
+            "EXP",
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "11:44:54",
+      "content": {
+        "utterances": [
+          "Great."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "c"
+}

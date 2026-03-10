@@ -1,0 +1,327 @@
+{
+  "conversation_id": 8,
+  "session_code": "a001",
+  "scenario": 2,
+  "mentioned_items": [
+    1,
+    3,
+    5,
+    8,
+    11
+  ],
+  "gt_items": [
+    5
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "11:27:04",
+      "content": {
+        "utterances": [
+          "Hi, welcome in.",
+          "Are you shopping for a specific occasion?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "RC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "11:27:09",
+      "content": {
+        "utterances": [
+          "Uh, yes, so I'm shopping for my regular days on campus as a university student.",
+          "So I may have to like walk outside or in the buildings.",
+          "It's a little bit chilly in the morning, so I don't want to get cold from that.",
+          "But I also want to like be able to, you know, take it off for warmer weather in the afternoon."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT",
+            "PEP"
+          ],
+          [
+            "PCT",
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "11:27:44",
+      "content": {
+        "utterances": [
+          "Yeah, sure.",
+          "Um, then I would like to recommend you Item03 and Item01 since they all consist of lightweight cotton.",
+          "So if you take off the clothes inside, you will feel comfortable with carrying them.",
+          "And since Item01 is windproof, you'll be perfect for the outside weather."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS",
+            "EAI"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "11:28:11",
+      "content": {
+        "utterances": [
+          "Mm-hmm.",
+          "I just feel like Item03 and... Item01 are too ugly."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RJT",
+            "CF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "11:28:20",
+      "content": {
+        "utterances": [
+          "Oh..."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "11:28:23",
+      "content": {
+        "utterances": [
+          "Or not my style, at least."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "CF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "11:28:37",
+      "content": {
+        "utterances": [
+          "Uhm...then how's Item08?",
+          "Since it is a baseball jacket, I think it'll fit your campus styling.",
+          "And it consists of 100% cotton, so it'll be comfortable for your skin."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RS"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "11:28:59",
+      "content": {
+        "utterances": [
+          "Uh... yes, Item08 looks like a good option.",
+          "Actually, Item03, uh... Do you have it in any other color, like black?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "NR"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "11:29:15",
+      "content": {
+        "utterances": [
+          "Yeah, we also have black and, uhm, blue?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "11:29:22",
+      "content": {
+        "utterances": [
+          "Mm-hmm.",
+          "Okay, I would like to try on Item03 in black, and you can also find my size for Item08."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "NR"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "11:29:36",
+      "content": {
+        "utterances": [
+          "Yeah, sure.",
+          "If you're looking for more dressy and casual style, I think Item05 and Item11 may fit your taste too.",
+          "They're both ideal for business wear and special events other than just campus walking."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS",
+            "EP"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "11:30:03",
+      "content": {
+        "utterances": [
+          "Um, yeah, they look good as well.",
+          "Um... Item05 and Item11, they look good as well."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "NR"
+          ],
+          [
+            "NR"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "11:30:13",
+      "content": {
+        "utterances": [
+          "Great."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "11:30:14",
+      "content": {
+        "utterances": [
+          "Um, I will try and compare."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "NR"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "11:30:18",
+      "content": {
+        "utterances": [
+          "Great."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 16,
+      "timestamp": "11:30:20",
+      "content": {
+        "utterances": [
+          "So I think, um, I will go with...one second.",
+          "I'll go with Item05 in black."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "a"
+}

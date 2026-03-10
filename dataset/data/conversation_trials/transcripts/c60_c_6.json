@@ -1,0 +1,247 @@
+{
+  "conversation_id": 60,
+  "session_code": "c000",
+  "scenario": 6,
+  "mentioned_items": [
+    26,
+    28,
+    31,
+    32
+  ],
+  "gt_items": [
+    26
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "18:44:39",
+      "content": {
+        "utterances": [
+          "Hi, what can I get for you?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "18:44:46",
+      "content": {
+        "utterances": [
+          "Um... I'm gonna go for a walk in the park nearby my apartment.",
+          "Um, and it just rained like yesterday, so I want something that's... I want a shoe that's easy to clean and doesn't get dirty after walking on the mud."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT"
+          ],
+          [
+            "PCT",
+            "PEP",
+            "IQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "18:45:27",
+      "content": {
+        "utterances": [
+          "Okay, are you looking for running shoes, or...?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK",
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "18:45:30",
+      "content": {
+        "utterances": [
+          "No, just waking."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "18:45:34",
+      "content": {
+        "utterances": [
+          "Walking, so you still want to be comfortable, um, but you want it to be, like, cleanable."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "18:45:36",
+      "content": {
+        "utterances": [
+          "Yeah, and running shoes are fine, they're comfortable.",
+          "But yeah..."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS",
+            "RP"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "18:45:47",
+      "content": {
+        "utterances": [
+          "Okay, um... so, for something that's like, depending on where you're walking.",
+          "If you're walking kind of, like, in the forest or where there's less pavement, I recommend Item28. Um, it is super comfortable, and it's good for, like trail running and hiking.",
+          "And it might not be as good if you're just walking around the neighborhood, actually.",
+          "Um, there's Item26, kind of as, like, a regular runner that's pretty basic, very comfortable, very easy to clean, just toss it in the machine.",
+          "Um, it's also very lightweight.",
+          "Um, but it might be, like, less stylish if you're looking for something to rock the block.",
+          "Yeah, and there's also Item32.",
+          "These are also some basic runners, um, with... they have GEL technology so if there's a high impact activity that you're doing.",
+          "But if you're just running, I feel like Item26 is probably best for you."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS",
+            "EAI",
+            "PCN"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "RS",
+            "EP",
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PCN"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "18:46:59",
+      "content": {
+        "utterances": [
+          "Um, what about Item31?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "18:47:03",
+      "content": {
+        "utterances": [
+          "Um... Item31 is meant for a kind of, like, hiking, so it's definitely gonna be much heavier.",
+          "Um, also, it's, like, meant for kind of, like, long, like, trekking in the mountains for a long period of time.",
+          "Not sure that's what you're looking for, depending on where you're walking, where your neighborhood is, I guess.",
+          "Um, but it's definitely lower maintenance, and you can machine wash it as well."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS",
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PER"
+          ],
+          [
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "18:47:34",
+      "content": {
+        "utterances": [
+          "Um, thank you for the recommendation.",
+          "I think I will choose Item26."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "18:47:41",
+      "content": {
+        "utterances": [
+          "Sounds good."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "c"
+}

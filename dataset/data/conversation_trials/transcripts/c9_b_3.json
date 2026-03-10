@@ -1,0 +1,252 @@
+{
+  "conversation_id": 9,
+  "session_code": "b010",
+  "scenario": 3,
+  "mentioned_items": [
+    15,
+    18,
+    20,
+    21,
+    22
+  ],
+  "gt_items": [
+    15,
+    18,
+    21
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "11:08:24",
+      "content": {
+        "utterances": [
+          "Welcome in!",
+          "Are you looking for something casual or more dressed up today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "11:08:31",
+      "content": {
+        "utterances": [
+          "Uh... I think just business casual."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "11:08:42",
+      "content": {
+        "utterances": [
+          "For business casual, you may like Item15 because it consists of really soft fabric, so you can wear it everywhere you go.",
+          "Since its design is very classic and basic, you can wear every time you go on a meeting or in an office."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RS",
+            "EAI"
+          ],
+          [
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "11:09:08",
+      "content": {
+        "utterances": [
+          "Um... I think Item15 is a great choice.",
+          "Um..."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "INT"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "11:09:16",
+      "content": {
+        "utterances": [
+          "If you want, I can recommend you other items that go well with Item15."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "11:09:22",
+      "content": {
+        "utterances": [
+          "Uh, sure."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "11:09:25",
+      "content": {
+        "utterances": [
+          "Um...If the weather is quite chill, you can wear Item22 under Item15.",
+          "And since Item22 is a turtleneck and lightweight, it is perfect for warmth and chill weather."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "REC",
+            "PCN"
+          ],
+          [
+            "EAI",
+            "PCN"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "11:09:56",
+      "content": {
+        "utterances": [
+          "Um... I, um, personally, don't think layering two layers of sweaters is a good choice, just for... just in terms of looks and also comfort, but I think Item15 alone or Item22 alone might be good choices."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "RJT",
+            "CF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "11:10:27",
+      "content": {
+        "utterances": [
+          "Sure.",
+          "Then what about Item21 or Item18?",
+          "If you don't prefer layering two sweaters, you can layer other fleece or fleece jackets for the chill weather."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "11:10:45",
+      "content": {
+        "utterances": [
+          "Mm-hmm.",
+          "So, since usually I need to wear these to a slightly cold indoor temperature, I think maybe... something like, so Item18, Item21, or Item20 is what you're talking about?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "PCT",
+            "AC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "11:11:11",
+      "content": {
+        "utterances": [
+          "Uh, I just mentioned Item18 and Item21."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "11:11:14",
+      "content": {
+        "utterances": [
+          "Okay, okay.",
+          "Yes, yes, I think there are good choices to wear on top of Item15."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "11:11:25",
+      "content": {
+        "utterances": [
+          "Great."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "b"
+}

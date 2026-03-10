@@ -1,0 +1,33 @@
+{
+  "id": 11,
+  "catalogue": "a",
+  "categories": [
+    "Clothing, Shoes & Accessories",
+    "Men",
+    "Clothing",
+    "Outerwear",
+    "Coats & Jackets",
+    "Wool & Blends"
+  ],
+  "product_name": "Runcati Mens Full Length Trench Coat Notched Lapel Long Jacket Double Breasted Classic Winter Overcoat",
+  "product_brand": "Brand: Runcati",
+  "product_rating": "4.4",
+  "product_description": [
+    "Timeless wool blend trench coat for elegance.",
+    "Double-breasted design with notched lapel.",
+    "Perfect for formal and casual occasions.",
+    "Key words: trench coat, wool blend, double-breasted, elegant"
+  ],
+  "about_product": [
+    "Premium fabric with smooth lining for comfort.",
+    "Full length with two front pockets and inner pocket.",
+    "Ideal for business wear and special events.",
+    "Matches well with t-shirts or suits.",
+    "Key words: quality, stylish, versatile, warm"
+  ],
+  "product_detail": {
+    "Fabric type": "100% Polyester",
+    "Care instructions": "Machine Wash"
+  },
+  "reviews": "Overall, the reviews reflect a positive sentiment towards the coat's fit and material quality, though some users expressed discomfort with the pocket design."
+}

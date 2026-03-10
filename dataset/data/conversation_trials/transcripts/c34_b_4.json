@@ -1,0 +1,202 @@
+{
+  "conversation_id": 34,
+  "session_code": "b001",
+  "scenario": 4,
+  "mentioned_items": [
+    14,
+    22,
+    24
+  ],
+  "gt_items": [
+    24
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "16:30:28",
+      "content": {
+        "utterances": [
+          "Hello, what sort of tops or active wear are you mostly interested in?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "16:30:33",
+      "content": {
+        "utterances": [
+          "Um, I'm looking for some casual, stylish, chic top... for me to wear when I'm trying to visit a friend.",
+          "And I wanted to try to be feminine... has some feminine details for me."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT",
+            "PEP"
+          ],
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "16:30:57",
+      "content": {
+        "utterances": [
+          "Great, um, so...",
+          "Let's, I want to ask for your thoughts about some of the items in our collection, so I can have a better sense of your taste.",
+          "For example, what do you think of Item22? Which is a perfect fit for a casual look.",
+          "But it has a turtleneck, and it's also lightweight, and it's pretty warm."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "IP"
+          ],
+          [
+            "RS",
+            "A",
+            "EP"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "16:31:24",
+      "content": {
+        "utterances": [
+          "Um, I actually think that's a bit formal, maybe something more casual I would say."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "RJT",
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "16:31:33",
+      "content": {
+        "utterances": [
+          "Sounds great.",
+          "Um, how about Item24?",
+          "That can, in my opinion, have some sort of feminine look that you were looking for.",
+          "And it's also a versatile top that can serve for both casual and formal occasions."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "16:31:50",
+      "content": {
+        "utterances": [
+          "Yeah, Item24 looks good to me."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "16:31:55",
+      "content": {
+        "utterances": [
+          "Sounds great.",
+          "We also have some soft and cozy pullovers, like for example Item14 which is both durable and it's kind of unisex wear.",
+          "And you can maybe consider that one as well.",
+          "What do you think of that?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS",
+            "EAI"
+          ],
+          [
+            "A"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "16:32:14",
+      "content": {
+        "utterances": [
+          "I would say I prefer Item24 because, I don't really like the hoodie, so...",
+          "Yeah, I think Item24 is the style that I would wear to a friend's party."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "RJT",
+            "CF"
+          ],
+          [
+            "ACT",
+            "EXP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "16:32:27",
+      "content": {
+        "utterances": [
+          "Sounds great, I definitely agree with that."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "b"
+}

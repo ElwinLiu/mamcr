@@ -1,0 +1,33 @@
+{
+  "id": 4,
+  "catalogue": "a",
+  "categories": [
+    "Clothing, Shoes & Accessories",
+    "Men",
+    "Clothing",
+    "Outerwear",
+    "Coats & Jackets",
+    "Leather & Faux Leather",
+    "Faux Leather"
+  ],
+  "product_name": "Levi's Mens Faux Leather Motorcycle JacketJacket",
+  "product_brand": "Visit the Levi's Store",
+  "product_rating": "4.6",
+  "product_description": [
+    "Classic faux leather with buffalo plaid lining.",
+    "Zipper front closure and detailed cuffs.",
+    "Multiple pockets for convenience.",
+    "Key words: faux leather, motorcycle jacket, versatile, stylish"
+  ],
+  "about_product": [
+    "Asymmetrical zipper and snap-down lapels for style.",
+    "Faux leather is perfect for layering and seasonal transitions.",
+    "Key words: stylish, versatile, layering, men's fashion"
+  ],
+  "product_detail": {
+    "Fabric type": "100% Polyurethane",
+    "Care instructions": "Machine Wash",
+    "Origin": "Imported"
+  },
+  "reviews": "Overall, customers appreciate the comfort and quality of the jacket, noting its stylish design and versatility. Some have mentioned sizing issues, but many express satisfaction with the fit and value for money."
+}

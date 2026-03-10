@@ -1,0 +1,376 @@
+{
+  "conversation_id": 22,
+  "session_code": "b010",
+  "scenario": 4,
+  "mentioned_items": [
+    23
+  ],
+  "gt_items": [
+    23
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "15:18:36",
+      "content": {
+        "utterances": [
+          "All right. Hello.",
+          "Welcome, how can I help you?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "15:18:43",
+      "content": {
+        "utterances": [
+          "Hello.",
+          "Sorry, give me a minute, please."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "15:18:46",
+      "content": {
+        "utterances": [
+          "No worries, take your time."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "15:19:03",
+      "content": {
+        "utterances": [
+          "Um, I'm looking for something that's more casual, but quite stylish, and then it's fit for indoors."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "15:19:14",
+      "content": {
+        "utterances": [
+          "Casual, stylish, and fit for indoors.",
+          "Give me a second here... let me just take a look...",
+          "Okay, are you looking for more of a pullover, um or do you prefer something with a button-up or a zipper system?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "IP"
+          ],
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "15:19:43",
+      "content": {
+        "utterances": [
+          "A pullover would be good."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "15:19:45",
+      "content": {
+        "utterances": [
+          "Okay, pullover would be good.",
+          "So... Um, yeah, we have a few options, mostly in our sweaters.",
+          "Um, do you have, you know, any sleeve preference?",
+          "Do you... would you like long sleeve, short sleeve?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "IP"
+          ],
+          [
+            "RP"
+          ],
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "15:20:01",
+      "content": {
+        "utterances": [
+          "A short sleeve would be good.",
+          "It's for, like, a dinner at a friend's...like for a dinner gathering."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "15:20:09",
+      "content": {
+        "utterances": [
+          "Short sleeves.",
+          "So we do... we don't have like a t-shirt style short sleeve.",
+          "We do have sort of like a vest, so it doesn't have the sleeves.",
+          "It's sort of like a, you know, a cozy cable knit type sweater.",
+          "It's got a V-neck design.",
+          "Is that sort of the style you were looking for?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "15:20:36",
+      "content": {
+        "utterances": [
+          "I think it seems about good."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "NR"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "15:20:38",
+      "content": {
+        "utterances": [
+          "Okay, great.",
+          "That's awesome."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "15:20:42",
+      "content": {
+        "utterances": [
+          "Um..."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "15:20:45",
+      "content": {
+        "utterances": [
+          "Yeah, go ahead."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "15:20:47",
+      "content": {
+        "utterances": [
+          "Um, which one do... which one, which item?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "AC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "15:20:52",
+      "content": {
+        "utterances": [
+          "Oh sorry.",
+          "So the item I was talking about was Item23.",
+          "Um, it's sort of like a pull-on machine wash cotton sweater.",
+          "Um... yeah.",
+          "Does that sound suitable for your event?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "ANS"
+          ],
+          [
+            "EAI",
+            "EP"
+          ],
+          [
+            "OTH"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 16,
+      "timestamp": "15:21:12",
+      "content": {
+        "utterances": [
+          "Um... does this... this comes in more than one color, right?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 17,
+      "timestamp": "15:21:20",
+      "content": {
+        "utterances": [
+          "Yeah, it can come in whatever color you would like it to."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 18,
+      "timestamp": "15:21:28",
+      "content": {
+        "utterances": [
+          "I think this would be good."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 19,
+      "timestamp": "15:21:30",
+      "content": {
+        "utterances": [
+          "This would be good?",
+          "Great um... yeah, awesome."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "b"
+}

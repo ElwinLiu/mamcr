@@ -1,0 +1,83 @@
+-----------------------------------------------------------------
+Onboarding / Fasion Profile Survey
+-----------------------------------------------------------------
+
+This document reproduces the questionnaire used to collect 
+fashion profile data for participants. Each column in 
+`fashion_profiles/profiles.csv` corresponds to one of these questions.
+
+-----------------------------------------------------------------
+Q1. Please describe your personal style preferences.
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Q2. How would you describe the vibes of your outfits and wardrobe 
+(select all that apply). If an option does not make sense to you, 
+please ignore it.
+-----------------------------------------------------------------
+Options included (multi-select):
+- Chic – Elegant, polished, often minimalist  
+- Preppy – Clean-cut, collegiate, often includes polos, blazers  
+- Streetwear – Trend-driven, urban, sneakers, oversized fits  
+- Casual – Everyday wear, laid-back, basic staples  
+- Sporty / Athleisure – Athletic-inspired, leggings, sneakers  
+- Minimalist – Simple cuts, neutral tones, low ornamentation  
+- Vintage – Retro aesthetics, often 70s–90s inspired  
+- Grunge – Dark tones, distressed fabrics, layered  
+- Classic – Timeless cuts and colors, traditional  
+- Goth – Dark, dramatic, black-heavy ensembles  
+- Y2K – 2000s nostalgia, playful, low-rise, shiny materials  
+- E-girl / E-boy – Online-influenced, alt fashion, anime  
+- High Concept – Fashion-forward, unconventional, runway-inspired pieces  
+- Business Casual – Office-appropriate, structured but not formal  
+- Luxury – Designer-driven, high-end textures and brands  
+- Cozy / Loungewear – Comfortable, soft fabrics, homey feel  
+- Techwear – Futuristic, utilitarian, function-oriented  
+- Other: ________
+
+-----------------------------------------------------------------
+Q3. Please indicate how important each factor is to you when 
+purchasing clothes.
+-----------------------------------------------------------------
+Scale: 1 (least) – 5 (most)
+- Comfort  
+- Style  
+- Practicality  
+- Chasing Trends  
+- Brand or Label  
+- Self Expression  
+- Sustainability  
+- Price  
+- Color  
+
+-----------------------------------------------------------------
+Q4. How often do you purchase new clothes?
+-----------------------------------------------------------------
+Options:
+- Weekly  
+- Biweekly  
+- Monthly  
+- Quarterly  
+- Yearly  
+- Other: ________
+
+-----------------------------------------------------------------
+Q5. How much do you typically spend per month on clothing?
+-----------------------------------------------------------------
+Options (in CAD):
+- < $50  
+- $50 – $100  
+- $101 – $200  
+- $201 – $300  
+- $301 – $400  
+- $401 – $500  
+- > $500  
+- Other: ________
+
+-----------------------------------------------------------------
+Q6. What color(s) do you think you look best in?
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+Q7. How do you want your clothes to make you feel?
+-----------------------------------------------------------------

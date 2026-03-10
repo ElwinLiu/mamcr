@@ -1,0 +1,435 @@
+{
+  "conversation_id": 24,
+  "session_code": "c010",
+  "scenario": 6,
+  "mentioned_items": [
+    26,
+    27,
+    28,
+    31,
+    32,
+    35
+  ],
+  "gt_items": [
+    31
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "15:33:23",
+      "content": {
+        "utterances": [
+          "Great.",
+          "Hello, what can I get for you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "15:33:30",
+      "content": {
+        "utterances": [
+          "Um, hello, um... Sorry, give me a minute."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "15:33:33",
+      "content": {
+        "utterances": [
+          "Yeah, no worries."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "15:33:51",
+      "content": {
+        "utterances": [
+          "Um hello, I'm looking for shoes that are comfortable to wear that I'll be walking in for a long time.",
+          "And then it's...like it's better if it would be a little bit waterproof for, like, grassy floor that was just through the rain."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IQ",
+            "PEP"
+          ],
+          [
+            "PEP",
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "15:34:09",
+      "content": {
+        "utterances": [
+          "I see.",
+          "Would you... what sort of terrain would you be walking on?",
+          "Um, mostly, like, flat terrain, or are you going sort of hiking or going on a trail with these shoes?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RC"
+          ],
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "15:34:24",
+      "content": {
+        "utterances": [
+          "Mostly grass and dirt paths."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "15:34:28",
+      "content": {
+        "utterances": [
+          "Grass and dirt path.",
+          "Okay, give me one second."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "IP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "15:34:53",
+      "content": {
+        "utterances": [
+          "So we do have a hiking shoe that is approved for all weather conditions.",
+          "It's waterproof.",
+          "It handles outdoor activities like hiking, you know, walking through non-paved terrain pretty well and that is Item31.",
+          "We also have Item28 which is another type of one of our hiking or running or trail-running shoes.",
+          "It...people have reported that it fits quite well, you know, with your foot and people have said it has some pretty excellent grip and comfort on various terrains, so it's definitely more of a performance shoe here.",
+          "It's not too much information on the ability for it to be waterproof, but assuming it is made out of, you know, rubber, it should give some pretty good protection and that is Item28.",
+          "We also have, you know, some of our running shoes here, which is, you know, obviously less waterproof, but a lot more comfortable for walking long distances, and that's Item27, Item26, Item32, and Item35.",
+          "So, could I get, you know, an understanding of what you're looking for?",
+          "Are you looking for more of like a hiking shoe or something like joggers?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "EAI"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EP",
+            "RS"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EAI",
+            "EP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "RS",
+            "EP"
+          ],
+          [
+            "A"
+          ],
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "15:36:24",
+      "content": {
+        "utterances": [
+          "Um, I think I like more of hiking shoes, because it's...It'll be better to walk.",
+          "Like you were saying, they're a little bit waterproof, mostly Item28..."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "RP"
+          ],
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "15:36:36",
+      "content": {
+        "utterances": [
+          "No, go ahead, go ahead.",
+          "You want to ask something?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "15:36:42",
+      "content": {
+        "utterances": [
+          "Like the temperature is a bit humid, so I'm worried about keeping the heat inside.",
+          "Would Item28 do that?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT",
+            "CF"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "15:36:57",
+      "content": {
+        "utterances": [
+          "Okay, give me one second.",
+          "Will it let air through?",
+          "Okay, give me one second."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "IP"
+          ],
+          [
+            "ACK"
+          ],
+          [
+            "IP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "15:37:20",
+      "content": {
+        "utterances": [
+          "Yeah, for sure.",
+          "So these shoes are made for, you know, prolonged trail running, hiking, you know, and general performance.",
+          "The outer material on the top is sort of like a mesh material, so it will sort of let air through.",
+          "It's not entirely waterproof like Item31, but it is pretty water resistant.",
+          "It's built to, you know, run through sort of muddy terrain or, you know, as you said, if it just nearly rained, you know, walking through that should be no problem at all.",
+          "Yeah."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "ANS",
+            "EAI"
+          ],
+          [
+            "PCM"
+          ],
+          [
+            "PCN"
+          ],
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "15:37:58",
+      "content": {
+        "utterances": [
+          "Like comparing Item28 and Item31, which one would you see is more water-resistant?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "CC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "15:38:00",
+      "content": {
+        "utterances": [
+          "Mm-hmm.",
+          "Item31 definitely is water-resistant, less breathable, right?",
+          "It's definitely, you know, reported to be a water-resistant shoe built to be waterproof for all weather conditions.",
+          "Whereas Item28 is more built for your average condition.",
+          "There might be a little bit of rain, might be a bit muddy, but you can still breathe into the shoe.",
+          "Air can still get in.",
+          "Yeah."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "PCM"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "PCM"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 16,
+      "timestamp": "15:38:36",
+      "content": {
+        "utterances": [
+          "Thank you.",
+          "Um, I think I'll go with Item31."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 17,
+      "timestamp": "15:38:40",
+      "content": {
+        "utterances": [
+          "Item31? Okay, no worries.",
+          "Um, could I get an idea of why you picked Item31?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 18,
+      "timestamp": "15:38:48",
+      "content": {
+        "utterances": [
+          "Mostly because of the water-resistance."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "EXP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 19,
+      "timestamp": "15:38:51",
+      "content": {
+        "utterances": [
+          "I see, great."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "c"
+}

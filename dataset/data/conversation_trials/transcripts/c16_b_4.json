@@ -1,0 +1,477 @@
+{
+  "conversation_id": 16,
+  "session_code": "b000",
+  "scenario": 4,
+  "mentioned_items": [
+    16,
+    17,
+    23,
+    24
+  ],
+  "gt_items": [
+    16
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "14:21:59",
+      "content": {
+        "utterances": [
+          "Hi, what can I help you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "14:22:03",
+      "content": {
+        "utterances": [
+          "Hi, so this weekend I'm going to a small dinner party at my friend's place.",
+          "It will be an indoor party, and I think it will be pretty casual, but I think everyone will just probably look nice.",
+          "So I want to look good as well, but I also want to feel relaxed because it's indoor and we will like just stay indoor all the time.",
+          "So I'm looking for some item that is not too formal or flashy, but comfortable.",
+          "Do you have any recommendations?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PEP",
+            "PCT"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "IQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "14:22:41",
+      "content": {
+        "utterances": [
+          "Yes, I would recommend Item16 and Item17 because they are stylish."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RS",
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "14:22:50",
+      "content": {
+        "utterances": [
+          "Mm-hmm.",
+          "Yeah, I think for these two, I would prefer Item16 because I don't really like the style of Item17.",
+          "But I'm also thinking about Item23 and Item24.",
+          "Do you think they are good as well?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "INT",
+            "CF"
+          ],
+          [
+            "PIP"
+          ],
+          [
+            "CON",
+            "IA"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "14:23:10",
+      "content": {
+        "utterances": [
+          "Uh, yes, they are like good for both casual and formal occasions.",
+          "So, um, but they are more like classic."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS",
+            "EAI"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "14:23:20",
+      "content": {
+        "utterances": [
+          "Mm-hmm.",
+          "What do you recommend, if I choose Item23, what do you recommend to wear inside? Because I'm thinking of having my own clothes to match it for Item23."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "IA"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "14:23:39",
+      "content": {
+        "utterances": [
+          "Maybe a shirt inside, and you can also wear a jacket outside of it.",
+          "But if you take off the jacket, it will also look nice."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "14:23:56",
+      "content": {
+        "utterances": [
+          "But what's the material of Item23?",
+          "Because I don't want it to be too hard for me to wash.",
+          "I don't want to do hand wash.",
+          "I want to use washing machine.",
+          "So is it washing machine washable?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IF"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "14:24:17",
+      "content": {
+        "utterances": [
+          "Yes, it's 100% cotton, and machine wash is perfect for it."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "14:24:23",
+      "content": {
+        "utterances": [
+          "Okay. What about Item24?",
+          "What's the material of Item24?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK",
+            "IF"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "14:24:33",
+      "content": {
+        "utterances": [
+          "Item24 is hand wash only."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "14:24:38",
+      "content": {
+        "utterances": [
+          "Oh, it's hand wash only.",
+          "So it will not be in my consideration then.",
+          "For Item23 and Item16, which one do you recommend?",
+          "Because I'm, maybe I'm just deciding between these two."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RJT"
+          ],
+          [
+            "IA"
+          ],
+          [
+            "NR"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "14:24:55",
+      "content": {
+        "utterances": [
+          "Mm-hmm. They're both a perfect fit for what you want.",
+          "But like, it depends if you want to be more stylish or more classic."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK",
+            "EP"
+          ],
+          [
+            "PCM"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "14:25:08",
+      "content": {
+        "utterances": [
+          "I see.",
+          "So is Item16 a one piece or like a two piece set?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "14:25:20",
+      "content": {
+        "utterances": [
+          "Uh...let me check.",
+          "It's two-piece."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "IP"
+          ],
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 16,
+      "timestamp": "14:25:36",
+      "content": {
+        "utterances": [
+          "It's a two-piece.",
+          "Okay."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 17,
+      "timestamp": "14:25:41",
+      "content": {
+        "utterances": [
+          "And it has a long length, like, maybe what you like."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 18,
+      "timestamp": "14:25:43",
+      "content": {
+        "utterances": [
+          "Okay, I think Item16 looks good as well.",
+          "Is it hand wash only?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "INT"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 19,
+      "timestamp": "14:25:54",
+      "content": {
+        "utterances": [
+          "No, machine wash is fine."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 20,
+      "timestamp": "14:26:00",
+      "content": {
+        "utterances": [
+          "So for Item16, can I match with other colors?",
+          "Let's say because this set is, like, gray and white.",
+          "And do you guys have, like, a gray and pink?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IF"
+          ],
+          [
+            "IF"
+          ],
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 21,
+      "timestamp": "14:26:11",
+      "content": {
+        "utterances": [
+          "I think we have."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 22,
+      "timestamp": "14:26:14",
+      "content": {
+        "utterances": [
+          "Okay.",
+          "Sure, I think Item16... it's good.",
+          "Um, can I take one?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PIP"
+          ],
+          [
+            "ACT"
+          ],
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 23,
+      "timestamp": "14:26:28",
+      "content": {
+        "utterances": [
+          "Yes, sure."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "<no tag available>"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "b"
+}

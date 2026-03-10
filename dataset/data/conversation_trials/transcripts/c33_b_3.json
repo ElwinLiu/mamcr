@@ -1,0 +1,245 @@
+{
+  "conversation_id": 33,
+  "session_code": "b000",
+  "scenario": 3,
+  "mentioned_items": [
+    13,
+    18,
+    22
+  ],
+  "gt_items": [
+    22
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "16:37:44",
+      "content": {
+        "utterances": [
+          "So, hi, how can I help you today?",
+          "We have a new collection of tops and active wears."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "16:37:52",
+      "content": {
+        "utterances": [
+          "Um, hi, I'm looking for some professional look that's slightly tailored, and preferably neutral color and comfortable to sit for a long period of time."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "16:38:04",
+      "content": {
+        "utterances": [
+          "Sounds great.",
+          "Um... How would you think of Item18, for example?",
+          "Are you actually into zipper front jackets?",
+          "It's super warm and cozy and can serve in different places and purposes."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS",
+            "A"
+          ],
+          [
+            "RP"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "16:38:20",
+      "content": {
+        "utterances": [
+          "Yeah, I really like the design.",
+          "Do you have any other recommendations?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "INT"
+          ],
+          [
+            "CON"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "16:38:24",
+      "content": {
+        "utterances": [
+          "Yeah, sure.",
+          "Uh, we have multiple different options as well.",
+          "For example, if you don't like the zipper or button in front of the clothes, for example, we have Item22 which is a turtleneck jacket.",
+          "That can also fit multiple different purposes and can allow you to look professional.",
+          "What do you think of that?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "IP"
+          ],
+          [
+            "RS",
+            "EP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "16:38:50",
+      "content": {
+        "utterances": [
+          "Um, I actually prefer Item22.",
+          "It makes me look more professional at work."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ],
+          [
+            "EXP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "16:38:56",
+      "content": {
+        "utterances": [
+          "Sounds great.",
+          "Also, in the same line as Item22, we have Item13, which is also fine-tuned for your comfort and quality.",
+          "And it also has a very durable and long-lasting material.",
+          "And the major difference is in their collar.",
+          "The Item22 has a turtleneck, but Item13 doesn't, but they're both our best sellers",
+          "Which one would you prefer?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS",
+            "EP"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PCM"
+          ],
+          [
+            "PCM",
+            "EAI"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "16:39:29",
+      "content": {
+        "utterances": [
+          "Uh, out of the three, I would still prefer Item22."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "16:39:34",
+      "content": {
+        "utterances": [
+          "Sounds great."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "16:39:35",
+      "content": {
+        "utterances": [
+          "For it being professional."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "EXP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "16:39:37",
+      "content": {
+        "utterances": [
+          "You have a great taste."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "b"
+}

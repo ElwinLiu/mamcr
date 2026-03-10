@@ -1,0 +1,34 @@
+{
+  "id": 21,
+  "catalogue": "b",
+  "categories": [
+    "Clothing, Shoes & Accessories",
+    "Women",
+    "Clothing",
+    "Activewear",
+    "Vests"
+  ],
+  "product_name": "Columbia Women's Benton Springs Vest, Cirrus Grey Heather, Small",
+  "product_brand": "Visit the Columbia Store",
+  "product_rating": "4.4",
+  "product_description": [
+    "Durable fleece for core warmth in cold weather.",
+    "Perfect for layering or wearing alone.",
+    "Features zippered pockets and adjustable hem.",
+    "Key words: fleece, layering, warmth, pockets"
+  ],
+  "about_product": [
+    "Soft and warm MTR filament material for winter activities.",
+    "Modern classic fit for comfortable outdoor use.",
+    "Crafted from plush filament fleece for warmth.",
+    "Key words: fleece, vest, winter, outdoor, comfort"
+  ],
+  "product_detail": {
+    "Fabric type": "100% Polyester",
+    "Care instructions": "Machine Wash",
+    "Closure type": "Zipper",
+    "Length": "Standard Length",
+    "Country of origin": "Vietnam"
+  },
+  "reviews": "Overall, reviews highlight the vest's comfort and practicality, with users appreciating the soft material and functional zippered pockets."
+}

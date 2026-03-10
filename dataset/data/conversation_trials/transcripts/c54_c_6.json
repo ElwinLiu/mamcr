@@ -1,0 +1,452 @@
+{
+  "conversation_id": 54,
+  "session_code": "c010",
+  "scenario": 6,
+  "mentioned_items": [
+    29,
+    30
+  ],
+  "gt_items": [
+    29
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "11:41:58",
+      "content": {
+        "utterances": [
+          "Hello, how can I help you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "11:42:01",
+      "content": {
+        "utterances": [
+          "Hi there, I'm looking for a pair of shoes, but probably for like a warm and humid day.",
+          "So anything that's like waterproof, basically."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IQ",
+            "PCT"
+          ],
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "11:42:22",
+      "content": {
+        "utterances": [
+          "Uh, okay, give me a second.",
+          "Let me check the specs for the shoes."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "IP"
+          ],
+          [
+            "IP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "11:42:26",
+      "content": {
+        "utterances": [
+          "And also probably easy to clean."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "11:42:29",
+      "content": {
+        "utterances": [
+          "Okay, um, are you thinking about more of an outdoor hiking shoe or like an everyday walking shoe?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "11:42:39",
+      "content": {
+        "utterances": [
+          "Yeah, I want to say...and I thought, well, a combination of both would be better.",
+          "I'm planning to probably like to walk around in the city, outdoors, and then stop by the local shops indoors as well.",
+          "So ... anything that's like...not like sports shoes, and also probably not business formal as well.",
+          "I just want something, like, in between the two extreme scenarios."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "RP"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "11:43:18",
+      "content": {
+        "utterances": [
+          "Uh, so I just want to know how important it is waterproof for you?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "11:43:26",
+      "content": {
+        "utterances": [
+          "Um, I'll just say like 40% and I'll probably avoid the slippers.",
+          "I think I do like Item29 and Item30, yeah."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PEP"
+          ],
+          [
+            "PIP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "11:43:55",
+      "content": {
+        "utterances": [
+          "Okay, yeah, so Item29 and Item30 are good choices.",
+          "So, Item30 is waterproof.",
+          "Also, it's designed, you know, as a work boot, so it can handle a variety...",
+          "Uh, sorry, did you say Item29 and Item30?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "11:44:18",
+      "content": {
+        "utterances": [
+          "Yes"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "11:44:18",
+      "content": {
+        "utterances": [
+          "Okay, yeah, okay, it can handle a variety of different scenarios.",
+          "Item29 is a little bit more casual, but it's also good for a lot of scenarios.",
+          "However, it's not waterproof.",
+          "But in terms of easy to put on and comfort, Item29 is a little bit better than Item30."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK",
+            "PCN"
+          ],
+          [
+            "EAI",
+            "PCN"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "PCM"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "11:44:42",
+      "content": {
+        "utterances": [
+          "Okay, I see.",
+          "What about the cleaning?",
+          "Is...are both, like, easy to clean?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "IF"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "11:44:49",
+      "content": {
+        "utterances": [
+          "Oh, sorry.",
+          "Yeah, so both are fairly easy to clean.",
+          "You just need to wipe them.",
+          "For Item30, it's a little bit easier, because it's waterproof, so you just need to wipe them lightly."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ANS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PCM",
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "11:45:03",
+      "content": {
+        "utterances": [
+          "Okay, which one is anti-flip by the way?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "11:45:07",
+      "content": {
+        "utterances": [
+          "Anti what, sorry?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 16,
+      "timestamp": "11:45:11",
+      "content": {
+        "utterances": [
+          "Anti-flip.",
+          "Oh, sorry, and anti-slip. Yeah."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ],
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 17,
+      "timestamp": "11:45:14",
+      "content": {
+        "utterances": [
+          "Anti-slip. Uh, so... Item29 is a slip-on, if that's what you mean?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 18,
+      "timestamp": "11:45:21",
+      "content": {
+        "utterances": [
+          "Yeah."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 19,
+      "timestamp": "11:45:21",
+      "content": {
+        "utterances": [
+          "Oh, sorry, anti-slip.",
+          "They have pretty good grips."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 20,
+      "timestamp": "11:45:29",
+      "content": {
+        "utterances": [
+          "Both ones, right?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 21,
+      "timestamp": "11:45:31",
+      "content": {
+        "utterances": [
+          "Both ones are, yeah."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 22,
+      "timestamp": "11:45:35",
+      "content": {
+        "utterances": [
+          "Okay. Yeah, I think I like Item29 better.",
+          "There's not that many designs, just more simple.",
+          "Yeah, I'll probably go with Item29."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ],
+          [
+            "ACT"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 23,
+      "timestamp": "11:45:51",
+      "content": {
+        "utterances": [
+          "Okay, great.",
+          "I'll just wrap up Item29 for you."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EF"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "c"
+}

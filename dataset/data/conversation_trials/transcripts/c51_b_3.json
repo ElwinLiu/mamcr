@@ -1,0 +1,262 @@
+{
+  "conversation_id": 51,
+  "session_code": "b001",
+  "scenario": 3,
+  "mentioned_items": [
+    13,
+    15,
+    23
+  ],
+  "gt_items": [
+    23
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "11:27:51",
+      "content": {
+        "utterances": [
+          "Hi, how can I help you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "11:27:54",
+      "content": {
+        "utterances": [
+          "Hi there, I'm looking for a layering piece that is casual, like in the middle of business casual and casual, and is good for a Friday in-office outfit."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IQ",
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "11:28:16",
+      "content": {
+        "utterances": [
+          "Are you looking for clothing, like for work or just, you know, casual everyday wear?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "11:28:24",
+      "content": {
+        "utterances": [
+          "Yeah, probably for, like, indoor work scenario, but for a Friday."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS",
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "11:28:32",
+      "content": {
+        "utterances": [
+          "Okay, cool.",
+          "So, do you have a preference with the color or material?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "11:28:41",
+      "content": {
+        "utterances": [
+          "Yeah, I want it to be like more like a simple, streamlined, probably not too oversized.",
+          "In terms of the color, I think all the options look good to me, as long as it's not that, like, bright or, you know, standout colors."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PEP"
+          ],
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "11:29:05",
+      "content": {
+        "utterances": [
+          "Okay, great.",
+          "Um... How about Item13 and Item15?",
+          "These are pretty good layering pieces for work, and it's not very formal, and you can wear them both formally and casually."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "11:29:24",
+      "content": {
+        "utterances": [
+          "Um, yeah, I do like Item15.",
+          "Did you say Item13 as well?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "INT"
+          ],
+          [
+            "AC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "11:29:30",
+      "content": {
+        "utterances": [
+          "Yes, I did."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "11:29:32",
+      "content": {
+        "utterances": [
+          "Okay.",
+          "I think I like Item15, but the tie there looks a little bit too formal for Friday.",
+          "So what about Item23?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "CF"
+          ],
+          [
+            "CON"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "11:29:45",
+      "content": {
+        "utterances": [
+          "Item23 is great as well.",
+          "It's not as formal as Item15, but it's a vest, so it can give you freedom in the arms.",
+          "Also, it's pretty comfortable, and it should be a very good layering piece for work."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "PER"
+          ],
+          [
+            "PCM",
+            "EAI"
+          ],
+          [
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "11:30:01",
+      "content": {
+        "utterances": [
+          "Okay, yeah, I'll probably go with Item23.",
+          "Feels like it's also, like, more practical in terms of, like, going with other layering pieces that I have.",
+          "So yeah, I'll probably go and buy Item23 then."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ],
+          [
+            "EXP"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "11:30:18",
+      "content": {
+        "utterances": [
+          "Okay, sounds good.",
+          "I'll just wrap up for you."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EF"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "b"
+}

@@ -1,0 +1,33 @@
+{
+  "id": 5,
+  "catalogue": "a",
+  "categories": [
+    "Clothing, Shoes & Accessories",
+    "Men",
+    "Clothing",
+    "Outerwear",
+    "Coats & Jackets",
+    "Wool & Blends"
+  ],
+  "product_name": "Pretifeel Mens Trench Coat Slim Fit Double Breasted Long Jacket Notched Lapel Belt Fall Windproof Coat",
+  "product_brand": "Brand: Pretifeel",
+  "product_rating": "4.1",
+  "product_description": [
+    "Windproof thermal jacket with multiple pockets.",
+    "Suitable for all casual occasions.",
+    "Machine washable for easy care.",
+    "Key words: jacket, outdoor, casual, multi-pocket, thermal"
+  ],
+  "about_product": [
+    "High quality windproof thermal fabric for comfort.",
+    "Classic double-breasted design with knee length.",
+    "Suitable for casual wear, outdoor activities, and travel.",
+    "Easy to match with various outfits.",
+    "Key words: windproof, thermal, stylish, versatile, durable"
+  ],
+  "product_detail": {
+    "Fabric type": "65% Polyester, 35% Cotton",
+    "Care instructions": "Hand Wash Only"
+  },
+  "reviews": "Overall, the reviews reflect a positive sentiment towards the jacket's style and functionality, with many praising its quality and fit. However, some users noted concerns about the material's durability and waterproof capabilities."
+}

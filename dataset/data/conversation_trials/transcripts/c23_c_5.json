@@ -1,0 +1,473 @@
+{
+  "conversation_id": 23,
+  "session_code": "c011",
+  "scenario": 5,
+  "mentioned_items": [
+    29,
+    30,
+    36
+  ],
+  "gt_items": [
+    36
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "15:24:51",
+      "content": {
+        "utterances": [
+          "All right.",
+          "Hello, how can I help you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "15:24:56",
+      "content": {
+        "utterances": [
+          "Um, hello, please give me a minute."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "15:24:59",
+      "content": {
+        "utterances": [
+          "No worries."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "15:25:38",
+      "content": {
+        "utterances": [
+          "Um, hello, I'm looking for like winter wear shoes,"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "15:25:39",
+      "content": {
+        "utterances": [
+          "Hey."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "15:25:43",
+      "content": {
+        "utterances": [
+          "But I'll be walking like in... like I'll be indoors and outside for the duration of wearing these shoes.",
+          "So, it's like something that can cover me, like keep me warm for the outside winter, but then not too hot for the inside."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT"
+          ],
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "15:26:01",
+      "content": {
+        "utterances": [
+          "Not too warm for inside.",
+          "Okay, give me one second."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "15:26:06",
+      "content": {
+        "utterances": [
+          "Okay."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "15:26:12",
+      "content": {
+        "utterances": [
+          "So are you going to be walking through any like snow or any sort of wet terrain?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "15:26:22",
+      "content": {
+        "utterances": [
+          "Like paved sidewalks, and then there's no..."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "15:26:24",
+      "content": {
+        "utterances": [
+          "Sidewalks?",
+          "Okay. Okay."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "15:26:26",
+      "content": {
+        "utterances": [
+          "And then normal store floors."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "15:26:29",
+      "content": {
+        "utterances": [
+          "Mm-hmm, mm-hmm, let's see...",
+          "All right, so what I can find...",
+          "Since you mentioned you'll also be wearing these indoors, I'm not sure what type of shoes you usually wear indoors, but from what I can sort of see in my head, Item36 is probably a good pick for you.",
+          "Um, It's a pretty casual style.",
+          "It's warm.",
+          "It sort of has like a plush wool inside for sort of extra warmth.",
+          "It's pretty lightweight.",
+          "It's sort of like a sheep fur lining on the inside, rubber sole, and it sort of covers your ankles.",
+          "Um, it's, it'd probably be pretty suitable to wear inside, as well as outside on sort of like a pavement or a dry area.",
+          "Um, we also have, you know, some of our boots, which, you know, Item30 and Item29 probably suit the winter conditions pretty well but I'm not sure if you'd want to wear those inside because they are sort of like a boot-style shoe.",
+          "So does any of those sound appealing to you?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "IP"
+          ],
+          [
+            "RS",
+            "EP"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "RS",
+            "EP"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "15:28:15",
+      "content": {
+        "utterances": [
+          "Um, yeah, out of the three, which one do you think is more comfortable?",
+          "Because I think I'll be walking a lot."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IA"
+          ],
+          [
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "15:28:24",
+      "content": {
+        "utterances": [
+          "Right.",
+          "So if you're walking a lot and you're not necessarily in any like rough terrain, mostly on sidewalks, probably Item36 is more comfortable for you.",
+          "Um, I mean, it does have like a wool inner lining and customers that review the item express that they're pretty satisfied with the comfort and the warmth of the shoes, you know, compared to some of their alternatives."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "PCM",
+            "EP"
+          ],
+          [
+            "EAI",
+            "PER"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 16,
+      "timestamp": "15:28:52",
+      "content": {
+        "utterances": [
+          "I see.",
+          "And then it wouldn't be too warm if I'm like in an indoor warmer space."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 17,
+      "timestamp": "15:28:59",
+      "content": {
+        "utterances": [
+          "Um, what's sort of... what's the temperature of, uh, the indoor space?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 18,
+      "timestamp": "15:29:07",
+      "content": {
+        "utterances": [
+          "Um, like in a restaurant kind of place?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 19,
+      "timestamp": "15:29:13",
+      "content": {
+        "utterances": [
+          "Oh, you'll tend to be okay in a restaurant.",
+          "They, from what I know, they don't keep their rooms, like, super warm or overly hot.",
+          "Um, so, yeah, I think Item36 should work for the restaurant.",
+          "Um, it does have a wool lining on the inside, so just keep that in mind.",
+          "But, overall, I think it should be okay for indoors.",
+          "However, you know, if you don't really care too much for fashion, and you just want something reliable, you know, something like that you probably keep on for the whole day.",
+          "Um, you could go with out boots.",
+          "Uh, But, you know, it'll definitely be less comfortable than Item36."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ],
+          [
+            "PCN"
+          ],
+          [
+            "PER"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PER"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "PCM"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 20,
+      "timestamp": "15:30:07",
+      "content": {
+        "utterances": [
+          "Which one is the out boots?",
+          "Which item number?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IF"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 21,
+      "timestamp": "15:30:10",
+      "content": {
+        "utterances": [
+          "Yeah, so Item30 and Item29 would be the boots."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 22,
+      "timestamp": "15:30:19",
+      "content": {
+        "utterances": [
+          "Um, I think I'll go with Item36."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 23,
+      "timestamp": "15:30:22",
+      "content": {
+        "utterances": [
+          "Item36?",
+          "Okay, yeah, for sure."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "c"
+}

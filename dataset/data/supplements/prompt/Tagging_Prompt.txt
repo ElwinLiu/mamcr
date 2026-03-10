@@ -1,0 +1,755 @@
+Below is the tagging prompt used for each conversation in VOGUE. 
+Note that the intent list was not final, since reviewers refined and expanded it as needed.
+
+Prompt:
+"""You are an expert annotator for multi-turn conversations in a conversational recommender system.
+Your task is to assign one or more **intent labels** to each utterance in a conversation. Follow the taxonomy below. Use only the exact label names (e.g., Accept (ACT), not "accept").
+Avoid over-tagging. Assign multiple intents only when the utterance clearly fulfills more than one function.
+---
+### SEEKER INTENT CATEGORIES
+
+Ask for Recommendation:
+• "Initial Query (IQ)" – User asks for a recommendation in the first query
+• Continue (CON) – User asks for another recommendation in a subsequent query
+
+Provide Preference:
+• Provide Context (PCT) – User provides background or situational information that may affect the recommendation
+• Provide Explicit Preferences (PEP) – User specifies desired features or requirements for the recommended item
+• Provide Implicit Preference (PIP) – User implies preference through comments or reactions without explicitly stating features on non-recommended items
+• Refine Preference (RP) – User improves over-constrained/under-constrained preferences
+
+Answer (ANS) – User answers a question from the recommender (i.e. Factual, Yes/No)
+
+Acknowledgement (ACK) – User shows understanding towards a previous recommender utterance (e.g., "Okay", "Got it").
+
+Recommendation Rating:
+• Accept (ACT) – User accepts the recommended item, either explicitly or implicitly (e.g., "I'll go with this", "This works").
+• Reject (RJT) – User rejects the recommended item, either explicitly or implicitly
+• Neutral Response (NR) – User does not indicate a decision with the current recommendations (e.g., "looks okay, but...").
+
+Inquire:
+• "Inquire - Factual (IF)" – User requires additional information (i.e. factual information) regarding the recommendation
+• "Inquire - Ask Opinion (IA)" – User requires the recommender’s personal opinions
+
+Critiquing:
+• Critique - Feature (CF) – User critiques on a specific feature of the recommended item
+• Critique - Add (CA) – User adds further constraints on top of the current recommendation
+• Critique - Compare (CC) – User requests comparison between recommended item with another item
+
+Explain (EXP) – User explains the reasons for accepting or selecting a recommendation, often right before, in or after the acceptance turn.
+Use EXP around an Accept (ACT) turn, especially when the user contrasts, justifies, or gives a personal reason
+Others:
+• Others (OTH) – Greetings, gratitude expression, chit-chat utterance
+
+
+---
+
+### ASSISTANT INTENT CATEGORIES
+
+Request:
+• Request Task Initiation (RTI) – Recommender initiates the conversation by requesting open-ended user input
+• Request Preferences (RP) – Recommender requests the User’s preference
+• Request Context (RC) – Recommender requests the User’s situational or background information
+• Clarify Question (CQ) – Recommender asks for clarification on a previous requirement
+• Ask Opinion (A) – Recommender requests the User’s opinion to a choice question (e.g., yes/no)
+• Ask Reasons (AR) – Recommender confirms task fulfillment during the conversation
+• Ensure Fulfillment (EF) – Recommender requests the User’s rational to a selected item
+
+Inform Progress (IP) – Recommender discloses the current item being processed
+
+Acknowledgement (ACK) – Recommender shows understanding towards a previous user utterance
+
+Answer (ANS) – Recommender answers the question issued by the User
+→ Do **not** tag assistant utterances that add unsolicited information as ANS. Use `EAI`, `EP`, etc.
+
+Recommend:
+• Recommend - Show (RS) – Recommender provides recommendation by showing it directly
+• Recommend - Explore (RE) – Recommender provides recommendation and asks if the user has prior knowledge
+• Recommend - Combine (REC) – Recommender provides a recommendation that is compatible or complementary to another item
+
+Explain:
+• Explain - Preference (EP) – Recommender explains recommendations based on the user’s said preference
+• Explain - Additional Info (EAI) – Recommender explains recommendations with features not previously discussed
+
+Personal Opinion:
+• Comparison (PCM) – Recommender compares two or more mentioned items
+• Persuasion (PER) – Recommender  positively evaluates or promotes a recommended item
+• Prior Experience (PEX) – Recommender refers to past experience with the recommended item
+• Context (PCN) – Recommender provides opinion considering the given context or current reality
+
+Others:
+• Others (OTH) – Greetings, gratitude expression, chit-chat utterance
+
+---
+
+### GENERAL GUIDELINES
+
+**Use "Answer (ANS)" ONLY for factual questions.**
+→ If the assistant simply shares product info or describes features without a question, use:
+• Explain - Additional Info (EAI)
+• Explain - Preference (EP)
+• Context (PCN), etc.
+
+**Use "Accept (ACT)" ONLY for firm selections.**
+→ Don’t use for “maybe”, “interested”, “looks good” — those are `Neutral Response (NR).
+
+**Use "Ensure Fulfillment (EF)" when the assistant checks if the user’s goal is met.**
+→ e.g., “Does this work for you?”, “Anything else?”
+
+**Distinguish "PCT" vs. "PEP":**
+• PCT = context/situation (e.g., “for summer”, “no dress code”)
+• PEP = item requirement (e.g., “breathable and comfortable“ )
+
+### Multi-Intent Guidance
+  # Many utterances contain more than one communicative function (e.g., recommendation + explanation). Assign multiple intent labels when the utterance performs clearly distinct acts.
+  # Examples:
+  # • “We have Item12, a very high-rated item”
+  #   → ["Recommend - Show (RS)", "Explain - Additional Info (EAI)"]
+  # • “Check out Item5 which matches your wool preference.”
+  #   → ["Recommend - Show (RS)", "Explain - Preference (EP)"]
+  # However, avoid overtagging: Do not assign multiple labels unless the meanings are clearly separable.
+---
+### OUTPUT FORMAT
+
+Return a JSON list.
+Each object should include:
+- "speaker": "Seeker" or "Assistant"
+- "utterance_id": same as the one in the json
+- "utterance": full text
+- "intent": list of one or more full intent label(s)
+
+Example:
+[
+  {{
+    "speaker": "Assistant",
+    "utterance_id":1,
+    "utterance": "Hi, how can I help you today?",
+    "intent": [
+      "Request Task Initiation (RTI)",
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id":2,
+    "utterance": "Yeah, so I want to choose a right outerwear for a fall visit to a farm.",
+    "intent": [
+      "Provide Context (PCT)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id":3,
+    "utterance": "So do you have any recommendations for me?",
+    "intent": [
+      "Initial Query (IQ)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id":4,
+    "utterance": "Yeah, for sure.",
+    "intent": [
+      "Acknowledgement (ACK)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id":5,
+    "utterance": "So you're visiting a farm in the fall, is that correct?",
+    "intent": [
+      "Clarify Question (CQ)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id":6,
+    "utterance": "Yes, and then it will be in the afternoon.",
+    "intent": [
+      "Answer (ANS)",
+      "Provide Context (PCT)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id":7,
+    "utterance": "Ah, okay, so where is this farm going to be?",
+    "intent": [
+      "Acknowledgement (ACK)",
+      "Request context (RC)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id":8,
+    "utterance": "Do you think it's going to be cold, or is it in a hotter area?",
+    "intent": [
+      "Request context (RC)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id":9,
+    "utterance": "The weather is cool with a chance of light rain.",
+    "intent": [
+      "Answer (ANS)",
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id":10,
+    "utterance": "Okay, Yeah.",
+    "intent": [
+      "Acknowledgement (ACK)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id"11,
+    "utterance": "So something, I would recommend something that is, you know, warm and comfortable, and also maybe waterproof.",
+    "intent": [
+      "Explain - Preference (EP)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id":12,
+    "utterance": "So I would suggest you taking a look at Item02, Item07, and Item09.",
+    "intent": [
+      "Recommend - Show (RS)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id":13,
+    "utterance": "So I can tell you more about them if you'd like.",
+    "intent": [
+      "Ask Opinion (AO)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id":14,
+    "utterance": "Yeah.",
+    "intent": [
+      "Answer (ANS)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id":15,
+    "utterance": "So are those all waterproof?",
+    "intent": [
+      "Inquire - Factual (IF)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id":16,
+    "utterance": "So not all of them are.",
+    "intent": [
+      "Answer (ANS)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id":17,
+    "utterance": "So Item02 is specifically designed for waterproof.",
+    "intent": [
+      "Explain - Additional Info (EAI)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id":18,
+    "utterance": "It's more of a hiking jacket.",
+    "intent": [
+      "Explain - Additional Info (EAI)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id":19,
+    "utterance": "The other two though, Item07 and Item09, are a little bit more comfortable with maybe more suited for like a fall vibe.",
+    "intent": [
+      "Explain - Additional Info (EAI)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id":20,
+    "utterance": "Oh, I see.",
+    "intent": [
+      "Acknowledgement (ACK)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id":21,
+    "utterance": "Because I'm going to be outdoors for a few hours and then I will be walking through grassy fields and then some dirt path.",
+    "intent": [
+      "Provide Context (PCT)",
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id":22,
+    "utterance": "So I need something that maybe can be, like. waterproof and then can separate the dust.",
+    "intent": [
+      "Refine Preference (RP)",
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id":23,
+    "utterance": "Yeah, sure.",
+    "intent": [
+      "Acknowledgement (ACK)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id":24,
+    "utterance": "May I ask, like, what is the purpose of this?",
+    "intent": [
+      "Request context (RC)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id":25,
+    "utterance": "Are you working there or are you visiting?",
+    "intent": [
+      "Clarify Question (CQ)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id":26,
+    "utterance": "Like, is it for fun or is it like...",
+    "intent": [
+      "Clarify Question (CQ)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id":27,
+    "utterance": "Yeah, it will just be for fun and then for like, so for several hours.",
+    "intent": [
+      "Answer (ANS)",
+      "Provide Context (PCT)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id":28,
+    "utterance": "Okay.",
+    "intent": [
+      "Acknowledgement (ACK)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id":29,
+    "utterance": "Yeah, in that case, I would recommend... probably Item02 will be your best bet.",
+    "intent": [
+      "Recommend - Show (RS)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id":30,
+    "utterance": "Because it is a really highly rated item, and it is very waterproof and weatherproof, and it's also very breathable, so, you know, perfect for a sustained period being outdoors.",
+    "intent": [
+      "Explain - Preference (EP)",
+      "Explain - Additional Info (EAI)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id":31,
+    "utterance": "So what do you think about that?",
+    "intent": [
+      "Ask Opinion (A)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id":32,
+    "utterance": "Yeah, yeah, I think I will go with Item02.",
+    "intent": [
+      "Accept (ACT)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id":33,
+    "utterance": "Okay, cool.",
+    "intent": [
+      "Acknowledgement (ACK)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id":34,
+    "utterance": "Sounds good.",
+    "intent": [
+      "Acknowledgement (ACK)"
+    ]
+  }}
+]
+
+##Example2:
+[
+  {{
+    "speaker": "Assistant",
+    "utterance_id": 1,
+    "utterance": "Okay, what can I help you find today?",
+    "intent": [
+      "Request Task Initiation (RTI)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id": 2,
+    "utterance": "No, I'm not ready.",
+    "intent": [
+      "Answer (ANS)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id": 3,
+    "utterance": "Oh, not already, sorry.",
+    "intent": [
+      "Acknowledgement (ACK)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id": 4,
+    "utterance": "Take your time.",
+    "intent": [
+      "Others (OTH)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id": 5,
+    "utterance": "Okay, I'm ready.",
+    "intent": [
+      "Others (OTH)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id": 6,
+    "utterance": "I will go to a farm in early fall, and I will... I might get dirty to participate in the activities like picking fruits and getting through the dirt.",
+    "intent": [
+      "Provide Context (PCT)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id": 7,
+    "utterance": "But, um, and the weather might change from cloudy to raining, so I want something waterproof.",
+    "intent": [
+      "Provide Context (PCT)",
+      "Provide Explicit Preferences (PEP)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id": 8,
+    "utterance": "Yeah, so I don't like Item11, Item10.",
+    "intent": [
+      "Provide Implicit Preference (PIP)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id": 9,
+    "utterance": "I think Item10 is not very durable, like it might get scratched.",
+    "intent": [
+      "Provide Implicit Preference (PIP)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id": 10,
+    "utterance": "I also don't like Item05.",
+    "intent": [
+      "Provide Implicit Preference (PIP)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id": 11,
+    "utterance": "I like Item02, Item01, and yeah, I'm choosing between Item02 and Item01.",
+    "intent": [
+      "Provide Implicit Preference (PIP)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id": 12,
+    "utterance": "I want to know if Item02 have a hoodie so I can...have a hood, so I can put it on you.",
+    "intent": [
+      "Inquire - Factual (IF)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+     "utterance_id": 13,
+    "utterance": "Yeah, for sure.",
+    "intent": [
+      "Acknowledgement (ACK)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id": 14,
+    "utterance": "So, yeah, so Item02 and Item01, right?",
+    "intent": [
+      "Clarify Question (CQ)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+     "utterance_id": 15,
+    "utterance": "Um, item 3 does have a hood, and it is fully... it has a waterproof exterior.",
+    "intent": [
+      "Answer (ANS)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id": 16,
+    "utterance": "So, it's really good if you're going to be, like, under the rain, or if it's just very... what... where you're going to?",
+    "intent": [
+     "Context (PCN)",
+     "Request context (RC)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id": 17,
+    "utterance": "Um, it's also very breathable, despite it being waterproof, so maybe if you're visiting a farm and you're doing a lot of physical activity, you can still, like, kind of like, comfortably breathe through this fabric.",
+    "intent": [
+      "Explain - Additional Info (EAI)",
+      "Context (PCN)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id": 18,
+    "utterance": "Um, it's also very durable, so I would recommend it for, like, if you were to, like, scratch it up in the field or something like that.",
+    "intent": [
+      "Explain - Additional Info (EAI)",
+      "Persuasion (PER)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id": 19,
+    "utterance": "Um, for Item01, I think... It would be a little less waterproof because there's also no hood to it, so if it rains, it's gonna fall on your head.",
+    "intent": [
+      "Comparison (PCM)",
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id": 20,
+    "utterance": "Also, it is made out of cotton, so you might get wet with that one.",
+    "intent": [
+      "Explain - Preference (EP)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id": 21,
+    "utterance": "But it's up to you.",
+    "intent": [
+      "Others (OTH)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id": 22,
+    "utterance": "Let me know if you have any more questions.",
+    "intent": [
+      "Ensure Fulfillment (EF)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id": 23,
+    "utterance": "Is there any other option that is waterproof?",
+    "intent": [
+      "Continue (CON)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id": 24,
+    "utterance": "I don't need a hood necessarily, but is there any other options?",
+    "intent": [
+      "Refine Preference (RP)",
+      "Continue (CON)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id": 25,
+    "utterance": "Um, so you mentioned you don't want Item10, but that one is water resistant.",
+    "intent": [
+      "Answer (ANS)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id": 26,
+    "utterance": "Um, but it might get scratched up.",
+    "intent": [
+      "Explain - Additional Info (EAI)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id": 27,
+    "utterance": "I would say item 3 is your best option, because our options are mostly not waterproof.",
+    "intent": [
+      "Persuasion (PER)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id": 28,
+    "utterance": "Can you tell me more about Item06?",
+    "intent": [
+      "Inquire - Factual (IF)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id": 29,
+    "utterance": "Yeah, Item06 is actually made out of cotton.",
+    "intent": [
+      "Answer (ANS)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id": 30,
+    "utterance": "Um, and the lining is polyester, so there's not that much waterproof.",
+    "intent": [
+      "Explain - Preference (EP)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id": 31,
+    "utterance": "But if you're just looking for something warm and comfortable, definitely you can go with that one.",
+    "intent": [
+      "Explain - Additional Info (EAI)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id": 32,
+    "utterance": "But yeah, there's also no hood, but it is more comfortable and warm.",
+    "intent": [
+      "Explain - Preference (EP)",
+      "Explain - Additional Info (EAI)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id": 33,
+    "utterance": "Yeah, then I think I will choose item 10, because I don't know if it'll rain or not.",
+    "intent": [
+      "Accept (ACT)",
+      "Explain (EXP)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id": 34,
+    "utterance": "If it's gonna ring and it's probably gonna be a light rain.",
+    "intent": [
+      "Explain (EXP)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id": 35,
+    "utterance": "Um, but item 10 looks more farmer style.",
+    "intent": [
+      "Critique - Feature (CF)",
+      "Explain (EXP)",
+      "Provide Explicit Preferences (PEP)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id": 36,
+    "utterance": "Um, I don't know. I'm gonna...",
+    "intent": [
+      "Neutral Response (NR)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id": 37,
+    "utterance": "Okay, yeah, for sure. Yeah, uh, just be careful.",
+    "intent": [
+      "Acknowledgement (ACK)",
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id": 38,
+    "utterance": "it is... machine wash is okay.",
+    "intent": [
+      "Explain - Additional Info (EAI)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id": 39,
+    "utterance": "Um... so, there's also a lot of pockets, if you want to put things inside.",
+    "intent": [
+      "Explain - Additional Info (EAI)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id": 40,
+    "utterance": "Yeah, I don't want the microplastics.",
+    "intent": [
+      "Explain (EXP)"
+    ]
+  }},
+  {{
+    "speaker": "Seeker",
+    "utterance_id": 41,
+    "utterance": "I don't know, like, not the microplastic, something from the water resistance thing getting into the soil, so Item06 would be my final choice.",
+    "intent": [
+      "Explain (EXP)",
+      "Accept (ACT)"
+    ]
+  }},
+  {{
+    "speaker": "Assistant",
+    "utterance_id": 42,
+    "utterance": "Sounds good.",
+    "intent": [
+      "Acknowledgement (ACK)"
+    ]
+  }}
+]
+
+Do **not** include explanation, formatting, or markdown in the output.
+### CONVERSATION
+{conversation_block}
+Now tag each utterance with the appropriate intent.
+"""

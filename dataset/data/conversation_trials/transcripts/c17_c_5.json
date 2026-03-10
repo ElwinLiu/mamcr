@@ -1,0 +1,428 @@
+{
+  "conversation_id": 17,
+  "session_code": "c100",
+  "scenario": 5,
+  "mentioned_items": [
+    29,
+    30,
+    36
+  ],
+  "gt_items": [
+    30
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "14:43:59",
+      "content": {
+        "utterances": [
+          "Hi, nice to meet you. Are you looking for anything specific?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "14:44:03",
+      "content": {
+        "utterances": [
+          "Hi, yes, I do.",
+          "So I have a vacation plan to Montreal with my friends in like next month.",
+          "So, I'm looking for a pair of shoes that is suitable for me, for that vacation, because I think in December it will be super cold in Montreal, and I want something easy to walk through streets.",
+          "And because I'm also going to visit some places, so I will be maybe out of, like... I will be outside all day in Montreal, so I want a pair of shoes that is easy to walk.",
+          "And most importantly, it has to be waterproof, because I will be walking on the snow, so yeah, and I also want it to be warm and comfy because of the cold weather, so do you think you guys have a suited style here, and can you recommend it for me?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT",
+            "PEP"
+          ],
+          [
+            "PCT",
+            "PEP"
+          ],
+          [
+            "PEP",
+            "IQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "14:45:14",
+      "content": {
+        "utterances": [
+          "Of course, yeah.",
+          "For waterproof shoes, we have Item29 and Item30.",
+          "And I think they are both suitable for your needs, because they are very comfortable and lightweight."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "14:45:31",
+      "content": {
+        "utterances": [
+          "Yeah, they look good, and also I saw Item36 as well.",
+          "I think it looks very comfortable and warm, but is it waterproof for Item36?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "INT"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "14:45:41",
+      "content": {
+        "utterances": [
+          "Yeah, Item36 is warm and comfortable, but it's not waterproof so..."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "14:45:57",
+      "content": {
+        "utterances": [
+          "Yeah, because I saw a lot of girls are currently wearing this kind of style of winter boots, so I also want to get one.",
+          "But since I will be walking, like, for almost all day during my vacation, so I don't want it to get wet easily.",
+          "Yeah, so I think Item29 and Item30, it's also good.",
+          "Like which one do you recommend more for like to me?",
+          "Because I didn't want it to be like too old school.",
+          "I want it to be like more trendy and also like stylish because maybe I'm also taking some pictures during that time so I want it to look good."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PEP"
+          ],
+          [
+            "RP"
+          ],
+          [
+            "INT"
+          ],
+          [
+            "IA"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "PEP",
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "14:46:52",
+      "content": {
+        "utterances": [
+          "Personally, I think Item30 is more stylish."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "PCM"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "14:46:55",
+      "content": {
+        "utterances": [
+          "Mm-hmm. Mm-hmm."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "14:46:59",
+      "content": {
+        "utterances": [
+          "And, um, yeah. Go ahead. Oh."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "14:47:02",
+      "content": {
+        "utterances": [
+          "Oh, keep going."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "14:47:05",
+      "content": {
+        "utterances": [
+          "And it's like customers have like really high ratings for Item30,",
+          "Like I said, it's very comfortable and the quality is really good."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "EAI"
+          ],
+          [
+            "EP",
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "14:47:14",
+      "content": {
+        "utterances": [
+          "Yeah, I think...yeah it looks pretty good, and I really like the style as well, but one thing I'm still considering is that I saw Item29, I don't need to..."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "INT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "14:47:38",
+      "content": {
+        "utterances": [
+          "To tie, tie the shoes?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "14:47:39",
+      "content": {
+        "utterances": [
+          "Yeah, to tie the shoes, and I think it looked more convenient.",
+          "But I really prefer the style of Item30.",
+          "So I'm kind of like deciding between these two, cannot decide yet."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ],
+          [
+            "INT"
+          ],
+          [
+            "IA"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "14:47:54",
+      "content": {
+        "utterances": [
+          "Yeah, it's really, it's more convenient.",
+          "Item29 is more convenient to wear, but like, do you need to take it on and off, like multiple times?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EAI",
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 16,
+      "timestamp": "14:48:06",
+      "content": {
+        "utterances": [
+          "Not necessarily, because I'm just walking out outdoor, I don't need to take it off very often though."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS",
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 17,
+      "timestamp": "14:48:14",
+      "content": {
+        "utterances": [
+          "Yeah, then maybe it's not too big of a problem for Item30, but it depends on you."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "PCN",
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 18,
+      "timestamp": "14:48:22",
+      "content": {
+        "utterances": [
+          "Um. Do they have this, like, basically the same level of waterproof, or which one is better?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 19,
+      "timestamp": "14:48:42",
+      "content": {
+        "utterances": [
+          "Uhm... I think they have pretty, like, very similar level of waterproof, because their fabric type is the same."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 20,
+      "timestamp": "14:48:50",
+      "content": {
+        "utterances": [
+          "Mm-hmm. Um, sure.",
+          "So I think I would just go with Item30, because I really like its style.",
+          "So yeah, I will get Item30 for now."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACT",
+            "EXP"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 21,
+      "timestamp": "14:49:07",
+      "content": {
+        "utterances": [
+          "Sure, yeah, and I think it looks good if you wear jeans."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK",
+            "PER"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 22,
+      "timestamp": "14:49:11",
+      "content": {
+        "utterances": [
+          "Yes, thank you for your recommendation."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "c"
+}

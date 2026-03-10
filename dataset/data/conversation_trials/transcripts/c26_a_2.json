@@ -1,0 +1,324 @@
+{
+  "conversation_id": 26,
+  "session_code": "a011",
+  "scenario": 2,
+  "mentioned_items": [
+    8,
+    11,
+    12
+  ],
+  "gt_items": [
+    8
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "17:25:07",
+      "content": {
+        "utterances": [
+          "Hello, how can I help you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "17:25:12",
+      "content": {
+        "utterances": [
+          "Um, hi.",
+          "I am just looking for something that kind of gets me through the day.",
+          "I'm a university student, and I just want something nice and, like, kind of like a transition piece from colder to, like, warmer weather"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "IQ"
+          ],
+          [
+            "PCT",
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "17:25:40",
+      "content": {
+        "utterances": [
+          "Okay, you said colder and light warmer."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "17:25:44",
+      "content": {
+        "utterances": [
+          "Yeah, something that kind of works in both situations.",
+          "And kind of shows my personality, I guess.",
+          "Nothing too bland."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "17:25:58",
+      "content": {
+        "utterances": [
+          "Is there any particular functionality you're looking for?",
+          "Like, waterproof, windproof?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RP"
+          ],
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "17:26:03",
+      "content": {
+        "utterances": [
+          "Um, not kind of windproof, but it doesn't have to be... it doesn't have to be."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "17:26:12",
+      "content": {
+        "utterances": [
+          "Okay.",
+          "Well, I'll say take a look at Item12 or Item11.",
+          "They both are similar designs.",
+          "The only difference is color.",
+          "I think Item12 is the black one.",
+          "Item11 is a gray one.",
+          "And those are the typical classic designs you're looking for, long coat, trench coat.",
+          "Um, there's other difference between those two are, Item11 is actually machine washable.",
+          "So if you're going for daily use, I think that's pretty important as well.",
+          "Item12, you can, it's hand wash only.",
+          "Um, both the materials are pretty good.",
+          "Item12 is 100% wool.",
+          "Um, Item11 is 100% polyester.",
+          "We have very positive customer reviews and feedback for both of the designs.",
+          "Are you looking for more daily usage or...?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "PCM"
+          ],
+          [
+            "PCN"
+          ],
+          [
+            "PCM"
+          ],
+          [
+            "PER"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "RC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "17:27:24",
+      "content": {
+        "utterances": [
+          "I think they might...",
+          "Yeah, more daily usage.",
+          "I think these might be a bit too heavy."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "ANS"
+          ],
+          [
+            "CF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "17:27:33",
+      "content": {
+        "utterances": [
+          "Oh, okay."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "17:27:35",
+      "content": {
+        "utterances": [
+          "Too warm."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "CF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "17:27:42",
+      "content": {
+        "utterances": [
+          "Then... give me a minute...",
+          "How about Item08?",
+          "It's the basic style-ish like baseball coat.",
+          "A lot of the graduate students, university students, are in this style.",
+          "It's a classic design unisex baseball jacket, right?",
+          "It's 100% cotton.",
+          "It has this durability and the coverage, basically one for the particular weather situation you described.",
+          "We have a lot of possible feedbacks on this one."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "IP"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "17:28:22",
+      "content": {
+        "utterances": [
+          "Yeah, I think that would be a good fit."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "17:28:28",
+      "content": {
+        "utterances": [
+          "Nice, let me pack it up for you."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "EF"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "a"
+}

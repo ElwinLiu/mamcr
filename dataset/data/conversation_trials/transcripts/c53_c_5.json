@@ -1,0 +1,238 @@
+{
+  "conversation_id": 53,
+  "session_code": "c001",
+  "scenario": 5,
+  "mentioned_items": [
+    30,
+    36
+  ],
+  "gt_items": [
+    36
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "11:47:57",
+      "content": {
+        "utterances": [
+          "Hi there, how can I help you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "11:48:01",
+      "content": {
+        "utterances": [
+          "Hi. I'm looking for a pair of shoes that's for the winter and I'll probably walk a lot both indoors and outside so..."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IQ",
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "11:48:15",
+      "content": {
+        "utterances": [
+          "Um, okay, great.",
+          "Um, do you have any preferences in terms of color?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "11:48:22",
+      "content": {
+        "utterances": [
+          "I don't really have, like, preferences of color, but I'm assuming, like, darker color would be probably easier to clean and hide the dirt.",
+          "I don't know."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS",
+            "PEP"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "11:48:37",
+      "content": {
+        "utterances": [
+          "Um, okay, great.",
+          "Are you looking for something that you can walk when it's snowing and raining, or just something a little bit more casual?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "11:48:48",
+      "content": {
+        "utterances": [
+          "Yeah, there's probably no snow, but it's still winter, right?",
+          "So I'll probably go with like ankle boots?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS",
+            "PCT"
+          ],
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "11:49:01",
+      "content": {
+        "utterances": [
+          "Okay.",
+          "So, yeah, so Item36 and Item30 are pretty good choices for winter boots.",
+          "That's also very warm.",
+          "But Item30 is a little bit more outdoorsy.",
+          "It has good grips.",
+          "It can be used as work boots versus Item36 is a little bit warmer, but you can really, you know, use it as a hiking or outdoor shoe."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PCM",
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "11:49:34",
+      "content": {
+        "utterances": [
+          "Okay, what about the, like... which one is more, like, comfortable and also practical for walking?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "11:49:41",
+      "content": {
+        "utterances": [
+          "If it's just in the city, Item36 is definitely more comfortable and more practical.",
+          "It's also a little bit lighter, so it's good for everyday city walking."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS",
+            "PCN"
+          ],
+          [
+            "EAI",
+            "PCN"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "11:49:54",
+      "content": {
+        "utterances": [
+          "Hmm-mm, okay.",
+          "Yeah, I do like Item36, the simple designs and nothing flashy.",
+          "So yeah, I can go with Item36."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "INT"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "11:50:05",
+      "content": {
+        "utterances": [
+          "Okay, sounds great.",
+          "I'll just wrap up Item36 for you."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EF"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "c"
+}

@@ -1,0 +1,420 @@
+{
+  "conversation_id": 14,
+  "session_code": "a000",
+  "scenario": 2,
+  "mentioned_items": [
+    2,
+    3,
+    5,
+    8
+  ],
+  "gt_items": [
+    2
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "14:06:31",
+      "content": {
+        "utterances": [
+          "Hi, are you looking for something specific today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "14:06:36",
+      "content": {
+        "utterances": [
+          "Yes, I'm looking for something to wear during my regular school day.",
+          "I think currently in this season, I think it will be a little bit chilly in the morning and I'm also going to campus on foot, so I'm wondering if there's any items suitable for me wearing to school, like by walking."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT"
+          ],
+          [
+            "PCT",
+            "IQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "14:07:07",
+      "content": {
+        "utterances": [
+          "Yeah, we have a lot of choices here.",
+          "How about Item03?",
+          "Let's start with Item03."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "RS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "14:07:15",
+      "content": {
+        "utterances": [
+          "Um, I'm, I personally don't like the style.",
+          "So do you have any other recommendations?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "RJT"
+          ],
+          [
+            "CON"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "14:07:24",
+      "content": {
+        "utterances": [
+          "OK."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "14:07:25",
+      "content": {
+        "utterances": [
+          "Like, more casual."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "14:07:26",
+      "content": {
+        "utterances": [
+          "Uh, okay, um... casual?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "14:07:27",
+      "content": {
+        "utterances": [
+          "Yes."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "14:07:29",
+      "content": {
+        "utterances": [
+          "How about Item08?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "14:07:33",
+      "content": {
+        "utterances": [
+          "Item08... the styles looks good for me, but I am looking for some more oversized instead of a fit to size.",
+          "So do you have, like, some oversized clothes, jackets that I can choose?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "CF",
+            "RP"
+          ],
+          [
+            "CON"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "14:07:55",
+      "content": {
+        "utterances": [
+          "How about Item05?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "14:07:59",
+      "content": {
+        "utterances": [
+          "Item05, it's a bit long, I think, because I'm not too high, like, not too tall.",
+          "So do you have, like, shorter, but like shorter in length, but overall like oversized?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "CF",
+            "PCT"
+          ],
+          [
+            "RP",
+            "CON"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "14:08:18",
+      "content": {
+        "utterances": [
+          "Um... so do you have any preferences, like looking at the other items?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "14:08:24",
+      "content": {
+        "utterances": [
+          "I personally want one of that with the... let me think about it.",
+          "Do you think Item02 looks good?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "PIP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "14:08:47",
+      "content": {
+        "utterances": [
+          "Let me see."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "IP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 16,
+      "timestamp": "14:08:49",
+      "content": {
+        "utterances": [
+          "Because I really like the style."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PIP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 17,
+      "timestamp": "14:08:55",
+      "content": {
+        "utterances": [
+          "Yes, yeah, it's not too thick, but it's still like windproof and waterproof.",
+          "So I think Item02 also fits your needs."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "EAI"
+          ],
+          [
+            "PER"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 18,
+      "timestamp": "14:09:07",
+      "content": {
+        "utterances": [
+          "Does it have a pocket that I can put my cell phone in it when I'm walking to campus?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 19,
+      "timestamp": "14:09:16",
+      "content": {
+        "utterances": [
+          "Yes, it has pockets."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 20,
+      "timestamp": "14:09:19",
+      "content": {
+        "utterances": [
+          "Uh, okay.",
+          "And do you think it's wind-resistant, because I think it looks like it's wind-resistant, and I prefer to some wind-resistant jackets, because it's a little bit windy and breezy in the morning."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "IA",
+            "PEP",
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 21,
+      "timestamp": "14:09:53",
+      "content": {
+        "utterances": [
+          "Uhm... I'm not sure if it's wind-resistant, but based on the quality, I think it will be OK for this kind of weather."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS",
+            "PCN"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 22,
+      "timestamp": "14:10:05",
+      "content": {
+        "utterances": [
+          "OK, and yeah, if this one has a color in white, I think I would pick this one."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 23,
+      "timestamp": "14:10:16",
+      "content": {
+        "utterances": [
+          "OK, yes, we have."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 24,
+      "timestamp": "14:10:18",
+      "content": {
+        "utterances": [
+          "OK, then I would get this one, then."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "a"
+}

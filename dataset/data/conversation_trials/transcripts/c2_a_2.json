@@ -1,0 +1,321 @@
+{
+  "conversation_id": 2,
+  "session_code": "a100",
+  "scenario": 2,
+  "mentioned_items": [
+    1,
+    4,
+    5,
+    6,
+    8,
+    12
+  ],
+  "gt_items": [
+    4
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "00:11:32",
+      "content": {
+        "utterances": [
+          "Hello, how can I help you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "00:11:35",
+      "content": {
+        "utterances": [
+          "Hey, I want to purchase one cloth that is good for my like...my regular day on campus."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "00:11:45",
+      "content": {
+        "utterances": [
+          "Okay, so you're looking for something to wear in a more formal setting for school?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "00:11:52",
+      "content": {
+        "utterances": [
+          "Yes, so I will wear it during the weekdays at the university, and then I will have a few classes.",
+          "And then maybe I will attend some study groups, and then I will be walking between buildings, and then I will drink some coffee and also hanging out around campus.",
+          "And then the weather, I think, is more like in late March in Toronto, and then it's a little bit cold in the morning, and then it will become slightly warmer by afternoon."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS",
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "00:12:31",
+      "content": {
+        "utterances": [
+          "Right, okay, so are we thinking something more formal or something more casual for your campus day-to-day?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK",
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "00:12:41",
+      "content": {
+        "utterances": [
+          "I want something that is like comfortable, and then functional, and then ideally something that fits my style.",
+          "Yeah, I'm looking for a jacket or outerwear."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PEP"
+          ],
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "00:12:57",
+      "content": {
+        "utterances": [
+          "Okay, yeah, so let's see",
+          "Okay, you can take a look at these items.",
+          "I'll list them out.",
+          "So there's Item08, Item05, and also Item01.",
+          "So all three of these are designed for comfort, and they're a bit of like different styles, but if you can let me know which one you think suits your style a bit more."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "IP"
+          ],
+          [
+            "IP"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EP",
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "00:13:29",
+      "content": {
+        "utterances": [
+          "Oh, I think maybe Item01 fits me more.",
+          "I don't like white color."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "INT"
+          ],
+          [
+            "CF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "00:13:35",
+      "content": {
+        "utterances": [
+          "Okay.",
+          "So we have other colors available as well for the items, but if you like Item01 's specific style, you can also take a look at Item06 and Item04, as well as Item12.",
+          "That might be a bit more similar in style to Item01.",
+          "They're all pretty highly rated and very comfortable, and they're all fairly warm, so perfect for the fall weather."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ANS",
+            "RS"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EP",
+            "EAI",
+            "PCN"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "00:14:11",
+      "content": {
+        "utterances": [
+          "Yeah, so I think I like Item04."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "00:14:16",
+      "content": {
+        "utterances": [
+          "Item04?",
+          "Okay, would you like to know more about it?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "CQ"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "00:14:22",
+      "content": {
+        "utterances": [
+          "Yeah, sure."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "00:14:23",
+      "content": {
+        "utterances": [
+          "Okay.",
+          "So yeah, it's a leather jacket.",
+          "It's very stylish, and it's machine washable, so, you know, you can fairly conveniently clean it.",
+          "And our customer reviews have said that this particular clothes is very comfortable, and they've rated it fairly highly.",
+          "It's one of our higher rated items.",
+          "So would you like to purchase this one?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI",
+            "EP"
+          ],
+          [
+            "EAI",
+            "PER"
+          ],
+          [
+            "EF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "00:14:56",
+      "content": {
+        "utterances": [
+          "Yeah, I think I'll go with Item04."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "00:14:59",
+      "content": {
+        "utterances": [
+          "Okay, cool. Thanks."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK",
+            "OTH"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "a"
+}

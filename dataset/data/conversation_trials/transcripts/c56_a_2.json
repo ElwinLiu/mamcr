@@ -1,0 +1,276 @@
+{
+  "conversation_id": 56,
+  "session_code": "a000",
+  "scenario": 2,
+  "mentioned_items": [
+    2,
+    3,
+    5,
+    10
+  ],
+  "gt_items": [
+    10
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "18:33:06",
+      "content": {
+        "utterances": [
+          "Hi, what can I help you look for today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "18:33:16",
+      "content": {
+        "utterances": [
+          "Yeah, just a regular outfit.",
+          "I would be going to the campus, so any comfortable outfit would be fine.",
+          "And I don't want to draw too much attention."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IQ"
+          ],
+          [
+            "PCT",
+            "PEP"
+          ],
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "18:33:37",
+      "content": {
+        "utterances": [
+          "Okay, so just something for school, like the daily wear?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "18:33:41",
+      "content": {
+        "utterances": [
+          "Yeah."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "18:33:43",
+      "content": {
+        "utterances": [
+          "Um, what is your personal style kind of like?",
+          "Do you prefer something maybe more leathery or kind of like casual or sporty?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RP"
+          ],
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "18:33:58",
+      "content": {
+        "utterances": [
+          "Functional, practical."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "18:34:00",
+      "content": {
+        "utterances": [
+          "Practical.",
+          "Okay, uh, I do... I recommend Item03.",
+          "It is 100% cotton, and it's very light, and it's a good outer jacket for you to wear.",
+          "It's not very too thick.",
+          "You can kind of wear it all day without it... well, like, without getting tired of it.",
+          "So, it's also good for all occasions, kind of versatile option.",
+          "Um, if you want something maybe a little more fancy for, like, going back to school in the fall, Item05 is more of, like, a casual outdoor jacket.",
+          "It's also windproof if it does get cold or windy.",
+          "Uh, I would say it's, like, slightly more, kind of like, stylish option compared to number one, um, where you can, like, layer things.",
+          "Um, yeah."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "RS",
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PCM",
+            "EAI"
+          ],
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "18:34:58",
+      "content": {
+        "utterances": [
+          "Yeah, I don't want to draw too much attention, so I think Item02 would be a great choice for me.",
+          "What do you think?",
+          "And, um, the weather... it will be in early March, so kind of chilly in the morning and then yeah."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PEP",
+            "PIP"
+          ],
+          [
+            "IA"
+          ],
+          [
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "18:35:20",
+      "content": {
+        "utterances": [
+          "Yeah, for sure. Item02 is more like a sporty option, especially if it's cold.",
+          "Um, depending where you are, it might not be, like, thick enough as an outdoor jacket.",
+          "So Item10 would be kind of, like, a more, like, heat-protective option.",
+          "And then, um, it is waterproof, though.",
+          "If it does rain a lot where you are, um, and it has a hood, so perfect for the rain.",
+          "But yeah, definitely it would draw less attention than, like, Item05, if you're just looking for something to wear every day."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK",
+            "EAI",
+            "PCN"
+          ],
+          [
+            "EAI",
+            "PCN"
+          ],
+          [
+            "RS",
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI",
+            "PCN"
+          ],
+          [
+            "PCM",
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "18:35:56",
+      "content": {
+        "utterances": [
+          "Thank you very much for your recommendation.",
+          "I didn't even notice Item10, but I like Item10.",
+          "Yeah, Item10 would be my final decision."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "ACT"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "18:36:10",
+      "content": {
+        "utterances": [
+          "Okay, sounds good."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "a"
+}

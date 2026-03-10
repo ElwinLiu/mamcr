@@ -1,0 +1,33 @@
+{
+  "id": 22,
+  "catalogue": "b",
+  "categories": [
+    "Clothing, Shoes & Accessories",
+    "Men",
+    "Clothing",
+    "Tops, Tees & Shirts"
+  ],
+  "product_name": "LONGBIDA Men Slim Fit Lightweight Long Sleeve Pullover Top Turtleneck T-Shirt",
+  "product_brand": "Visit the LONGBIDA Store",
+  "product_rating": "4",
+  "product_description": [
+    "Chest measurements available for accurate fitting.",
+    "Lightweight thermal turtleneck for casual and semi-formal occasions.",
+    "Great for layering in cooler weather.",
+    "Key words: turtleneck, lightweight, thermal, casual, versatile"
+  ],
+  "about_product": [
+    "65% polyester, 35% cotton, machine washable.",
+    "Stylish turtleneck design, slim fit, long sleeve.",
+    "Pairs well with jeans or suits for various looks.",
+    "Ideal for spring, fall, and winter wear.",
+    "Key words: basic shirt, pullover, casual, versatile, comfortable"
+  ],
+  "product_detail": {
+    "Fabric type": "65% Polyester, 35% Cotton",
+    "Care instructions": "Machine Wash",
+    "Closure type": "Pull On",
+    "Neck style": "Turtle Neck"
+  },
+  "reviews": "Overall, the product received mixed reviews. Many customers praised the quality and fit, noting it was true to size and comfortable. However, some expressed disappointment with quality control issues and sizing inconsistencies. Despite these concerns, several reviewers indicated they would purchase again, appreciating the style and comfort."
+}

@@ -1,0 +1,36 @@
+{
+  "id": 32,
+  "catalogue": "c",
+  "categories": [
+    "Clothing, Shoes & Accessories",
+    "Men",
+    "Shoes",
+    "Athletic",
+    "Running",
+    "Track & Field & Cross Country",
+    "Cross-Country"
+  ],
+  "product_name": "ASICS Men's Gel-Venture 10 Trail Running Shoes",
+  "product_brand": "Visit the ASICS Store",
+  "product_rating": "4.4",
+  "product_description": [
+    "Modified midsole with AMPLIFOAM for better cushioning",
+    "Rearfoot GEL technology for a softer feel",
+    "Advanced traction pattern for road and trail",
+    "Key words: cushioning, traction, comfort, outdoor, versatile"
+  ],
+  "about_product": [
+    "Mesh upper: Improves breathability",
+    "Solution dyeing process: Reduces water and carbon emissions",
+    "Rearfoot GEL technology: Enhances impact absorption",
+    "AMPLIFOAM cushioning: Provides superior comfort",
+    "Key words: breathable, eco-friendly, cushioning, comfort, grip"
+  ],
+  "product_detail": {
+    "Sole material": "Rubber",
+    "Outer material": "Polyester",
+    "Closure type": "Lace-Up",
+    "Water resistance level": "Not Water Resistant"
+  },
+  "reviews": "Overall, the reviews highlight exceptional comfort and fit, with many users expressing satisfaction for various activities like hiking and exercise. The shoes are praised for their cushioning and support, making them a popular choice among customers."
+}

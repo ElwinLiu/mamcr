@@ -1,0 +1,274 @@
+{
+  "conversation_id": 37,
+  "session_code": "a010",
+  "scenario": 1,
+  "mentioned_items": [
+    2,
+    6,
+    7,
+    8,
+    10
+  ],
+  "gt_items": [
+    2
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "18:52:27",
+      "content": {
+        "utterances": [
+          "What type of coat or jackets are you looking for?",
+          "Are you looking for...?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "18:52:35",
+      "content": {
+        "utterances": [
+          "Mmm, give me a minute.",
+          "Okay, and this time, I'm planning to go to a farm, probably in September, October, in the fall time.",
+          "And I'll go there in the afternoon, so I'll do some normal farm visits, like picking up fruits, exploring their agricultures, like corns, seasonal food markets, etc.",
+          "And I investigate the weather...it will be a little cool, and also it might rain, and so, in a farm, the ground may be damp and muddy.",
+          "And so for most of the farm, I believe, is in outside space, so I'll be walking through the grass, through the farmlands, and etc.",
+          "And maybe sometimes the path will be dirty after rain, I guess.",
+          "So for the jacket choices, I need a jacket that's suitable for this scenario, and in the meantime, I need... I will take a photo of this trip as well, so I need to look good in a jacket.",
+          "And as you can tell, it needs to be functional in this scenario as I described, but also gives me a good looking."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PEP",
+            "IQ"
+          ],
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "18:54:46",
+      "content": {
+        "utterances": [
+          "Okay, so, okay.",
+          "Since you're looking for a coat that is suitable for going to a farm in September, I think you need something that is light and comfortable because as you said, you want to use it for picking fruits and outdoor activities.",
+          "So, since it may rain, I think you need something to be waterproof.",
+          "Item02 is an excellent fit because it's waterproof.",
+          "Also, Item08 is a light jacket.",
+          "So you can also consider Item08 and also Item06 because it's suitable for autumn and winter outdoor activities, as mentioned in the specification.",
+          "And also it's warm, so you can choose among Item08 and Item06.",
+          "But since you mentioned you want to also take photos and you want to look good, so among these three options, maybe Item06 and Item08 are better.",
+          "Because Item02 although it's waterproof, but it's more simple and it's less stylish compared to Item08 and Item06.",
+          "So which one do you prefer more?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "RS",
+            "EP"
+          ],
+          [
+            "RS",
+            "EP"
+          ],
+          [
+            "RS",
+            "EP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "PCM",
+            "EP"
+          ],
+          [
+            "PCM",
+            "EP"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "18:56:14",
+      "content": {
+        "utterances": [
+          "Like, in this case, in a farm, and it's, you know, it's muddy.",
+          "I believe waterproof or mud-proof clothes might be better.",
+          "Item06 and Item08 seems very easy to get dirt on.",
+          "Whereas, Item02, it's comparably...more muddy proven, like rain proven.",
+          "So, aside from Item02, would you give me another Plan B to decide between?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT"
+          ],
+          [
+            "RP"
+          ],
+          [
+            "CF"
+          ],
+          [
+            "CF"
+          ],
+          [
+            "CON"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "18:56:52",
+      "content": {
+        "utterances": [
+          "And then, okay, Item07 is also a good option, because it's light.",
+          "It's good for doing outdoor activities, like picking fruits.",
+          "Also, it's a...it has a dark color, so it doesn't get dirty easily and...",
+          "Also, another option could be Item10, because it's also waterproof.",
+          "And, it's more like a winter jacket.",
+          "And it might be too warm for early in the fall.",
+          "But, I mean, you can consider it as a Plan B, both Item07 and Item10."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RS",
+            "EAI"
+          ],
+          [
+            "PCN"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "RS",
+            "EP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "PCN"
+          ],
+          [
+            "RS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "18:57:33",
+      "content": {
+        "utterances": [
+          "Yeah, yeah, they are good recommendations.",
+          "Deciding between Item02 and Item10, and I think I'll choose Item02.",
+          "It looks better.",
+          "It's waterproof, and it's dark, so it's kind of very hard to get dirty.",
+          "And also, it has the style that looks good, because I'm taking a photo, right?",
+          "So, yeah, I will choose this one."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACT"
+          ],
+          [
+            "EXP"
+          ],
+          [
+            "EXP"
+          ],
+          [
+            "EXP"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "18:58:00",
+      "content": {
+        "utterances": [
+          "Okay, I think you made an excellent choice."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "18:58:04",
+      "content": {
+        "utterances": [
+          "Thanks, appreciate it."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "a"
+}

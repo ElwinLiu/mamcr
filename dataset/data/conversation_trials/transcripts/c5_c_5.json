@@ -1,0 +1,410 @@
+{
+  "conversation_id": 5,
+  "session_code": "c000",
+  "scenario": 5,
+  "mentioned_items": [
+    29,
+    30,
+    36
+  ],
+  "gt_items": [
+    29
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "00:29:38",
+      "content": {
+        "utterances": [
+          "Hello, how can I help you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "00:29:40",
+      "content": {
+        "utterances": [
+          "Yeah, so I'm going to a trip to Montreal in winter, and then I plan to visit markets, museums, and I'm also going to have dinner in the evening.",
+          "I think I will move between outdoor streets, um, and then to warm indoor space throughout the day.",
+          "Yeah, so do you have any shoes recommended for winter?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "IQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "00:30:16",
+      "content": {
+        "utterances": [
+          "Yeah. Um... give me one second.",
+          "Uh, so you're looking for something to wear in Montreal during the winter."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "IP"
+          ],
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "00:30:26",
+      "content": {
+        "utterances": [
+          "Yes."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "00:30:27",
+      "content": {
+        "utterances": [
+          "So, uh, both outdoors and indoors."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "00:30:30",
+      "content": {
+        "utterances": [
+          "Yeah, outdoors"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "00:30:31",
+      "content": {
+        "utterances": [
+          "So Montreal is, uh, during the winter, there's, you can expect quite a bit of snow so I would recommend wearing something a bit weatherproof, so maybe like, uh, boots.",
+          "So I would say take a look at...I would say take a look at Item30, Item29 and Item36.",
+          "So these three, Item30, Item36, and Item29... so these three are all built to be durable in the outdoors and be weatherproof.",
+          "They're all very comfortable and very warm and I can tell you more about them if you'd like."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "PCN"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI",
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "00:31:37",
+      "content": {
+        "utterances": [
+          "Oh, so all of them are waterproof.",
+          "So I doubt Item36 is waterproof or not."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "00:31:46",
+      "content": {
+        "utterances": [
+          "So Item36 is not specifically waterproof, but it is designed specifically.",
+          "It is designed for like year-round wear.",
+          "So if you'll be a little bit more careful, like maybe walk on like the sidewalks during the winter, it would still be fairly valid.",
+          "So unless you think you'll be walking through a lot of snow, then maybe it wouldn't be suited."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PCN"
+          ],
+          [
+            "PCN"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "00:32:17",
+      "content": {
+        "utterances": [
+          "Yeah, I think I will be walking through a lot of snow, so maybe I will choose between Item30 and Item29.",
+          "So what's the difference between those two?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT",
+            "RP"
+          ],
+          [
+            "CC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "00:32:29",
+      "content": {
+        "utterances": [
+          "Okay, so Item29 is a... give me give me one second... so Item29 is a premium leather material, so it's very comfortable and very stylish.",
+          "And Item30, it's more of a... also made of leather, but it's more of like a hiking vibe, so it looks maybe not as stylish.",
+          "But this one, customers think it's very high quality and it's very durable and comfortable.",
+          "So I guess it depends on what kind of vibes you think you'll be going for."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "EAI"
+          ],
+          [
+            "PCM"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "00:33:19",
+      "content": {
+        "utterances": [
+          "Oh, I see.",
+          "Yeah, I think maybe Item29 will fit me more."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "INT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "00:33:28",
+      "content": {
+        "utterances": [
+          "Yeah, for sure.",
+          "I think as well cause you're going to museums and such, right?",
+          "So maybe Item29 will be a bit more suited for those settings."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "CQ"
+          ],
+          [
+            "PCN"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "00:33:40",
+      "content": {
+        "utterances": [
+          "Yeah, so if I want to go to the mountain, maybe Item30 will fit me better."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "EXP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "00:33:46",
+      "content": {
+        "utterances": [
+          "Yeah, yeah.",
+          "Winter hiking, Item30 will be better for sure."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "PCN"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 16,
+      "timestamp": "00:33:51",
+      "content": {
+        "utterances": [
+          "Yeah, but I'm not going to hike."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 17,
+      "timestamp": "00:33:53",
+      "content": {
+        "utterances": [
+          "Okay."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 18,
+      "timestamp": "00:33:55",
+      "content": {
+        "utterances": [
+          "Yeah, so yeah, I think it will all be city walk, so I will choose Item29."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "EXP",
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 19,
+      "timestamp": "00:34:02",
+      "content": {
+        "utterances": [
+          "Okay, yeah.",
+          "Sounds good"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 20,
+      "timestamp": "00:34:03",
+      "content": {
+        "utterances": [
+          "Thank you."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 21,
+      "timestamp": "00:34:04",
+      "content": {
+        "utterances": [
+          "Thanks."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "c"
+}

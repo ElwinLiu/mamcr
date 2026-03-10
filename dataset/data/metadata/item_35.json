@@ -1,0 +1,27 @@
+{
+  "id": 35,
+  "catalogue": "c",
+  "categories": [
+    "Clothing, Shoes & Accessories",
+    "Men",
+    "Shoes",
+    "Fashion Sneakers"
+  ],
+  "product_name": "Fila mens Disruptor II Sneakers",
+  "product_brand": "Brand: Fila",
+  "product_rating": "4.3",
+  "product_description": null,
+  "about_product": [
+    "Comfortable and wide fit",
+    "Aggressive tread for traction",
+    "Lightweight design",
+    "Key words: shoes, comfort, traction, lightweight"
+  ],
+  "product_detail": {
+    "Fabric type": "Leather / synthetic",
+    "Care instructions": "Machine Wash",
+    "Sole material": "Rubber",
+    "Outer material": "Leather"
+  },
+  "reviews": "Overall, the reviews are highly positive, highlighting the comfort, quality, and fit of the shoes. Many users appreciate the wide design and aggressive tread, making them suitable for walking. However, there is a notable negative review regarding durability, with one user experiencing issues after a short period. Overall, the sentiment is overwhelmingly favorable."
+}

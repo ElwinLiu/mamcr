@@ -1,0 +1,333 @@
+{
+  "conversation_id": 10,
+  "session_code": "b001",
+  "scenario": 4,
+  "mentioned_items": [
+    13,
+    16,
+    17,
+    19,
+    22,
+    24
+  ],
+  "gt_items": [
+    22,
+    17
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "11:15:12",
+      "content": {
+        "utterances": [
+          "Hi, good to see you!",
+          "Is there a certain look or style you're going for today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "11:15:18",
+      "content": {
+        "utterances": [
+          "Um... so... so I've been invited to a small dinner at my friend's apartment, but I just...there's no dress code, but I just want to, you know, wear something, like, nicer?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "11:15:43",
+      "content": {
+        "utterances": [
+          "Okay, that's cool.",
+          "Um... then, how about... Item16?",
+          "Item16 is quite a stylish item, and since the cotton is quite soft and lightweight, you can feel comfortable in the party."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EAI",
+            "PCN"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "11:16:05",
+      "content": {
+        "utterances": [
+          "Uh... sorry, what do you mean, the parking?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "AC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "11:16:08",
+      "content": {
+        "utterances": [
+          "Park... I mean, the party."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "11:16:10",
+      "content": {
+        "utterances": [
+          "Oh, in the party.",
+          "Oh, sorry.",
+          "Yeah, personally, I don't really enjoy the length of the clothes.",
+          "I like just normal length.",
+          "Um... so, yeah, I'm trying to be casual, clean, and comfortable."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "OTH"
+          ],
+          [
+            "CF"
+          ],
+          [
+            "RP"
+          ],
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "11:16:35",
+      "content": {
+        "utterances": [
+          "Then, how about Item17?",
+          "It has a normal length and since the style is the style of Japanese kimono style, I think it would look quite stylish."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RS"
+          ],
+          [
+            "EP",
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "11:16:49",
+      "content": {
+        "utterances": [
+          "Yeah, I think Item17 is... looks great.",
+          "And, but I just think out of the twelve options, not a lot of them are for casual purposes.",
+          "They look too formal."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "INT"
+          ],
+          [
+            "CF"
+          ],
+          [
+            "CF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "11:17:15",
+      "content": {
+        "utterances": [
+          "Yep, uh... but among them, I think Item24 and Item19 can be also a good choice for you since those look quite casual and clean."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK",
+            "RS",
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "11:17:30",
+      "content": {
+        "utterances": [
+          "Yeah, you're absolutely right.",
+          "I think Item17 is...looks the best for me among the twelve."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "INT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "11:17:40",
+      "content": {
+        "utterances": [
+          "Great.",
+          "Um, do you... If you want, I can recommend you some items that go well with Item17."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "11:17:49",
+      "content": {
+        "utterances": [
+          "Uh, sure."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "11:17:56",
+      "content": {
+        "utterances": [
+          "If the weather is... quite chill, you can wear Item22 or Item13 underneath the Item17."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "REC",
+            "PCN"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "11:18:07",
+      "content": {
+        "utterances": [
+          "Mmm, you're... yeah, you're absolutely right.",
+          "I think... having a turtleneck, like Item22 is a great option underneath Item17."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "INT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "11:18:20",
+      "content": {
+        "utterances": [
+          "Sure, and yeah, any items you want?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK",
+            "EF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 16,
+      "timestamp": "11:18:21",
+      "content": {
+        "utterances": [
+          "So, I will go with Item22 and Item17."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 17,
+      "timestamp": "11:18:27",
+      "content": {
+        "utterances": [
+          "Great."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "b"
+}

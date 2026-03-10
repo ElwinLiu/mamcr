@@ -1,0 +1,242 @@
+{
+  "conversation_id": 59,
+  "session_code": "c001",
+  "scenario": 5,
+  "mentioned_items": [
+    28,
+    29,
+    30,
+    35,
+    36
+  ],
+  "gt_items": [
+    29
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "18:39:16",
+      "content": {
+        "utterances": [
+          "Hi, how can I assist you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "18:39:32",
+      "content": {
+        "utterances": [
+          "I'm going to walk in the snow for a whole day.",
+          "So I want a shoe that's comfortable and waterproof, hopefully have some, can grab the floor properly, like the grits.",
+          "More friction, less slippery shoe, but yeah."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "18:40:03",
+      "content": {
+        "utterances": [
+          "Okay, so you're looking for winter shoes in the snow?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "18:40:07",
+      "content": {
+        "utterances": [
+          "Correct."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "18:40:07",
+      "content": {
+        "utterances": [
+          "Great to walk in the snow?",
+          "Okay. Um, okay, so right off the bat, our winter shoes are kind of more like Item30.",
+          "Uh, maybe number like Item28 and Item35 for casual wear, if it's not snowing.",
+          "Um, Item36 is warm, but definitely has less grip, and Item35.",
+          "Um, so... I would think that, um...",
+          "Okay, maybe Item30 is what you're looking for. So, um, it's a fabric, a leather fabric.",
+          "But it has a rubber sole, and, it's very grippy, so especially if you're outdoors, you can, like, it, like, prevents you from, like, slipping.",
+          "It's also waterproof if you're, like, stepping in the snow.",
+          "Um, it's a really, like, durable shoe overall.",
+          "Um, but if you're also maybe looking for something like, less durable and, like, kind of, like, thick and heavy, Item29 is a good option.",
+          "It's, like, lighter weight.",
+          "Might be less warm, though, if you're kind of wearing it in the winter, um, but it is still good for the outdoors, and very comfortable."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACK",
+            "RS"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "OTH"
+          ],
+          [
+            "ACK",
+            "RS",
+            "EAI"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI",
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "18:41:33",
+      "content": {
+        "utterances": [
+          "Thank you for the recommendation.",
+          "I tried Item30, like, a similar type Item30...similar type of shoes of number 6 before, and it's very non-flexible.",
+          "I cannot properly do my activities, I can only walk straight, walk backwards.",
+          "Um, so, I think Item29 has a better flexibility.",
+          "But I think it also has the... Um, friction... underneath it, right?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "RJT",
+            "CF"
+          ],
+          [
+            "CF"
+          ],
+          [
+            "NR"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "18:42:11",
+      "content": {
+        "utterances": [
+          "Uh, yeah. Um, so sole is actually synthetic.",
+          "It's not rubber, but it is like, it's shockproof.",
+          "Also, the insoles will reduce your joint impact, like, if you walk a lot.",
+          "Um, so, yeah, it's still pretty good for the weather.",
+          "It might be less warm, but it's a pretty good option."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "PER"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "18:42:36",
+      "content": {
+        "utterances": [
+          "Okay, then Item29 would be my final choice."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "18:42:41",
+      "content": {
+        "utterances": [
+          "Sounds good."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "c"
+}

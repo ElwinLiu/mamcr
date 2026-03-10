@@ -1,0 +1,198 @@
+{
+  "conversation_id": 25,
+  "session_code": "a100",
+  "scenario": 1,
+  "mentioned_items": [
+    5
+  ],
+  "gt_items": [
+    5
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "17:20:31",
+      "content": {
+        "utterances": [
+          "Hello, what can I do for you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "17:20:35",
+      "content": {
+        "utterances": [
+          "Hi, I am gonna be outside yet again.",
+          "Um... I want something that kind of protects me from the sun and gives me some, like, warmth, but nothing too heavy."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT"
+          ],
+          [
+            "PEP",
+            "IQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "17:20:44",
+      "content": {
+        "utterances": [
+          "Mm-hmm, Okay.",
+          "And it is particularly useful for springtime, summertime?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "17:20:59",
+      "content": {
+        "utterances": [
+          "Yeah, like... spring, fall, like early fall."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "17:21:06",
+      "content": {
+        "utterances": [
+          "Okay."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "17:21:15",
+      "content": {
+        "utterances": [
+          "It also has to look kind of nice, like, put together, nothing too casual."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "17:21:21",
+      "content": {
+        "utterances": [
+          "Mm-hmm, mm-hmm, I'm looking...",
+          "Um...how about take a look at Item05.",
+          "This is the classic design we have.",
+          "It's windproof.",
+          "It also has thermal technology, allows it to be winterproof and lightweight at the same time.",
+          "It was suitable for... might be slightly cold days or for the high temperatures that's also good.",
+          "It has this classic design, double breast, right?",
+          "It's suitable for casual wear, but I think you can also do it for office days.",
+          "Um... this one has a pretty high customer review.",
+          "I think it both has the style and the functionality.",
+          "What do you think?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "IP"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PER"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "17:22:23",
+      "content": {
+        "utterances": [
+          "Yeah, I think this is a good option."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "17:22:28",
+      "content": {
+        "utterances": [
+          "Nice."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "a"
+}

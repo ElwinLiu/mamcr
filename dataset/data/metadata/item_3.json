@@ -1,0 +1,34 @@
+{
+  "id": 3,
+  "catalogue": "a",
+  "categories": [
+    "Clothing, Shoes & Accessories",
+    "Men",
+    "Clothing",
+    "Outerwear",
+    "Coats & Jackets",
+    "Lightweight Jackets",
+    "Denim"
+  ],
+  "product_name": "Levi Strauss Signature Gold mens Signature Trucker JacketDenim Jacket",
+  "product_brand": "Brand: Levi Strauss Signature Gold",
+  "product_rating": "4.5",
+  "product_description": [
+    "Classic fit with modern style for any occasion.",
+    "Premium flex denim for all-day comfort.",
+    "Versatile layering piece for every guy.",
+    "Key words: trucker jacket, denim, classic, versatile"
+  ],
+  "about_product": [
+    "All-day comfort and authentic style.",
+    "Premium, durable lightweight flex denim.",
+    "Side hem adjusters and side pockets.",
+    "Key words: trucker jacket, denim, classic, durable"
+  ],
+  "product_detail": {
+    "Fabric type": "100% Cotton",
+    "Care instructions": "Machine Wash",
+    "Origin": "Imported"
+  },
+  "reviews": "Overall, customers express high satisfaction with the jacket's quality and style, noting its comfort and versatility. Many appreciate the classic design and durability, while a few mention sizing issues. Positive sentiments dominate, with several recommending the jacket as a wardrobe staple."
+}

@@ -1,0 +1,348 @@
+{
+  "conversation_id": 30,
+  "session_code": "c011",
+  "scenario": 6,
+  "mentioned_items": [
+    27,
+    31,
+    32
+  ],
+  "gt_items": [
+    32
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "17:13:04",
+      "content": {
+        "utterances": [
+          "Okay, how can I help you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "17:13:10",
+      "content": {
+        "utterances": [
+          "Just need to read a bit, um...",
+          "Okay, I'm looking for some shoes which can handle, like, a little bit of, like, muddiness, maybe.",
+          "But I want something that's kind of... that are good in the heat and can be kind of aesthetic as well."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "17:13:41",
+      "content": {
+        "utterances": [
+          "Are you going to hiking, or what's the scenario that they use?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "17:13:44",
+      "content": {
+        "utterances": [
+          "Um, like, walking through the park, but it rained or something like that."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS",
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "17:13:54",
+      "content": {
+        "utterances": [
+          "Hey, let me see... we have...",
+          "And you mentioned you wanted using it in, maybe, hot temperature?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "IP"
+          ],
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "17:14:02",
+      "content": {
+        "utterances": [
+          "Yeah, it's gonna be kind of hot, so I want something that doesn't make me sweat."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS",
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "17:14:07",
+      "content": {
+        "utterances": [
+          "And it also needs to be, you say, survive the muddy scenarios?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "17:14:14",
+      "content": {
+        "utterances": [
+          "Hmm."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "17:14:16",
+      "content": {
+        "utterances": [
+          "So we're kind of looking for a breezy one, and at the same time, it needs to be waterproof."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "17:14:24",
+      "content": {
+        "utterances": [
+          "Not necessarily waterproof, but if it gets, like, dirty, it's not really an issue.",
+          "Something that has, like, traction, as well."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "RP"
+          ],
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "17:14:31",
+      "content": {
+        "utterances": [
+          "I see, I see, okay.",
+          "Let me see...",
+          "Well, if you focus on usability, I would say Item31.",
+          "Take a look at Item31.",
+          "And it has this surface that's breezy, and it's waterproof.",
+          "And the most important is machine washable.",
+          "But I do say that in... maybe, if you're looking for better performance in hot temperatures, then, Item32 would be, again, my choice.",
+          "It's not necessarily waterproofing, but the surface technique from this brand is actually... Um, I would say semi-waterproofing.",
+          "It has some level of that.",
+          "And this one is typically... It's more comfortable, or it's more breathable than the previous choice.",
+          "And also, it comes with a color that you can survive the muddy scenarios."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "IP"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "RS",
+            "EP"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PCM",
+            "EP"
+          ],
+          [
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "17:16:11",
+      "content": {
+        "utterances": [
+          "Yeah, I think they're both good options.",
+          "Kind of just depends on..."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "NR"
+          ],
+          [
+            "NR"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "17:16:15",
+      "content": {
+        "utterances": [
+          "Mm-hmm."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "17:16:17",
+      "content": {
+        "utterances": [
+          "Aesthetics, but they're both suitable."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "NR"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "17:16:22",
+      "content": {
+        "utterances": [
+          "Okay, would you like to?",
+          "No, you have the choice of, like, maybe warmer weather, you take Item32.",
+          "And maybe the temperature's not too much of the heat, then you take Item27.",
+          "I can pack two for you."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "PCM"
+          ],
+          [
+            "PCM"
+          ],
+          [
+            "EF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 16,
+      "timestamp": "17:16:39",
+      "content": {
+        "utterances": [
+          "Probably, you know, in my... frugal ways, I would just take Item32 because I think it's going to be hot."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT",
+            "EXP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 17,
+      "timestamp": "17:16:47",
+      "content": {
+        "utterances": [
+          "Okay, no problem."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "c"
+}

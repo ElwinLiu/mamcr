@@ -1,0 +1,39 @@
+-----------------------------------------------------------------
+Post-Dialogue Surveys
+-----------------------------------------------------------------
+
+After each dialogue, both Seekers and Assistants completed short 
+surveys about their experience. Responses are recorded in the 
+`assistant_ratings.csv/` and `seeker_ratings.csv/` CSV files. 
+
+-----------------------------------------------------------------
+Seeker Satisfaction Questions
+-----------------------------------------------------------------
+
+Responses on a 1–5 scale (1 = Strongly Disagree, 5 = Strongly Agree):
+
+- likert_1: "The conversation allowed me to make a good selection on what to buy."
+- likert_2: "I made a well justified final selection."
+- likert_3: "I would actually purchase the item selected."
+- likert_4: "During the conversation, I felt like I was in control of the process."
+- likert_5: "I found the recommendations given by the Assistant helpful."
+
+Seekers also provided **item-level ratings** for each 
+catalog item in the scenario (e.g., item_1), on a 1–5 scale:  
+1 = Not likely to purchase, 5 = Very likely to purchase.
+
+-----------------------------------------------------------------
+Assistant Reflection Question
+-----------------------------------------------------------------
+
+Assistants completed one free-text question:
+
+- "Please describe what you think the Seeker's scenario was."
+
+This reflection is recorded in the `assistant_interpretation` 
+column of the survey CSV files.
+
+Assistants also provided **item-level ratings** based on how 
+likely they thought the Seeker would be to buy each catalog item
+ in the scenario (e.g., item_1), on a 1–5 scale:  
+1 = Not likely to purchase, 5 = Very likely to purchase.

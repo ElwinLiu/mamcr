@@ -1,0 +1,32 @@
+{
+  "id": 36,
+  "catalogue": "c",
+  "categories": [
+    "Clothing, Shoes & Accessories",
+    "Men",
+    "Shoes",
+    "Boots"
+  ],
+  "product_name": "UGG mens Classic Mini",
+  "product_brand": "Visit the UGG Store",
+  "product_rating": "4.5",
+  "product_description": [
+    "Classic Mini silhouette for casual style",
+    "Ankle height for year-round wear",
+    "Genuine twin-faced sheepskin upper",
+    "Key words: Classic Mini, casual, comfort, sheepskin"
+  ],
+  "about_product": [
+    "Signature UGG comfort with Twinface sheepskin",
+    "Plush wool insole for warmth",
+    "Lightweight, flexible EVA outsole",
+    "Key words: UGG, comfort, sheepskin, boots"
+  ],
+  "product_detail": {
+    "Fabric type": "Suede",
+    "Fur description": "Dyed Sheep Fur (Fur Origin: Australia/Ireland/Spain/United Kingdom/United States)",
+    "Sole material": "Rubber",
+    "Shaft height": "5"
+  },
+  "reviews": "Overall, customers express high satisfaction with the comfort and warmth of the boots, although some experienced fit issues. Many appreciate the quality and quick shipping, while a few reported durability concerns after limited use."
+}

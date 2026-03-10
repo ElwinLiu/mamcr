@@ -1,0 +1,445 @@
+{
+  "conversation_id": 48,
+  "session_code": "c100",
+  "scenario": 6,
+  "mentioned_items": [
+    25,
+    26,
+    27,
+    28,
+    31,
+    32,
+    35
+  ],
+  "gt_items": [
+    32
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "12:06:06",
+      "content": {
+        "utterances": [
+          "Hi, how can I help you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "12:06:10",
+      "content": {
+        "utterances": [
+          "Yeah, um, I'm looking for shoes in summer weather."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IQ",
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "12:06:18",
+      "content": {
+        "utterances": [
+          "Sorry, can you repeat that?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "12:06:20",
+      "content": {
+        "utterances": [
+          "Yeah, I'm looking for a casual wear that I might need in the summer."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "12:06:27",
+      "content": {
+        "utterances": [
+          "Okay.",
+          "And it's a casual wear just for like, for daily use?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "12:06:36",
+      "content": {
+        "utterances": [
+          "Yeah, yeah, mostly for work and when I want to go outside for travel."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS",
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "12:06:42",
+      "content": {
+        "utterances": [
+          "Okay, so... and would you like a sort of more of a running shoe style or more of a clean, simple look?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "12:06:59",
+      "content": {
+        "utterances": [
+          "Yeah, um... I don't have... yeah, go ahead."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "12:07:02",
+      "content": {
+        "utterances": [
+          "For example like Item26 or Item25 or Item35 versus Item27, which has just like a simpler exterior design."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RS",
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "12:07:26",
+      "content": {
+        "utterances": [
+          "Yeah, I would say I would prefer the first set, like running shoes."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "12:07:31",
+      "content": {
+        "utterances": [
+          "Okay. Okay, and... Um... Just one second.",
+          "Okay, yeah, so for that sort of style. I definitely recommend, Item26 and Item25.",
+          "These are our highest rated casual wear running shoe types of products.",
+          "Do either of those stand out to you?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK",
+            "IP"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "12:08:22",
+      "content": {
+        "utterances": [
+          "Yeah, you know, I would say these are good and also popular as I see a lot of similar shoes like these, so I have also like sort of the same shoe.",
+          "So are there any other recommendations, like the style or, you know, like, I was seeking for running shoes, but not exactly what I have right now."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "RJT"
+          ],
+          [
+            "CON",
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "12:08:54",
+      "content": {
+        "utterances": [
+          "Okay. Um... Yeah, so...",
+          "Um, there's also Item35, and Item32 which still are more casual.",
+          "And then, I guess there's also Item31 and Item28 for more, like, a outdoor, sort of applications, like if you're going camping or hiking.",
+          "Um, but for work, I'd definitely more recommend either Item35 or Item32.",
+          "Is one of those more to your liking?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "RS",
+            "EAI"
+          ],
+          [
+            "RS",
+            "EP"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "12:09:36",
+      "content": {
+        "utterances": [
+          "Yeah, I would say Item31 and Item28 seems more heavy for me.",
+          "Like, also, it's..."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "CF"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "12:09:42",
+      "content": {
+        "utterances": [
+          "Yeah."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 16,
+      "timestamp": "12:09:45",
+      "content": {
+        "utterances": [
+          "Uh, so when you're working in the office, there will be like clipping sounds."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "CF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 17,
+      "timestamp": "12:09:50",
+      "content": {
+        "utterances": [
+          "Right."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 18,
+      "timestamp": "12:09:52",
+      "content": {
+        "utterances": [
+          "Yeah, uh... so, I think my final choice will be either Item35 or Item32.",
+          "Any like final recommendation or opinion?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "INT"
+          ],
+          [
+            "IA"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 19,
+      "timestamp": "12:10:04",
+      "content": {
+        "utterances": [
+          "Sure. So, Item32 gets very exceptional reviews of comfort and there's known to be, like, quite a versatile shoe, so you can use it for work, or also more... more athletic applications.",
+          "And they also have very good support and cushioning.",
+          "Um, Item35 still gets quite positive reviews, just not quite as high.",
+          "They're great for walking, though they aren't quite as durable as Item32.",
+          "Do you have a style preference between the two?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "EAI",
+            "PCN"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PCM"
+          ],
+          [
+            "PCM",
+            "EAI"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 20,
+      "timestamp": "12:10:59",
+      "content": {
+        "utterances": [
+          "I would say these styles are acceptable, and, you know, like I was thinking if Item35 is breathable?",
+          "I have to wear the shoes for a whole day, and I don't want my feet to smell bad."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "NR",
+            "IF"
+          ],
+          [
+            "PCT",
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 21,
+      "timestamp": "12:11:19",
+      "content": {
+        "utterances": [
+          "Right.",
+          "Yeah so, Item32, if you want breathability for the shoe, then Item32 is definitely the way to go."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ANS",
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 22,
+      "timestamp": "12:11:28",
+      "content": {
+        "utterances": [
+          "Oh, okay, I see, so... I think my final decision will be Item32."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 23,
+      "timestamp": "12:11:35",
+      "content": {
+        "utterances": [
+          "Okay, great."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "c"
+}

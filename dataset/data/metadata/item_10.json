@@ -1,0 +1,28 @@
+{
+  "id": 10,
+  "catalogue": "a",
+  "categories": [
+    "Clothing, Shoes & Accessories",
+    "Sport Specific Clothing",
+    "Outdoor Recreation",
+    "Men",
+    "Jackets",
+    "Down Jackets"
+  ],
+  "product_name": "Mountain Warehouse Seasons Mens Puffer Jacket - Lightweight Coat",
+  "product_brand": "Visit the Mountain Warehouse Store",
+  "product_rating": "4.2",
+  "product_description": null,
+  "about_product": [
+    "Thermal tested for extreme cold conditions.",
+    "Water-resistant fabric repels light rain.",
+    "Includes two convenient side pockets.",
+    "2-year warranty for quality assurance.",
+    "Key words: thermal, water-resistant, pockets, warranty, insulation"
+  ],
+  "product_detail": {
+    "Fabric type": "100% Polyamide",
+    "Care instructions": "Machine Wash"
+  },
+  "reviews": "Overall, the reviews highlight the jacket's warmth, lightweight design, and durability, with many users expressing satisfaction with its performance in cold conditions. However, there are concerns about stitching quality and a negative experience with a used item being sent. Most reviewers recommend the jacket for its value and functionality."
+}

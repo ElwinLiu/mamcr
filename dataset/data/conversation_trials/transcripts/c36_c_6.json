@@ -1,0 +1,245 @@
+{
+  "conversation_id": 36,
+  "session_code": "c001",
+  "scenario": 6,
+  "mentioned_items": [
+    26,
+    28,
+    31
+  ],
+  "gt_items": [
+    31
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "16:19:13",
+      "content": {
+        "utterances": [
+          "Hello, we have a whole new collection of shoes, ranging from comfy flip-flops to sturdy, waterproof winter boots.",
+          "What can I get to you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ],
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "16:19:27",
+      "content": {
+        "utterances": [
+          "Um, hi, I'm looking for quick dry and maybe water-resistant material, and also I wish that it's supportive for quite a bit of walking.",
+          "And preferably, I would like some, uh, neutral colors to match the park vibe as well."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PEP"
+          ],
+          [
+            "PEP",
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "16:19:48",
+      "content": {
+        "utterances": [
+          "Great.",
+          "So, um... What do you think of Item31 which is a very popular hiking shoe, which can be great for your outdoor activities.",
+          "It's also... It has a plain black or gray color, which can fit basically with every different style, and probably most important of all, it's also waterproof."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS",
+            "EAI"
+          ],
+          [
+            "EP",
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "16:20:15",
+      "content": {
+        "utterances": [
+          "Um, is it also breathable material?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "16:20:22",
+      "content": {
+        "utterances": [
+          "Um...",
+          "Well, we don't have any particular mentions of it being breathable.",
+          "So, if that's really what matters to you a lot, we can certainly look into other options."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "ANS"
+          ],
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "16:20:43",
+      "content": {
+        "utterances": [
+          "I think... both Item31 and Item28, they have similar styles, and they match what I'm thinking so...",
+          "Yeah, I think Item31 would be a good choice."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "INT"
+          ],
+          [
+            "INT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "16:21:08",
+      "content": {
+        "utterances": [
+          "Great.",
+          "Um, I'm just checking the details of Item28 as well, to see if that's... that can also be considered as an option for you or not.",
+          "But the concern about Item28, even though it has a great style and it can match with every, you know, other clothes that you're wearing but we don't have any mention of it being either breathable or being waterproof.",
+          "So, yeah, maybe I agree with you.",
+          "Item31 can be a better fit for your criteria."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "IP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "ACK"
+          ],
+          [
+            "PER"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "16:21:45",
+      "content": {
+        "utterances": [
+          "Yeah, sounds like Item31 is the one that I will purchase."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "16:21:51",
+      "content": {
+        "utterances": [
+          "Great, awesome.",
+          "Um, just FYI, I'll also need to introduce to you, just FYI, Item26.",
+          "Because that one is also... it also has a breathable material, and it's also plain, classic, black look, but it's not waterproof.",
+          "Just FYI, if you want to consider taking a look at it as well."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EP",
+            "EAI"
+          ],
+          [
+            "RE"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "16:22:19",
+      "content": {
+        "utterances": [
+          "Yeah, I actually like the design of Item31 more than Item26.",
+          "So, I'll still stay with option, Item31."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "CC"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "16:22:28",
+      "content": {
+        "utterances": [
+          "Awesome, great."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "c"
+}

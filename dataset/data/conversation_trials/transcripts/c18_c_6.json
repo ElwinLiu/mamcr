@@ -1,0 +1,293 @@
+{
+  "conversation_id": 18,
+  "session_code": "c000",
+  "scenario": 6,
+  "mentioned_items": [
+    26,
+    28,
+    31,
+    32
+  ],
+  "gt_items": [
+    31
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "14:37:37",
+      "content": {
+        "utterances": [
+          "Hi, nice to meet you.",
+          "What can I help you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "14:37:40",
+      "content": {
+        "utterances": [
+          "Hi, I'm looking for a pair of shoes because I'm going for a walk in a park after a rainy day.",
+          "So I think the weather is not too cold.",
+          "It's quite warm but I think the ground might be very slippery or damp",
+          "So I need a pair of shoes that are comfortable for walking, but also safe and stable.",
+          "Do you have any recommendations?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "IQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "14:38:17",
+      "content": {
+        "utterances": [
+          "Uh, sure.",
+          "Um... I would recommend Item31 because it's waterproofed and like it's very good for outdoor activities."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS",
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "14:38:34",
+      "content": {
+        "utterances": [
+          "Yeah, I also saw Item31 and I think it looks good, but I'm also considering Item26 and Item32, oh, and also Item28.",
+          "Can you tell the difference of these four items?",
+          "Because I think they are all look to like very like suitable for walking, but I'm not sure the exact difference between them."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "NR",
+            "PIP"
+          ],
+          [
+            "CC"
+          ],
+          [
+            "CC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "14:39:07",
+      "content": {
+        "utterances": [
+          "Sure.",
+          "Item26 and Item32, they are both like lightweight.",
+          "They're like the like running shoes and they are very comfortable, but they're not waterproofed.",
+          "For Item28, Item28 is waterproofed and good for outdoor activities, but the only reason that I didn't recommend it is because it's hand wash only."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EP",
+            "EAI"
+          ],
+          [
+            "EP",
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "14:39:36",
+      "content": {
+        "utterances": [
+          "Oh, it's hand wash only.",
+          "Yeah, okay.",
+          "So Item31 and Item28 are all water resistant, right?",
+          "Because I don't mind hand washing shoes.",
+          "I just want it to be safe for me to walk in a slippery ground because I may use it in the future, like not only this time.",
+          "So I want it to be great quality and also like waterproof and safe to walk."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACK"
+          ],
+          [
+            "IF"
+          ],
+          [
+            "RP"
+          ],
+          [
+            "RP",
+            "PCT"
+          ],
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "14:40:18",
+      "content": {
+        "utterances": [
+          "Yes.",
+          "And Item28 is good for hiking, if you need it in the future."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "14:40:24",
+      "content": {
+        "utterances": [
+          "Okay."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "14:40:25",
+      "content": {
+        "utterances": [
+          "And, um... Item31 is also good for hiking."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "14:40:29",
+      "content": {
+        "utterances": [
+          "Which one do you think has a lighter weight, because I don't want it to be too heavy?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IA"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "14:40:41",
+      "content": {
+        "utterances": [
+          "Item31 has a lighter weight."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "14:40:45",
+      "content": {
+        "utterances": [
+          "Okay.",
+          "Uhm.. sure, uhm... I think Item31 looks good for me.",
+          "Um, sure, um, I will take Item31 then."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACT"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "14:41:03",
+      "content": {
+        "utterances": [
+          "Okay."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "c"
+}

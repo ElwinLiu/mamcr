@@ -1,0 +1,303 @@
+{
+  "conversation_id": 32,
+  "session_code": "a001",
+  "scenario": 2,
+  "mentioned_items": [
+    7,
+    8,
+    9
+  ],
+  "gt_items": [
+    7
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "16:08:14",
+      "content": {
+        "utterances": [
+          "Hello, what sorts of coats or jackets can I get you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "16:08:20",
+      "content": {
+        "utterances": [
+          "Um, I'm actually looking for something that is easy to take on and off between classes.",
+          "And preferably, there are some pockets for me to carry small items.",
+          "Yeah.",
+          "Do you have any recommendations?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PEP"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "OTH"
+          ],
+          [
+            "IQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "16:08:36",
+      "content": {
+        "utterances": [
+          "Um, absolutely.",
+          "So, for example, what do you think of, uh...Item...",
+          "Oh, I'm so sorry, just give me a second."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "IP"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "16:08:50",
+      "content": {
+        "utterances": [
+          "No worries"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "16:09:13",
+      "content": {
+        "utterances": [
+          "Sorry, I was looking at the wrong page...",
+          "Okay, um, sorry for the delay.",
+          "Uh, so what do you think of denim jackets with, for example, warm flannel lining in it?",
+          "In particular, I'm thinking of Item07, which is, which also has multiple packets that can allow you to carry your stuff between your classes."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "OTH"
+          ],
+          [
+            "A"
+          ],
+          [
+            "RS",
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "16:10:27",
+      "content": {
+        "utterances": [
+          "Uh, yeah, I think it matched my aesthetics and most students' aesthetics.",
+          "So, Item07 is good."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "INT"
+          ],
+          [
+            "INT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "16:10:35",
+      "content": {
+        "utterances": [
+          "Great.",
+          "Would you like to consider other items, if you, other items as well?",
+          "Like, for example, Item09 also is another flannel jacket with, you know, western styling.",
+          "And it's also pretty warm.",
+          "It also has different additional pockets, and actually, it does not have several pockets, but it does have, you know, one or two.",
+          "So how do you like this one?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "A"
+          ],
+          [
+            "RS",
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "16:11:05",
+      "content": {
+        "utterances": [
+          "Um, I would say I prefer Item07 than Item09, or even Item08."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "INT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "16:11:10",
+      "content": {
+        "utterances": [
+          "Awesome."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "16:11:12",
+      "content": {
+        "utterances": [
+          "Pretty good, in terms of how, like...It's neutral.",
+          "I like how simple the design is."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "CF"
+          ],
+          [
+            "CF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "16:11:21",
+      "content": {
+        "utterances": [
+          "Great, yeah, Item08 is actually also a great choice.",
+          "It's basically a baseball jacket, which is, you know, you can wear it in multiple occasions, in multiple different places.",
+          "It's really stylish but the only downside of it is that it doesn't have any pockets.",
+          "Uh, so since you mentioned that it's actually important for you, it ...might not be the... it actually has two small pockets, but at least in the reviews from the customers, you know, mentions that its pockets are, you know.",
+          "So, it's spacious to fit all your stuff.",
+          "So, that's also a great choice, but maybe if you really care about, you know, having several pockets, Item07 can still be a better choice.",
+          "What do you think?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK",
+            "PER"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI",
+            "EP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "PCM"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "16:12:13",
+      "content": {
+        "utterances": [
+          "Yes, I agree with you.",
+          "I think Item07 is the perfect choice."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "16:12:18",
+      "content": {
+        "utterances": [
+          "Great, awesome."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "a"
+}

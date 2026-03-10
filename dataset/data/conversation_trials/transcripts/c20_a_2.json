@@ -1,0 +1,360 @@
+{
+  "conversation_id": 20,
+  "session_code": "a010",
+  "scenario": 2,
+  "mentioned_items": [
+    5,
+    11,
+    12
+  ],
+  "gt_items": [
+    5
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "15:48:19",
+      "content": {
+        "utterances": [
+          "Okay, great.",
+          "Um...I'm going to give you some time to look through things.",
+          "Just let me know when you're ready."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "OTH"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "15:48:59",
+      "content": {
+        "utterances": [
+          "Okay.",
+          "The temperature is, like, kind of late March, so it's, like, mostly chilly in the morning, but then it gets slightly warmer by the afternoon.",
+          "And then I'm looking for, like a jacket, or something I can put on... like, easy to take on, easy to put on, and easy to take it off.",
+          "Do you have any suggestions for this?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "IQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "15:49:20",
+      "content": {
+        "utterances": [
+          "Okay, like a jacket?",
+          "Are you looking for, you know, something with sort of a longer, like a bit of length to it, goes past your hip, or are looking for something that sort of stops at the hip?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "CQ"
+          ],
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "15:49:35",
+      "content": {
+        "utterances": [
+          "Um...maybe a lengthier one would be great."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "15:49:38",
+      "content": {
+        "utterances": [
+          "Lengthier one?",
+          "Okay, so we have a few items that do have some length.",
+          "So Item11, Item12, and Item05 all have quite a bit of length.",
+          "So Item11 is pretty good for, you know, general wear, formal, and casual occasions.",
+          "It's 100% polyester, but it does have that sort of wool feel to it.",
+          "It does look like a premium fabric, and you know it's sort of like a trench coat, so easy to throw and easy to take off.",
+          "Item12 is, you know, a lot more formal looking, but can still be worn as a general purpose coat.",
+          "It is more of a winter coat, it is 100% wool, so it's a little bit on the warmer side, if you do prefer that.",
+          "And Item05, so this one is sort of like a jacket, more of a jacket style thing, so a little bit shorter than the other two.",
+          "It is made for outdoor wear, casual wear, and it's generally pretty windproof, so if you have a lot of wind where you are, this will help block out much of the wind.",
+          "So any of those options seem interesting to you?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "CQ"
+          ],
+          [
+            "IP"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI",
+            "EP"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI",
+            "PCN"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "15:51:06",
+      "content": {
+        "utterances": [
+          "Yeah, I'm thinking between Item11 and Item05.",
+          "Um, I wanted to ask which one you think would be more comfortable, maybe more fit for indoors?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "INT"
+          ],
+          [
+            "IA"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "15:51:13",
+      "content": {
+        "utterances": [
+          "Fit for indoors?",
+          "Yeah, for sure, just give me one second.",
+          "So, mentioned indoor, sorry, Item11 and Item05, is that correct?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "CQ"
+          ],
+          [
+            "IP"
+          ],
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "15:52:05",
+      "content": {
+        "utterances": [
+          "Yeah, about Item11 and Item12."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "15:52:08",
+      "content": {
+        "utterances": [
+          "Yeah, you mentioned those two items, right? as something you would consider."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "15:52:16",
+      "content": {
+        "utterances": [
+          "And then which one would be more comfortable?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IA"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "15:52:20",
+      "content": {
+        "utterances": [
+          "Right, so Item05 is marketed to be more of like an outside wear.",
+          "So usually wear it outdoors because it is sort of like a windproof jacket.",
+          "But people have reported that it is pretty stylish and pretty comfortable.",
+          "So I assume you would have no trouble wearing it indoors.",
+          "As for Item11, so this is sort of more of a trench coat.",
+          "It's elegant.",
+          "It definitely has a very nice design, so definitely be worn, you know, anywhere you would like.",
+          "It's pretty good for, you know, special events, wearing for special events.",
+          "But, you know, of course it's... It's perfect for casual occasions as well, so you can wear this both outdoors and indoors, fine."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PCN"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PER"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PCN"
+          ],
+          [
+            "EAI",
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "15:53:08",
+      "content": {
+        "utterances": [
+          "Okay, I think I'll go with Item05."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "15:53:12",
+      "content": {
+        "utterances": [
+          "Item05? Okay.",
+          "Could I know a little bit about why you chose that?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "AR"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "15:53:18",
+      "content": {
+        "utterances": [
+          "Mostly because it's windproof, because I'll be moving in and out of building, and then there might be a slight breeze, so I think Item05 might be more fit."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "EXP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "15:53:28",
+      "content": {
+        "utterances": [
+          "Yeah, no worries.",
+          "Yeah, it is definitely more of a thermal wear, so if you do need that, then it'll be a good fit for you."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "a"
+}

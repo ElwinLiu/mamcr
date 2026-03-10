@@ -1,0 +1,34 @@
+{
+  "id": 20,
+  "catalogue": "b",
+  "categories": [
+    "Clothing, Shoes & Accessories",
+    "Men",
+    "Clothing",
+    "Outerwear",
+    "Coats & Jackets",
+    "Active & Performance",
+    "Shells"
+  ],
+  "product_name": "Helly Hansen Crew Midlayer Jacket (Navy",
+  "product_brand": "Brand: Helly Hansen",
+  "product_rating": "4.3",
+  "product_description": [
+    "Ideal for various outdoor activities and weather conditions.",
+    "Features adjustable cuffs and hem for comfort.",
+    "Embroider-friendly design for customization.",
+    "Key words: outdoor, sailing, camping, hiking, casual"
+  ],
+  "about_product": [
+    "Fleece-lined, waterproof, windproof, breathable jacket.",
+    "Fully seam sealed with durable water repellency.",
+    "Insulated with Polartec fleece and quick-dry lining.",
+    "Key words: fleece-lined, waterproof, windproof, breathable, insulated"
+  ],
+  "product_detail": {
+    "Fabric type": "100% Polyester",
+    "Care instructions": "Machine Wash",
+    "Origin": "Imported"
+  },
+  "reviews": "Overall, the jacket receives high praise for its warmth, waterproof capabilities, and stylish design. Many users highlight its comfort and functionality in cold and wet conditions, although some note sizing issues, suggesting to consider trying it on before purchase."
+}

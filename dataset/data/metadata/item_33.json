@@ -1,0 +1,31 @@
+{
+  "id": 33,
+  "catalogue": "c",
+  "categories": [
+    "Clothing, Shoes & Accessories",
+    "Men",
+    "Shoes",
+    "Loafers & Slip-Ons",
+    "Penny-Loafer"
+  ],
+  "product_name": "Cole Haan Mens Pinch Penny Penny Loafer",
+  "product_brand": "Brand: Cole Haan",
+  "product_rating": "4.2",
+  "product_description": [
+    "Classic penny loafer for refined taste",
+    "Ideal for formal and casual occasions",
+    "Timeless style and quality craftsmanship"
+  ],
+  "about_product": [
+    "Moccasin-toe design with stacked heel",
+    "Perforated footbed for comfort",
+    "Durable construction"
+  ],
+  "product_detail": {
+    "Fabric type": "100% Leather",
+    "Care instructions": "Machine Wash",
+    "Sole material": "Leather",
+    "Outer material": "Leather"
+  },
+  "reviews": "Overall, the sentiment is positive with many praising the comfort and style, though some noted issues with fit and slipperiness of the sole."
+}

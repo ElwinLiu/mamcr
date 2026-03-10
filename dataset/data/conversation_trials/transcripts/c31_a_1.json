@@ -1,0 +1,131 @@
+{
+  "conversation_id": 31,
+  "session_code": "a000",
+  "scenario": 1,
+  "mentioned_items": [
+    2
+  ],
+  "gt_items": [
+    2
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "16:14:11",
+      "content": {
+        "utterances": [
+          "How are you?",
+          "Well, we have a new collection of tops, including lots of different jackets.",
+          "What can I get you?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "OTH"
+          ],
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "16:14:23",
+      "content": {
+        "utterances": [
+          "Um, hi, I'm actually looking for... An outerwear that is warm, but not too bulky.",
+          "I also like some cozy aesthetics that is good for some fall pictures.",
+          "And also, if preferably, I would like it to be waterproof material."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IQ",
+            "PEP"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "16:14:43",
+      "content": {
+        "utterances": [
+          "Awesome.",
+          "So... We have multiple different choices that can fit into your requirements.",
+          "For example, how about you consider Item02?",
+          "It's waterproof, which can be great for, you know, an outdoor activity in fall in which you don't... you're not sure whether it's gonna rain or not.",
+          "And it's also breathable, and it's durable, and it also has multiple pockets for you to carry your stuff.",
+          "What do you think about it?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "IP"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EP",
+            "PCN"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "16:15:13",
+      "content": {
+        "utterances": [
+          "Yeah, I actually really like that.",
+          "Um, so, yeah, I guess I'll purchase Item02."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "16:15:20",
+      "content": {
+        "utterances": [
+          "Awesome, great."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "a"
+}

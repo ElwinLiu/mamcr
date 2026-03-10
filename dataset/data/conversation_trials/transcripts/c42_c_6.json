@@ -1,0 +1,405 @@
+{
+  "conversation_id": 42,
+  "session_code": "c011",
+  "scenario": 6,
+  "mentioned_items": [
+    28,
+    29,
+    30,
+    31,
+    32,
+    36
+  ],
+  "gt_items": [
+    31
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "18:24:28",
+      "content": {
+        "utterances": [
+          "Okay, so are you looking for boots or shoes or flip flops?",
+          "And if you're looking for any of these categories for what applications are you purchasing it?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RP"
+          ],
+          [
+            "RC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "18:24:44",
+      "content": {
+        "utterances": [
+          "Yeah, let me...give me a minute to think about my decision.",
+          "It's a tough one.",
+          "Okay, so this time I'm preparing to go for a trail walk in a park.",
+          "And then...the park, it's more like a well-natured park, not like a modernized park.",
+          "I looked at the weather, so I believe before I go, the weather, it will be raining, so the ground will be pretty wet, and the... but the temperature will be pretty warm and humid.",
+          "So like I want...I wish the shoes can be somehow waterproofed, because I don't want to get my feet wet.",
+          "But I just don't want it to be too... I wanted to be able to give breath to my feet as well, so...",
+          "And in the meantime, after I go to the park, I'll be getting some coffee or just chilling in the restaurant, etc.",
+          "Therefore, it needs to look somehow cool so that I will be looked cool in a public space.",
+          "That's pretty much all I required."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "OTH"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "18:27:02",
+      "content": {
+        "utterances": [
+          "Uh, okay, so... I think you need a pair of comfortable hiking boots.",
+          "Since the weather might be rainy and the ground might be wet, I think you need something waterproof, as you mentioned.",
+          "But it shouldn't also be too hot, so I recommend Item32.",
+          "Because Item32 is waterproof and also, it's breathable, which means that you then... you don't get so hot.",
+          "So, um, and it's good for warm weather.",
+          "And also, it's comfortable for hiking, but also we have other waterproof options if you prefer more sturdy boots like Item31.",
+          "That is also waterproof, but it's, I think, less breathable compared to Item32.",
+          "And also, Item30 is waterproof, but I think it's less permissible compared to the other two options.",
+          "So both Item32 and Item31 are good.",
+          "Which one do you prefer more?",
+          "And if you like the boots style, then Item30 is also a good fit.",
+          "So, we have basically these three options."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK",
+            "EP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EP",
+            "RS"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EAI",
+            "RS"
+          ],
+          [
+            "PCM"
+          ],
+          [
+            "RS",
+            "PCM"
+          ],
+          [
+            "PER"
+          ],
+          [
+            "A"
+          ],
+          [
+            "RS",
+            "EP"
+          ],
+          [
+            "IP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "18:28:35",
+      "content": {
+        "utterances": [
+          "Yeah, so for this time, like, you know, after it rains, it'll be a lot of, like, damp or a little slippery in the place.",
+          "I don't want to fail, so probably, uh, a shoe that has more what... like hiking boots style will be better then.",
+          "Item32 looks like a running shoe, so... Would you be able to recommend new items to me?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT"
+          ],
+          [
+            "RP"
+          ],
+          [
+            "CF",
+            "CON"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "18:28:58",
+      "content": {
+        "utterances": [
+          "Yes, okay, so if you... Because, okay, as you mentioned, Item32 might be slippery.",
+          "Like, uh, and then Item31, I think it's a better fit.",
+          "Because it is also waterproof, and also it's good for hiking.",
+          "And also, it's less slippery, so I think Item31 is a good fit"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "18:29:45",
+      "content": {
+        "utterances": [
+          "Yeah, yeah, yeah, Item31, definitely.",
+          "Uh, in this case, would you be giving me a Plan B instead?",
+          "Uh, like, I mean, Item31 is very good, but, you know, when you look for shoes, you always want two options so, in case you don't get the first one, right?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ],
+          [
+            "CON"
+          ],
+          [
+            "CON"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "18:30:02",
+      "content": {
+        "utterances": [
+          "Yeah.",
+          "Yeah, so yeah, so both Item28 and Item29 could be a Plan B.",
+          "Item28, from the style perspective, it's... it looks more similar to Item31.",
+          "So if you want the same style as Item31, Item28 would be a good one, but I think it's not waterproof.",
+          "But Item29 is waterproof, so if you prefer waterproof shoes, then Item29 could also be a Plan B."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "PCM"
+          ],
+          [
+            "EP",
+            "RS"
+          ],
+          [
+            "EP",
+            "RS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "18:30:41",
+      "content": {
+        "utterances": [
+          "So, it's Item31, Item28, Item29, and what?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "AC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "18:30:47",
+      "content": {
+        "utterances": [
+          "Yes, I mean, the first choice is Item31, but if you'd like to have a plan B, uh, both Item28 and Item29 could be other options."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "18:30:59",
+      "content": {
+        "utterances": [
+          "Yeah, yeah, you know what?",
+          "Like, I think I'm hesitating between Item31 and Item28.",
+          "I don't know if you're correct that Item28 looks kind of waterproof to me.",
+          "I don't know, and I think the style... and I think the material looks nicer than Item31, but if it's not that waterproof, I will definitely go for Item31.",
+          "So I'm kind of deciding between the two.",
+          "Any good ideas?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "NR"
+          ],
+          [
+            "IF"
+          ],
+          [
+            "CF"
+          ],
+          [
+            "NR"
+          ],
+          [
+            "IA"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "18:31:39",
+      "content": {
+        "utterances": [
+          "Mmm...",
+          "Yeah, so Item36 is pretty sturdy and good-looking, but in the specification, it's not mentioned that it's waterproof, so I think it's more safe to choose Item31."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "EAI",
+            "PER"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "18:31:55",
+      "content": {
+        "utterances": [
+          "Yeah, then I'll go for Item31."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "18:31:58",
+      "content": {
+        "utterances": [
+          "Okay, great."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "18:31:59",
+      "content": {
+        "utterances": [
+          "Thank you for your assistance."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "18:32:01",
+      "content": {
+        "utterances": [
+          "No worries"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "c"
+}

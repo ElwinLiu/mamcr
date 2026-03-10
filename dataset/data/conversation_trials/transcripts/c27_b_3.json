@@ -1,0 +1,295 @@
+{
+  "conversation_id": 27,
+  "session_code": "b100",
+  "scenario": 3,
+  "mentioned_items": [
+    19,
+    23
+  ],
+  "gt_items": [
+    23
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "17:30:43",
+      "content": {
+        "utterances": [
+          "Hello, good afternoon, how can I help you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "17:30:50",
+      "content": {
+        "utterances": [
+          "Hi, I am doing this casual type of event, and I want something to keep me a little warm, but not hot.",
+          "And it'll be, like, inside."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT",
+            "PEP"
+          ],
+          [
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "17:31:06",
+      "content": {
+        "utterances": [
+          "What kind of business are you looking for? Is it, like, a tech style? Or it's like economy, commercial..."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "17:31:13",
+      "content": {
+        "utterances": [
+          "Um...Uh..."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "17:31:21",
+      "content": {
+        "utterances": [
+          "What kind of industry are you... are we looking at here?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "17:31:26",
+      "content": {
+        "utterances": [
+          "No clue.",
+          "Um, just a modern office, something that's, like, comfortable, but semi-formal is what I have."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ],
+          [
+            "PCT",
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "17:31:37",
+      "content": {
+        "utterances": [
+          "Okay, then...",
+          "How about Item23?",
+          "We have 100% customer satisfactory on this one.",
+          "This is the classic V-neck design.",
+          "Alright, you're looking at 100% cotton.",
+          "And it's machine washable at the same time.",
+          "Basically, it cannot go wrong at every office scenarios.",
+          "It has the right color.",
+          "Yeah, what do you think?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PCN",
+            "PER"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "17:32:18",
+      "content": {
+        "utterances": [
+          "Yes? I think that's a really good option."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "INT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "17:32:24",
+      "content": {
+        "utterances": [
+          "Nice.",
+          "And same for this V-neck design, we also have, if you look at Item19.",
+          "Again, 100% customer satisfactory.",
+          "Well, this one is... the only difference is this one is not 100% made of cotton as the previous one.",
+          "It has the long sleeves.",
+          "So, if you have a slightly cooler, air-conditioned working scenarios or business casual can do this one"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PCM"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PCN"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "17:33:03",
+      "content": {
+        "utterances": [
+          "It might be, like, good layering pieces with each other, even."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "INT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "17:33:09",
+      "content": {
+        "utterances": [
+          "Mm-hmm, mm-hmm.",
+          "I mean, this... okay, this one is also machine washable, so...",
+          "Well, for you, I'd probably say Item23, but If you're people looking...prefer dark colors, maybe Item19 is also pretty good.",
+          "What do you think?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EP",
+            "PCM"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "17:33:35",
+      "content": {
+        "utterances": [
+          "I think Item23 would be fine.",
+          "Because it's a layering... yeah, I think Item23 is good.",
+          "Item23 is good."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ],
+          [
+            "EXP",
+            "ACT"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "17:33:46",
+      "content": {
+        "utterances": [
+          "Okay. Let's go for Item23 then."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "b"
+}

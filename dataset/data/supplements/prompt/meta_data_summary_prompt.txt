@@ -1,0 +1,47 @@
+This is the prompt used to summarize item metadata.   
+Prompt:     
+     {
+      "role": "system",
+      "content": "You are a helpful assistant that summarizes e-commerce product data and returns a clean, concise JSON object with the same structure as the input."
+    },
+    {
+      "role": "user",
+      "content": f"""
+  You will be given a JSON object representing a product listing.
+
+  Your task:
+  - Summarize and shorten the content while preserving essential information.
+  - Maintain the exact JSON key structure as provided.
+
+  Instructions:
+
+  1. Set any empty fields (empty strings, empty lists) to `null`.
+
+  2. **About Product**:
+    - If this field is null , set it to `null`.
+    - Reduce to 3–4 concise bullet points (max 12 words each).
+    - Focus on core features and benefits only.
+    - Do not mention anything related to colors, sizing, fit, or prices.
+    - Add a final bullet: `Key words: [comma-separated descriptive terms]`.
+
+  3. **Product Description**:
+    - If this field is null,set it to `null`.
+    - Reduce to 3–4 short bullets.
+    - Do not mention anything related to colors, sizing, fit, or prices.
+    - Add final bullet: `Key words: [comma-separated descriptive terms]`.
+
+  4. **Reviews**:
+    - Exclude all non-English reviews.
+    - Write a single-paragraph summary capturing the overall sentiment and recurring themes.
+    - Do not mention anything related to colors, sizing, fit, or prices.
+    - Replace the list of reviews with only this summary under the "Reviews" key.
+
+
+  Rules:
+  - Return **only** the updated JSON object — no markdown, explanations, or extra text.
+  - The output must be **valid JSON** and follow the **exact same key structure** as the input.
+  - Maintain the order of top-level keys: 'ID', 'ASIN', 'About Product', 'Product Description', 'Reviews'.
+
+  Input JSON:
+  {input_json_str}
+  """

@@ -1,0 +1,327 @@
+{
+  "conversation_id": 4,
+  "session_code": "b100",
+  "scenario": 4,
+  "mentioned_items": [
+    16,
+    17,
+    24
+  ],
+  "gt_items": [
+    17
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "00:23:24",
+      "content": {
+        "utterances": [
+          "Hi, how can I help you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "00:23:27",
+      "content": {
+        "utterances": [
+          "Hi, I want to have dinner with my friends.",
+          "And then it's a weekend evening, and then I've been invited to a small dinner at my friend's apartment.",
+          "So it's not formal, no dress code, but I would like to let other people ...",
+          "I know that people will look put together, and then it will be an indoor social event, and then maybe I need to help in the kitchen.",
+          "And then maybe we will also play some group games, and then I want to look good without looking like I'm kind of trying too hard, and then I want something to be casual, clean, and comfortable."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT",
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "00:24:24",
+      "content": {
+        "utterances": [
+          "Okay.",
+          "Yeah, so you're looking for, I guess, something that's more stylish or suits your style, and something clean, and not too low effort, but also not too like flashy for an indoors gathering?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "00:24:45",
+      "content": {
+        "utterances": [
+          "Yes."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "00:24:47",
+      "content": {
+        "utterances": [
+          "Okay.",
+          "So, I can, let me show you a few items.",
+          "So, um...let's see.",
+          "So, okay, take a look at items, Item24, Item17, Item16.",
+          "So take a look at those three and see if any of them suit your style."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "IP"
+          ],
+          [
+            "OTH"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "00:25:19",
+      "content": {
+        "utterances": [
+          "Oh, I'm interested in Item16.",
+          "Can you tell me more about that?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "INT"
+          ],
+          [
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "00:25:24",
+      "content": {
+        "utterances": [
+          "Yeah, sure.",
+          "So Item11 is a very soft fabric and it's pretty stylish, very comfortable.",
+          "Our reviewer says it's, you know, it's a very versatile piece",
+          "It's one of our highest rated items actually.",
+          "So I would say it's very suited for your scenario."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PER"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "00:25:59",
+      "content": {
+        "utterances": [
+          "Oh.",
+          "I'm also looking, like I'm also interested in Item17, so can you tell me more about Item17?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "INT",
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "00:26:08",
+      "content": {
+        "utterances": [
+          "Yeah, so Item17 is a Japanese-style cardigan.",
+          "It's very stylish and maybe a little bit more different than the other ones, so it might draw a little bit more attention, but still, it's very versatile, so definitely suited for your scenario.",
+          "And, you know, our reviewers... our customers have said that it's a very comfortable piece.",
+          "So, yeah, people really like it for any just everyday wear as well as like special occasions."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "EAI"
+          ],
+          [
+            "EP",
+            "PCN"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PER"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "00:26:54",
+      "content": {
+        "utterances": [
+          "Oh, yeah, so for Item17 and Item16, which one do you recommend me to choose?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IA"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "00:27:04",
+      "content": {
+        "utterances": [
+          "Um...I guess up to how you feel like the vibes of the dinner party is, like if everyone will be wearing.",
+          "Like if you don't want to stand out too much, or like if you know everyone else is wearing something, you know, a little bit more reserved, then maybe I would suggest Item16.",
+          "But if everyone is, you know, you don't mind standing out a little bit, then like Item17 will be fine as well."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "PCN"
+          ],
+          [
+            "PCM",
+            "PCN"
+          ],
+          [
+            "PCM",
+            "PCN"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "00:27:36",
+      "content": {
+        "utterances": [
+          "Oh, I don't want to grab too much attention, maybe I will go with Item16."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "EXP",
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "00:27:44",
+      "content": {
+        "utterances": [
+          "Okay, yeah, that sounds like a good choice."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "00:27:49",
+      "content": {
+        "utterances": [
+          "Yeah, thank you."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "00:27:50",
+      "content": {
+        "utterances": [
+          "Thanks."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "b"
+}

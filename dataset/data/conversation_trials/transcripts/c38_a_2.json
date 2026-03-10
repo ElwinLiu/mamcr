@@ -1,0 +1,340 @@
+{
+  "conversation_id": 38,
+  "session_code": "a011",
+  "scenario": 2,
+  "mentioned_items": [
+    3,
+    5,
+    7,
+    8,
+    9
+  ],
+  "gt_items": [
+    8
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "18:43:03",
+      "content": {
+        "utterances": [
+          "Okay, so, mmm... what type of coat or jackets are you looking for?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "18:43:11",
+      "content": {
+        "utterances": [
+          "Hmm... let's see...",
+          "Give me a minute to decide."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "18:43:15",
+      "content": {
+        "utterances": [
+          "Okay."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "18:43:23",
+      "content": {
+        "utterances": [
+          "Mm-hmm. Hmmm. Okay.",
+          "So, so like next, so I'll be going to universities for the winter term next year.",
+          "And I had...I'll be going to a few lectures, like probably in the later winter session around like March or April, and I'll be going a few lectures and also study with my classmates for finals as well.",
+          "And you know, it's on campus, we're going to go in and out buildings, walking through libraries, and like maybe grab a quick lunch in a coffee shop.",
+          "And the weather at that time, I believe, will be like pretty chilly in the morning, like, a little bit cold.",
+          "Uh, not too cold... like a little bit cool in the morning, but getting warmer in the new afternoon time, and get back a little bit cool in the night.",
+          "And there's some breeze or wind.",
+          "A pretty, pretty nice weather, I'll say.",
+          "And in university and study, I don't want to wear something that's too formal, that's too like tight.",
+          "I want to be wearing something comfortable that I can easily put on.",
+          "Also I want it to be functional as well because I'm carrying things like my student cards, my phones, and sometimes I'll be carrying a wallet as well.",
+          "I want to like maybe have a zipper bag or pocket on the jacket as well.",
+          "And I also want to be looking cool in the style like I want to be looked good among my peers.",
+          "And so then... yeah that's pretty much about my requirement."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "PEP"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "18:46:22",
+      "content": {
+        "utterances": [
+          "Okay, so...",
+          "Okay, since you're looking for a coat to wear in the school around March and or April.",
+          "I think we don't need to look for super warm coats.",
+          "I think among them, the options we can... I mean, I recommend these three options, Item08, Item03 and Item09.",
+          "Item08 is a stylish baseball jacket and it has a trendy design and it's not that warm, but it is warm still, so Item08 is a good option.",
+          "It also has pockets, so you can use it to put your stuff in it.",
+          "Also, Item03 is a... has a classic fit with modern style,",
+          "It fits for any occasion, so it also has a side pocket",
+          "Also Item09... I think, is a good option.",
+          "Again, it has a... okay, let me see.",
+          "Um... Item09 is also a good option, because it's warm and also comfortable so you can use it for both outdoor and indoor activities.",
+          "And, yeah, so my recommendations overall are these three items, Item08, Item03, and Item09."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EP",
+            "EAI"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EP",
+            "EAI"
+          ],
+          [
+            "IP"
+          ],
+          [
+            "IP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "RS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "18:47:50",
+      "content": {
+        "utterances": [
+          "Item08, Item03, and Item09...",
+          "Oh, okay...Item08, Item03, and Item09...",
+          "Uh, I think... then for me, I don't want the clothes to be too fancy, like, Item09, maybe too many strips looking like that's not that appealing to me.",
+          "And also, at the same time, Item03 seems a bit tight.",
+          "It looks like it's made of, like jeans.",
+          "So, I wanted to be more comfortable.",
+          "So, based on this, could you give me more other options?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACK"
+          ],
+          [
+            "CF"
+          ],
+          [
+            "CF"
+          ],
+          [
+            "CF"
+          ],
+          [
+            "RP"
+          ],
+          [
+            "CON"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "18:48:44",
+      "content": {
+        "utterances": [
+          "Oh, okay, sure.",
+          "So, hmm...",
+          "Okay, so...you may also want to consider Item05.",
+          "Item05, it's also warm and also trendy.",
+          "It has multiple pockets.",
+          "And since you want things that are simpler, Item07 also can be a good option.",
+          "It's a comfortable denim jacket with a flannel leaning, and multiple pockets.",
+          "Now, I also recommend Item05 and Item07, maybe Item07 is a better choice compared to Item05.",
+          "Because Item05 is a little bit... I mean it's more formal, it is longer, but Item07 is shorter.",
+          "Maybe if you prefer Item07, there's still, I think, Item08 could be an option, because it's also warm and comfortable.",
+          "It would be easy to take off.",
+          "It has buttons in front, so...my final recommendations are Item08 and Item07."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "OTH"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "RS",
+            "EP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "RS",
+            "PCM"
+          ],
+          [
+            "PCM",
+            "EP"
+          ],
+          [
+            "RS",
+            "EP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "18:50:14",
+      "content": {
+        "utterances": [
+          "Yeah, yeah... I think you're right.",
+          "Uh, then I'll choose Item08.",
+          "Item08 looks more appealing to me.",
+          "It's cooler than Item07."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACT"
+          ],
+          [
+            "EXP"
+          ],
+          [
+            "EXP",
+            "CC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "18:50:28",
+      "content": {
+        "utterances": [
+          "Okay, great."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "a"
+}

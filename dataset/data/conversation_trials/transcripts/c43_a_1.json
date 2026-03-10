@@ -1,0 +1,269 @@
+{
+  "conversation_id": 43,
+  "session_code": "a011",
+  "scenario": 1,
+  "mentioned_items": [
+    2,
+    5,
+    10
+  ],
+  "gt_items": [
+    10
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "12:32:25",
+      "content": {
+        "utterances": [
+          "Alright, hi, how can I help you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "12:32:31",
+      "content": {
+        "utterances": [
+          "Yeah, I would like to have a sort of waterproof and also outdoor fit."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "IQ",
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "12:32:45",
+      "content": {
+        "utterances": [
+          "Okay, and how would you describe the style you're looking for?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK",
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "12:32:57",
+      "content": {
+        "utterances": [
+          "I would say I don't have much style preference, but the cloth itself needs to be sort of easy to clean after I get back to home."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "12:33:10",
+      "content": {
+        "utterances": [
+          "Okay, Um.",
+          "All right, so yeah, I'll look through what we have and provide you with a couple options, and see what you prefer?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "IP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "12:33:27",
+      "content": {
+        "utterances": [
+          "Um, so looking at our waterproof selections, there's Item05, Item02, so yeah those are our two waterproof options.",
+          "Um, do you have any preference between those two?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RS",
+            "EP"
+          ],
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "12:33:54",
+      "content": {
+        "utterances": [
+          "Sorry, is it Item05 and Item02?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "AC"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "12:33:56",
+      "content": {
+        "utterances": [
+          "Yeah."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "12:34:00",
+      "content": {
+        "utterances": [
+          "Yeah, I would say these two are a good fit, but I need one that is a bit warmer."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "CF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "12:34:10",
+      "content": {
+        "utterances": [
+          "Okay."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "12:34:11",
+      "content": {
+        "utterances": [
+          "These two look really lightweight and not kind of warm."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "CF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "12:34:21",
+      "content": {
+        "utterances": [
+          "Okay.",
+          "So we also have Item10, which is water resistant.",
+          "So it'll be waterproof in light rain, but it also has the added benefit of being much warmer than the other two options.",
+          "That's what people like this one for.",
+          "It's also machine wash, so it's no problem to just put it in the washing machine."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EP",
+            "EAI"
+          ],
+          [
+            "PER"
+          ],
+          [
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "12:35:11",
+      "content": {
+        "utterances": [
+          "So yeah, how do you like Item10?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "A"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 14,
+      "timestamp": "12:35:12",
+      "content": {
+        "utterances": [
+          "Yeah, I would say Item10 is a good one for my requirements and I will probably just choose that one."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 15,
+      "timestamp": "12:35:25",
+      "content": {
+        "utterances": [
+          "Okay, perfect."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "a"
+}

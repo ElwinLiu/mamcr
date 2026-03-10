@@ -1,0 +1,171 @@
+{
+  "conversation_id": 28,
+  "session_code": "b011",
+  "scenario": 4,
+  "mentioned_items": [
+    17
+  ],
+  "gt_items": [
+    17
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "17:35:45",
+      "content": {
+        "utterances": [
+          "Hello, how can I help you today?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "17:35:48",
+      "content": {
+        "utterances": [
+          "Hi, I'm having a little get-together with some friends at my place."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "17:35:54",
+      "content": {
+        "utterances": [
+          "I want something that looks nice.",
+          "It doesn't have to be, like, fancy, though.",
+          "It's a casual event."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PEP"
+          ],
+          [
+            "RP"
+          ],
+          [
+            "PCT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "17:36:08",
+      "content": {
+        "utterances": [
+          "Okay, give me a moment...",
+          "How about Item17?",
+          "It has this exotic Japanese design style.",
+          "I believe it's called a kimono.",
+          "Um... the fabric is 100% cotton.",
+          "It's not machine washable.",
+          "And it's actually lightweight.",
+          "We have many customers praise its stylish design, and comfort."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "IP"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "17:36:44",
+      "content": {
+        "utterances": [
+          "Yeah, um... It definitely fits all the... checks all the boxes.",
+          "Um, good, I guess.",
+          "Item17 is good."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACT"
+          ],
+          [
+            "OTH"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "17:36:52",
+      "content": {
+        "utterances": [
+          "Yeah, yeah, yeah, that's good.",
+          "We had the... we have a heat on the first bake.",
+          "That's pretty good."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "OTH"
+          ],
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "17:37:06",
+      "content": {
+        "utterances": [
+          "It's nice and let me pack it up for you."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "EF"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "b"
+}

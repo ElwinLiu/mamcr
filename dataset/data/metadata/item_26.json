@@ -1,0 +1,33 @@
+{
+  "id": 26,
+  "catalogue": "c",
+  "categories": [
+    "Clothing, Shoes & Accessories",
+    "Men",
+    "Shoes",
+    "Fashion Sneakers"
+  ],
+  "product_name": "Under Armour Mens Charged Assert 9 Running Shoes Running Shoe",
+  "product_brand": "Visit the Under Armour Store",
+  "product_rating": "4.5",
+  "product_description": [
+    "Built for speed and comfort",
+    "Responsive Charged Cushioning midsole",
+    "Solid rubber outsole for durability",
+    "Key words: running, performance, support, lightweight"
+  ],
+  "about_product": [
+    "Lightweight mesh upper for breathability",
+    "Durable leather overlays for stability",
+    "EVA sockliner for comfort",
+    "Charged Cushioning for responsiveness",
+    "Key words: running shoes, breathable, comfortable, durable"
+  ],
+  "product_detail": {
+    "Care instructions": "Machine Wash",
+    "Sole material": "Rubber",
+    "Shaft height": "Low-top",
+    "Outer material": "Mesh"
+  },
+  "reviews": "Overall, customers express high satisfaction with the shoes, highlighting their comfort, support, and durability for various activities. Many appreciate the lightweight design and breathability, making them suitable for both running and everyday wear. Some users noted sizing issues but still found the shoes to be a great choice for their needs."
+}

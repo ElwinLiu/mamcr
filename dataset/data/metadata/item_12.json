@@ -1,0 +1,34 @@
+{
+  "id": 12,
+  "catalogue": "a",
+  "categories": [
+    "Clothing, Shoes & Accessories",
+    "Men",
+    "Clothing",
+    "Outerwear",
+    "Coats & Jackets",
+    "Wool & Blends"
+  ],
+  "product_name": "FTCayanz Men's Trench Coat Wool Blend Slim Fit Top Coat Single Breasted Business Overcoat",
+  "product_brand": "Brand: FTCayanz",
+  "product_rating": "4.2",
+  "product_description": [
+    "Elegant wool blend fabric for all seasons.",
+    "Suitable for various occasions and layering.",
+    "Modern slim fit for a fashionable look.",
+    "Key words: trench coat, casual, formal, versatile"
+  ],
+  "about_product": [
+    "Classic stand collar and long sleeve design.",
+    "High-quality wool blend for comfort.",
+    "Functional pockets for convenience.",
+    "Key words: winter coat, wool blend, business, stylish"
+  ],
+  "product_detail": {
+    "Fabric type": "100% Wool",
+    "Care instructions": "Machine Wash, Hand Wash Only",
+    "Closure type": "Button",
+    "Outer material": "50% Wool, 50% Polyester; Lining: 100% Polyester"
+  },
+  "reviews": "Customers praise the coat's excellent quality and stylish design, noting its appeal for various occasions. Many express satisfaction with the purchase, highlighting its value for the price."
+}

@@ -1,0 +1,321 @@
+{
+  "conversation_id": 57,
+  "session_code": "b001",
+  "scenario": 3,
+  "mentioned_items": [
+    15,
+    18,
+    19,
+    21,
+    23
+  ],
+  "gt_items": [
+    21
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "18:49:50",
+      "content": {
+        "utterances": [
+          "Hi, what can I get for you?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "18:49:57",
+      "content": {
+        "utterances": [
+          "Um... It's just a regular Friday, and I'm going to the office, so business casual outfits would be great."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "PCT",
+            "PEP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "18:50:19",
+      "content": {
+        "utterances": [
+          "So, will you wear this indoors, right?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "CQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "18:50:19",
+      "content": {
+        "utterances": [
+          "And... Yeah, indoors."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "18:50:25",
+      "content": {
+        "utterances": [
+          "Okay, um, is there anything specific you're looking for?",
+          "Like, something to layer?",
+          "Or Long sleeve, short sleeve?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RP"
+          ],
+          [
+            "RP"
+          ],
+          [
+            "RP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "18:50:40",
+      "content": {
+        "utterances": [
+          "Yeah, something to layer, long sleeve.",
+          "So... wait...Item23 also looks... Interesting.",
+          "Um, I'm choosing from Item23, Item21, Item18, Item15, and Item19."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS",
+            "PEP"
+          ],
+          [
+            "PIP"
+          ],
+          [
+            "PIP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "18:51:03",
+      "content": {
+        "utterances": [
+          "Okay, so you're looking for kind of more of a Jacket-ish sweater, or, like, a button-up kind of thing."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "18:51:09",
+      "content": {
+        "utterances": [
+          "Yes."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ANS"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "18:51:09",
+      "content": {
+        "utterances": [
+          "So, uh, we're gonna start with Item19.",
+          "So, Item19 is definitely a knit sweater.",
+          "Um, you can see the patterns on it, and you can definitely layer it with, like, a collared shirt inside or something like that.",
+          "Um, it may look like it's like, wool, but it's not, like, 100% wool, it's actually mostly polyester, so you can still machine wash it.",
+          "Um, and then for Item15, it's not a button-up.",
+          "Um, it kind of, like, looks similar to Item19, but it is of lighter color.",
+          "Um, it's also, um, yeah, so it's not a button-up.",
+          "Um, if you don't like putting it over your head, it might not be as good of an option.",
+          "Uh, and then in terms of Item23, it is just a vest, but it's definitely cute.",
+          "And you can also wear, like, a shirt under, or, you know, like, a t-shirt, depending on the season.",
+          "Um, if you might need to buy, like a shirt to wear under, because it's kind of weird wearing just a vest, especially in the winter.",
+          "Um, and then in terms of Item21, it's a zip-up vest.",
+          "Um, it's like a fleece material, so it's warmer than Item23.",
+          "It's 100% polyester, so it's very machine washable."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RS"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI",
+            "EP"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "PCM"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EAI",
+            "PER"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PCN"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI",
+            "PCM"
+          ],
+          [
+            "EAI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "18:52:47",
+      "content": {
+        "utterances": [
+          "Okay, um... can you tell me a little bit, tell me more about Item18?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK",
+            "IF"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "18:52:55",
+      "content": {
+        "utterances": [
+          "Um, oh yeah, for sure, just that one.",
+          "So, Item18 is kind of more of, like a jacket?",
+          "It's definitely meant for, like, daily wear.",
+          "Um, and it's... I think, like, in terms of layering, it would probably most likely be putting something inside, or you can wear, like, maybe like a puffer jacket on the outside.",
+          "It is really warm if you're like planning on wearing this in the winter.",
+          "The only thing I would warn you about is that there's, like, sizing difficulties.",
+          "So, you might need to, like, buy one size up, so that, like, your arm area isn't so tight.",
+          "Um, but yeah, I would say it's pretty good, too."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EAI",
+            "PCN"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "EAI"
+          ],
+          [
+            "PER"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "18:53:45",
+      "content": {
+        "utterances": [
+          "Okay, thank you for the recommendation.",
+          "My final decision is Item21."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK",
+            "OTH"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "18:53:53",
+      "content": {
+        "utterances": [
+          "Okay."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "b"
+}

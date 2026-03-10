@@ -1,0 +1,371 @@
+{
+  "conversation_id": 41,
+  "session_code": "c010",
+  "scenario": 5,
+  "mentioned_items": [
+    25,
+    26,
+    27,
+    32,
+    35,
+    36
+  ],
+  "gt_items": [
+    35
+  ],
+  "conversation_content": [
+    {
+      "turn": 1,
+      "timestamp": "18:33:40",
+      "content": {
+        "utterances": [
+          "Okay, what kind of footwear do you prefer?"
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "RTI"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 2,
+      "timestamp": "18:33:49",
+      "content": {
+        "utterances": [
+          "Yeah, this time also gave me a minute to think about it."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 3,
+      "timestamp": "18:33:54",
+      "content": {
+        "utterances": [
+          "Okay."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 4,
+      "timestamp": "18:34:16",
+      "content": {
+        "utterances": [
+          "Oh, okay, so...",
+          "This time, the shoes again, but I'm planning to take a trip to Montreal, so I did some research about it.",
+          "I know there's very good museums, and the local markets in Montreal as well.",
+          "And I also would like to have some French food, or like Montreal or Quebec-style but, like, more, like, French-style food in the restaurant as well, to have a different taste compared to Ontario.",
+          "Therefore, I'll be walking quite a lot, moving between the outdoors and warmer indoors, as you can see.",
+          "Like before, like just imagine me walking on sidewalks and like walking in the museums and in between markets, and sat down for dinner to have wine and some French-style food.",
+          "And... I was planning to go around Christmas time so, I do need some warmer pieces to keep my feet warm.",
+          "But I did some research as well for the weather.",
+          "There won't be any snow in Montreal this Christmas, so it's pretty nice for me.",
+          "And so in this case, what kind of shoe would you recommend to me?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "PCT",
+            "PEP"
+          ],
+          [
+            "OTH"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "IQ"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 5,
+      "timestamp": "18:35:57",
+      "content": {
+        "utterances": [
+          "Yeah, okay, let me think...",
+          "Um... okay, since you're traveling to Montreal, and as you mentioned, you're visiting museums, and you're going to walk quite a lot, so you need to... you need something to be pretty comfortable.",
+          "And also, since you're planning lots of both indoors and outdoor activities.",
+          "Uh, I'm going to recommend Item27, and also Item35 and Item36 because Item36 is warmer than the other two options, but Item27 and Item35 are also very comfortable.",
+          "So, these three options, Item27, Item35 and Item36.",
+          "Since you don't need it to be waterproof as we mentioned, we are pretty flexible and can consider other options, too.",
+          "So, I mean, other options such as Item26 and Item25 are also comfortable options.",
+          "So let me know which one you prefer.",
+          "If you need something warm, then Item36 is good.",
+          "But if you need something more comfortable, both Item35... Item27 and Item25, and also Item26 are okay."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "RS",
+            "EP"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "A"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 6,
+      "timestamp": "18:37:23",
+      "content": {
+        "utterances": [
+          "Yeah, yeah, thank you for your recommendations, very appreciated.",
+          "So all those are good recommendations, but just in case that I... in my research, there won't be any snow.",
+          "So I don't want to wear boots when there's no snow.",
+          "It'll make me look pretty weird.",
+          "And also, as I mentioned, I want to look somehow cooler, and so maybe there needs to be a little bit of style on the shoe as well.",
+          "And I personally prefer mid or high heel shoes compared to low ones, because I have a very high angle feet so that's why I don't like the low-heel shoes as well.",
+          "And, uh...so, in this case, would you recommend a few more options to me."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACK",
+            "PCT"
+          ],
+          [
+            "CF"
+          ],
+          [
+            "CF"
+          ],
+          [
+            "RP"
+          ],
+          [
+            "RP"
+          ],
+          [
+            "CON"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 7,
+      "timestamp": "18:38:21",
+      "content": {
+        "utterances": [
+          "Uh, okay, so you prefer more high heels, so I think...If I get it correctly, you want it for...walking a lot, because...",
+          "Okay, so among these options, like Item27, Item26 and Item25, I think Item25 has higher heels Also Item35 is a good option if you prefer high heels, so I recommend Item35.",
+          "But also we have other options, like, which have higher heels like Item32?",
+          "So yeah, between Item25, Item32, and Item35 you can choose, because all of them have higher heels compared to other ones."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "EP"
+          ],
+          [
+            "RS",
+            "EP"
+          ],
+          [
+            "RS"
+          ],
+          [
+            "EP"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 8,
+      "timestamp": "18:39:23",
+      "content": {
+        "utterances": [
+          "Yeah, I am now deciding between Item25 and Item35.",
+          "So, Item35 looks warmer compared to Item25.",
+          "So that's what I'm thinking, and maybe better for winter time",
+          "But also, since I'll be indoors sometime and there will be heatings.",
+          "Uh... I'm not sure this will be...whether this will be too warm.",
+          "Any ideas?"
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "INT"
+          ],
+          [
+            "CF"
+          ],
+          [
+            "CF"
+          ],
+          [
+            "PCT"
+          ],
+          [
+            "IF"
+          ],
+          [
+            "IA"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 9,
+      "timestamp": "18:40:03",
+      "content": {
+        "utterances": [
+          "Okay, so... mmm... let me see, okay...",
+          "Item35 is actually a very comfortable shoes, but I don't think it's going to be too warm inside.",
+          "So I think Item35 is still good if you want to do indoor activities, but I think because this one has higher heels compared to other options.",
+          "So, Item35 is a good option.",
+          "And even though it's not breathable, it's not gonna be as hot as a boot.",
+          "So, Item35 I think is a reasonable option.."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "IP"
+          ],
+          [
+            "EAI",
+            "ANS"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "PER"
+          ],
+          [
+            "EP"
+          ],
+          [
+            "PER"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 10,
+      "timestamp": "18:40:54",
+      "content": {
+        "utterances": [
+          "Yeah, sounds good.",
+          "I'll pick Item35."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "ACK"
+          ],
+          [
+            "ACT"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 11,
+      "timestamp": "18:40:57",
+      "content": {
+        "utterances": [
+          "Yeah, great."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "ACK"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 12,
+      "timestamp": "18:40:59",
+      "content": {
+        "utterances": [
+          "Thank you so much, appreciate it."
+        ],
+        "role": "Seeker",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    },
+    {
+      "turn": 13,
+      "timestamp": "18:41:01",
+      "content": {
+        "utterances": [
+          "No worries."
+        ],
+        "role": "Assistant",
+        "tags": [
+          [
+            "OTH"
+          ]
+        ]
+      }
+    }
+  ],
+  "catalogue": "c"
+}
