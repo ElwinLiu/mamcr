@@ -1,0 +1,26 @@
+{
+  "name": "mamcr-tui",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node --env-file=.env dist/index.js",
+    "dev": "tsx --env-file=.env src/index.ts",
+    "load-db": "tsx --env-file=.env src/db/loader.ts",
+    "extract": "tsx --env-file=.env src/extract.ts",
+    "embed": "tsx --env-file=.env src/db/embed.ts"
+  },
+  "dependencies": {
+    "@mariozechner/pi-ai": "file:../../pi-mono/packages/ai",
+    "@mariozechner/pi-coding-agent": "file:../../pi-mono/packages/coding-agent",
+    "@sinclair/typebox": "^0.34.41",
+    "better-sqlite3": "^11.0.0",
+    "csv-parse": "^5.5.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.7.0"
+  }
+}

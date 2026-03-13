@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAMCR &mdash; VOGUE Dataset Explorer</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script>
+    (function() {
+      var t = Date.now();
+      var css = document.createElement('link');
+      css.rel = 'stylesheet';
+      css.href = 'style.css?t=' + t;
+      document.head.appendChild(css);
+      window.__cacheBust = t;
+    })();
+  </script>
+</head>
+<body>
+  <nav id="nav">
+    <div class="nav-brand">MAMCR</div>
+    <div class="nav-links">
+      <a href="#overview" class="active" data-section="overview">Overview</a>
+      <a href="#catalogue" data-section="catalogue">Catalogue</a>
+      <a href="#participants" data-section="participants">Participants</a>
+      <a href="#conversations" data-section="conversations">Conversations</a>
+      <a href="#analysis" data-section="analysis">Analysis</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- OVERVIEW -->
+    <section id="overview" class="section active">
+      <div class="section-header">
+        <h1>VOGUE Dataset</h1>
+        <p class="subtitle">Visual-Oriented Guided Understanding &amp; Evaluation for Conversational Fashion Recommendation</p>
+      </div>
+      <div class="stats-grid" id="stats-grid"></div>
+      <div class="chart-row">
+        <div class="chart-card">
+          <h3>Conversation Lengths</h3>
+          <canvas id="chart-conv-lengths"></canvas>
+        </div>
+        <div class="chart-card">
+          <h3>Top Dialogue Acts</h3>
+          <canvas id="chart-dialogue-acts"></canvas>
+        </div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-card">
+          <h3>Item Mention Frequency</h3>
+          <canvas id="chart-item-mentions"></canvas>
+        </div>
+        <div class="chart-card">
+          <h3>Ground Truth Selection Frequency</h3>
+          <canvas id="chart-gt-freq"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATALOGUE -->
+    <section id="catalogue" class="section">
+      <div class="section-header">
+        <h1>Item Catalogue</h1>
+        <p class="subtitle">36 items across 3 catalogues: Outerwear, Layering, Shoes</p>
+      </div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-cat="all">All</button>
+        <button class="filter-btn" data-cat="a">A &mdash; Outerwear</button>
+        <button class="filter-btn" data-cat="b">B &mdash; Layering</button>
+        <button class="filter-btn" data-cat="c">C &mdash; Shoes</button>
+      </div>
+      <div class="items-grid" id="items-grid"></div>
+    </section>
+
+    <!-- PARTICIPANTS -->
+    <section id="participants" class="section">
+      <div class="section-header">
+        <h1>Participants</h1>
+        <p class="subtitle">20 participants: 10 Seekers (s1-s10) &amp; 10 Assistants (a1-a10)</p>
+      </div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-role="all">All</button>
+        <button class="filter-btn" data-role="seeker">Seekers</button>
+        <button class="filter-btn" data-role="assistant">Assistants</button>
+      </div>
+      <div class="participants-grid" id="participants-grid"></div>
+    </section>
+
+    <!-- CONVERSATIONS -->
+    <section id="conversations" class="section">
+      <div class="section-header">
+        <h1>Conversations</h1>
+        <p class="subtitle">60 conversational recommendation sessions</p>
+      </div>
+      <div class="conv-layout">
+        <div class="conv-sidebar" id="conv-sidebar"></div>
+        <div class="conv-main" id="conv-main">
+          <div class="conv-placeholder">Select a conversation to view the transcript</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANALYSIS -->
+    <section id="analysis" class="section">
+      <div class="section-header">
+        <h1>Analysis</h1>
+        <p class="subtitle">Rating distributions, satisfaction scores, and dialogue patterns</p>
+      </div>
+      <div class="chart-row">
+        <div class="chart-card">
+          <h3>Seeker Satisfaction (Likert Scores)</h3>
+          <canvas id="chart-likert"></canvas>
+        </div>
+        <div class="chart-card">
+          <h3>Item Rating Distribution (Seeker)</h3>
+          <canvas id="chart-rating-dist"></canvas>
+        </div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-card">
+          <h3>Dialogue Acts by Role</h3>
+          <canvas id="chart-tags-role"></canvas>
+        </div>
+        <div class="chart-card">
+          <h3>Scenarios Overview</h3>
+          <div id="scenarios-list" class="scenarios-list"></div>
+        </div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-card wide">
+          <h3>Seeker vs Assistant Rating Agreement (per conversation)</h3>
+          <canvas id="chart-agreement"></canvas>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>MAMCR &mdash; Multi-Agent Multimodal Conversational Recommendation &bull; CSI5389</p>
+  </footer>
+
+  <script>document.write('<script src="app.js?t=' + window.__cacheBust + '"><\/script>');</script>
+</body>
+</html>
