@@ -1,11 +1,15 @@
 {
-  "name": "mamcr-tui",
+  "name": "mamcr-agent",
   "version": "0.1.0",
   "type": "module",
   "scripts": {
     "build": "tsc",
+    "build:server": "tsc -p tsconfig.electron.json",
+    "build:all": "npm run build && npm run build:server",
     "start": "node --env-file=.env dist/index.js",
+    "serve": "npm run build:all && node dist-electron/main.js",
     "dev": "tsx --env-file=.env src/index.ts",
+    "dev:serve": "tsx electron/main.ts",
     "load-db": "tsx --env-file=.env src/db/loader.ts",
     "extract": "tsx --env-file=.env src/extract.ts",
     "embed": "tsx --env-file=.env src/db/embed.ts"

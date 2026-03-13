@@ -65,7 +65,6 @@ export const getConversationTool: ToolDefinition<typeof getConversationParams> =
 			`## Conversation ${conv.conv_id}`,
 			`User: ${conv.user_id} | Scenario: ${conv.scenario_id} | Catalogue: ${conv.catalogue}`,
 			`Mentioned items: ${conv.mentioned_items}`,
-			`Ground truth items: ${conv.gt_items}`,
 		];
 
 		if (scenario) {

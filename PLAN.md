@@ -2,11 +2,13 @@
 
 ## Overview
 
-Build a multi-agent system on the VOGUE dataset to test LLM frameworks' ability in Conversational Recommendation (CR). The system actively conducts conversations (playing the Assistant role) by replaying human Seeker utterances from the dataset. Unlike the VOGUE paper's approach (load full transcript into one MLLM, ask for ratings), our system gives the agent realistic prior knowledge about the user and decouples preference tracking and history understanding into dedicated agents.
+Build a multi-agent system on the VOGUE dataset to test LLM frameworks' ability in Conversational Recommendation (CR). The system replays the original human-human conversation verbatim and has an LLM observer gather context progressively using tools, then predict ratings. Unlike the VOGUE paper's approach (load full transcript into one MLLM, ask for ratings), our system gives the agent realistic prior knowledge about the user and decouples preference tracking and history understanding into dedicated agents.
 
-**Core thesis**: MLLMs in the VOGUE benchmark are evaluated cold — zero context about the user. Human assistants have a structural advantage because they build mental models over time. We close this gap with a cold-start mechanism that distills user preferences from their other conversations, and a multi-agent architecture that separates concerns: preference tracking, history understanding, and conversation management.
+**Core thesis**: MLLMs in the VOGUE benchmark are evaluated cold — zero context about the user. Human assistants have a structural advantage because they build mental models over time. We close this gap with a cold-start mechanism that distills user preferences from their other conversations, and a multi-agent architecture that separates concerns: preference tracking, history understanding, and conversation observation.
 
-**Second motivation**: The VOGUE paper loads the entire conversation transcript and all item metadata into a single prompt — a monolithic context dump. This is unrealistic in production systems, where information must be discovered progressively: an assistant learns preferences through dialogue, retrieves item details on demand, and recalls history selectively. Our architecture enforces progressive disclosure by design — the Conversation Agent starts with only item names and categories, uses tools to drill into details as needed, and accumulates preference signals turn-by-turn rather than seeing everything at once. This mirrors how real recommendation systems operate under context and latency constraints.
+**Second motivation**: The VOGUE paper loads the entire conversation transcript and all item metadata into a single prompt — a monolithic context dump. This is unrealistic in production systems, where information must be discovered progressively: an assistant learns preferences through dialogue, retrieves item details on demand, and recalls history selectively. Our architecture enforces progressive disclosure by design — the Conversation Agent observes exchanges one at a time, uses tools to drill into item details as needed, and accumulates preference signals turn-by-turn rather than seeing everything at once. This mirrors how real recommendation systems operate under context and latency constraints.
+
+**Why observe, not generate**: The original human Seeker utterances were written in response to a specific human Assistant. If our LLM generates different assistant responses, the Seeker's replies become incoherent (e.g., the Seeker critiques Item 7 that the original assistant recommended, but our agent recommended Item 3). By replaying both sides verbatim, the conversation stays coherent. The LLM's value comes from its tool use (progressive item discovery, preference tracking, history retrieval) and the final rating prediction — not from generating responses.
 
 ---
 
@@ -58,7 +60,7 @@ mamcr/
 │   ├── agents/
 │   │   ├── preference-agent.ts   # separate session → produces context text
 │   │   ├── history-agent.ts      # separate session → produces context text
-│   │   └── conversation-agent.ts # main session with InteractiveMode
+│   │   └── conversation-agent.ts # observer session — watches exchanges, uses tools, predicts ratings
 │   ├── orchestrator.ts       # coordinates 3 agents per simulation turn
 │   ├── extract.ts            # taste extraction pipeline (pre-experiment)
 │   ├── eval/
@@ -232,34 +234,43 @@ CREATE TABLE item_embeddings (
 
 ## Multi-Agent Architecture
 
-Three agents with distinct responsibilities. The Preference Agent runs automatically after each exchange, injecting updated preference state into the Conversation Agent's context. The History Agent is demand-driven — exposed as a tool that the Conversation Agent calls when it needs historical context. This decouples preference tracking and historical knowledge from the main conversation logic.
+Three agents with distinct responsibilities. The Conversation Agent observes the replayed human conversation exchange-by-exchange, using tools to gather context progressively. The Preference Agent runs automatically after each exchange, extracting preference signals from both sides. The History Agent is demand-driven — exposed as a tool that the Conversation Agent calls when it needs historical context. After all exchanges are observed, the Conversation Agent predicts ratings.
 
 ```
+                    ┌─────────────────────────┐
+                    │   ORIGINAL CONVERSATION  │
+                    │   (replayed from DB)     │
+                    │                          │
+                    │   Seeker ←→ Assistant    │
+                    │   (both human, verbatim) │
+                    └───────────┬──────────────┘
+                                │ (exchange by exchange)
+                                ▼
 ┌──────────────────────────────────────────────────────────────────┐
-│                     CONVERSATION AGENT                           │
+│                   CONVERSATION AGENT (Observer)                   │
 │                                                                  │
-│  Plays the Assistant role in the conversation                   │
-│  Receives injected context from Preference Agent (automatic)   │
+│  Observes replayed exchanges — does NOT generate responses      │
+│  Uses tools to gather context about mentioned items/preferences │
 │  Calls History Agent on demand via recall_history tool          │
 │  Has direct access to: catalogue_search, compare_items, sql,   │
 │                         recall_history                           │
-│  At final turn: predicts 1-5 ratings for all 12 items           │
+│  After final exchange: predicts 1-5 ratings for all 12 items   │
 │                                                                  │
-│  Context window contains:                                       │
+│  Context window accumulates:                                    │
 │  - Scenario description                                         │
 │  - [PREF AGENT] Rendered taste profile + live preference state  │
 │  - Basic item metadata (names + categories, injected at start)  │
-│  - Conversation transcript so far                               │
+│  - Observed exchanges + tool results from progressive discovery │
 └───────────┬──────────────────────────────────┬───────────────────┘
-            │ (automatic, every turn)          │ (on demand, via tool)
+            │ (automatic, every exchange)      │ (on demand, via tool)
     ┌───────▼────────┐                 ┌──────▼─────────┐
     │ PREFERENCE      │                 │ HISTORY         │
     │ AGENT           │                 │ AGENT           │
     │                 │                 │                 │
-    │ Monitors convo  │                 │ Invoked when    │
-    │ Extracts prefs  │                 │ Convo Agent     │
-    │ after each      │                 │ calls           │
-    │ exchange         │                 │ recall_history  │
+    │ Monitors each   │                 │ Invoked when    │
+    │ exchange from   │                 │ Convo Agent     │
+    │ the original    │                 │ calls           │
+    │ conversation    │                 │ recall_history  │
     │                 │                 │                 │
     │ Cold start:     │                 │ Searches user's │
     │ loads taste     │                 │ past convos     │
@@ -293,8 +304,8 @@ Three agents with distinct responsibilities. The Preference Agent runs automatic
 3. Render into a structured taste profile text block
 4. Inject into the Conversation Agent's context
 
-**Live monitoring** (called after each full exchange — Seeker utterance + Conversation Agent response):
-1. Read both the Seeker utterance and the Conversation Agent's response for that turn
+**Live monitoring** (called after each replayed exchange — original Seeker + Assistant):
+1. Read both the Seeker utterance and the original Assistant response for that turn
 2. Extract preference signals (explicit, implicit, critique, reject) from both sides of the exchange
 3. Persist new signals to `user_preferences` table with `source_conv_id` = current conversation
 4. Re-render the updated preference summary and inject into context
@@ -356,9 +367,11 @@ Unlike the Preference Agent (which runs automatically every turn), the History A
 - User mentioned "I walk a lot" across multiple scenarios — mobility is important
 ```
 
-### Agent 3: Conversation Agent (Main)
+### Agent 3: Conversation Agent (Observer)
 
-**Role**: Plays the Assistant in the conversation. Responds to replayed Seeker utterances.
+**Role**: Observes the replayed human conversation. Gathers context via tools. Predicts ratings at the end.
+
+The Conversation Agent does NOT generate assistant responses. Both sides of the conversation (Seeker and Assistant) are replayed verbatim from the dataset. The agent's value comes from progressive context gathering — using tools to look up item details, search the catalogue, and recall history as the conversation unfolds — and the final rating prediction informed by all accumulated context.
 
 **Context at start**:
 - Scenario description (from `scenarios` table)
@@ -371,15 +384,16 @@ Unlike the Preference Agent (which runs automatically every turn), the History A
 - `sql_query`: Query detailed item metadata, user profile, etc. on demand
 - `recall_history`: Invoke the History Agent to search and synthesize relevant past interactions for this user
 
-**Behavior**:
-- Follows the 5-stage conversation structure naturally
-- Uses `catalogue_search` for grounded item retrieval (not hallucinated recommendations)
-- Uses `compare_items` for factual critique responses
-- Uses `sql_query` for progressive disclosure of item details (reviews, full description, etc.)
+**Per-exchange behavior** (observation mode):
+- Receives the original Seeker + Assistant exchange
+- Analyzes for preference signals, item mentions, and critiques
+- Proactively uses tools to gather context about mentioned items (progressive disclosure)
+- Uses `recall_history` when past context would help understand preferences
+- Keeps brief analysis notes (these accumulate in the session for rating prediction)
 
-**Rating prediction** (after final turn):
-- The Conversation Agent itself predicts 1-5 ratings for all 12 items
-- It has access to: the full conversation transcript, accumulated preference state, taste profile, historical context, and all item metadata
+**Rating prediction** (after final exchange):
+- The Conversation Agent predicts 1-5 ratings for all 12 items
+- It has access to: all observed exchanges, tool results from progressive discovery, accumulated preference state, taste profile, and historical context
 - The LLM IS the prediction model — no separate `predict_all_ratings` function
 - Output: `{item_id: predicted_rating}` for all 12 items in the catalogue
 
@@ -552,39 +566,38 @@ SETUP:
      → load_taste_profile(user_id="s1", exclude_conv_id=1)
      → renders taste profile text → injects into Conversation Agent context
 
-  2. Conversation Agent: initialized with
+  2. Conversation Agent (observer mode): initialized with
      → scenario description
      → taste profile (from Preference Agent)
      → basic item metadata: names + categories for items 1-12
      → recall_history tool available (History Agent invoked on demand)
 
-CONVERSATION LOOP:
-  For each turn in the original transcript:
-    1. Seeker utterance replayed from dataset
+OBSERVATION LOOP:
+  For each exchange in the original transcript (Seeker + Assistant replayed from DB):
+    1. Both sides replayed verbatim from dataset
 
-    2. Conversation Agent responds:
+    2. Conversation Agent observes the exchange:
        → may call catalogue_search, compare_items, sql_query, recall_history
-       → recall_history spins up History Agent when the LLM wants historical context
-       → generates assistant response
+       → gathers context about mentioned items, preferences, user history
+       → keeps brief analysis notes (accumulates in session context)
 
     3. Preference Agent monitors (after the full exchange):
-       → reads both the Seeker utterance and the Conversation Agent's response
+       → reads both the original Seeker and Assistant utterances
        → extracts new preference signals from both sides
        → update_preference(...) → persists to SQLite
-       → re-renders preference summary → injects updated context for next turn
+       → re-renders preference summary → injects updated context for next exchange
 
-  After final turn:
+  After final exchange:
     4. Conversation Agent predicts ratings:
-       → given full context (transcript + preferences + history + items)
+       → given full accumulated context (observed exchanges + tool results + preferences + history)
        → outputs {item_id: rating} for all 12 items
 
 OUTPUT:
   results/<conv_id>/
-    ├── transcript.json      # full conversation (seeker replayed + agent generated)
+    ├── transcript.json      # original conversation (both sides from DB)
     ├── predictions.json     # predicted ratings for all 12 items
-    ├── preferences.json     # accumulated preference state
-    ├── context_injections/  # what was injected by Pref and History agents
-    └── tool_calls.json      # log of all tool calls made
+    ├── preferences.txt      # accumulated preference state
+    └── tool_calls.json      # log of all tool calls (by all 3 agents)
 ```
 
 ---
@@ -647,36 +660,42 @@ await runPrintMode(session, {
 });
 ```
 
-### Display During Simulation
+### Web Visualizer (agent.elwin.cc)
 
-The event stream from Pi-mono provides real-time output:
+The simulation streams structured events via SSE to a two-panel web UI:
+
+**Left panel (timeline)** — real-time event stream:
+- Status messages (cold start, monitoring, prediction phases)
+- Replayed exchanges (Seeker + original Assistant from DB)
+- Collapsible tool call cards (color-coded by agent: conversation, preference, history)
+- Agent output cards (preference monitoring results, observer notes)
+
+**Right panel (context)** — injected context with source attribution:
+- Scenario (source: `scenarios` table)
+- Catalogue Items (source: `items` table)
+- Taste Profile (source: Preference Agent — updates live after each exchange)
 
 ```
-┌─ Simulating: Conv 1 | Seeker: s1 | Scenario: Farm Visit | Catalogue: a ─┐
-│                                                                           │
-│  [PREF AGENT] Cold start loaded: 12 preference signals from 5 convos    │
-│  [HIST AGENT] Relevant history: conv 2 (same catalogue, campus scenario) │
-│                                                                           │
-│  ── Turn 1 ──────────────────────────────────────────────────────────     │
-│  Seeker: "Hi, I need a jacket for a farm visit in the fall"              │
-│  [PREF] +explicit: occasion=farm/outdoor, season=fall                    │
-│  Agent: "Great! What kind of activities will you be doing..."            │
-│  [TOOLS] catalogue_search("outdoor fall jacket", catalogue="a", top_k=4)│
-│                                                                           │
-│  ── Turn 2 ──────────────────────────────────────────────────────────     │
-│  Seeker: "Muddy paths, maybe some rain"                                  │
-│  [PREF] +explicit: waterproof=required, durability=important             │
-│  Agent: "For rain and mud, you'll want something with..."                │
-│                                                                           │
-│  ...                                                                     │
-│                                                                           │
-│  ── Ratings ─────────────────────────────────────────────────────────     │
-│  Predicted: [3, 5, 2, 1, 1, 1, 2, 1, 1, 1, 3, 1]                       │
-│  Ground truth loaded for evaluation.                                     │
-│  MAE: 0.83 | PC: 0.72                                                   │
-│                                                                           │
-│  Results saved to: results/conv_1/                                       │
-└───────────────────────────────────────────────────────────────────────────┘
+┌─ Timeline ──────────────────────────────┬─ Context ─────────────────┐
+│                                          │                           │
+│  [PREF AGENT] Cold start complete       │  ▼ Scenario               │
+│                                          │    scenarios (id: 1)      │
+│  ── Turn 2 ──                            │    "Choosing the Right    │
+│  [Seeker] "I want outerwear for..."     │     Outerwear for..."     │
+│  [Assistant] "You're visiting a farm..." │                           │
+│                                          │  ▼ Catalogue Items        │
+│  ► conversation  catalogue_search        │    items (catalogue: a)   │
+│  ► preference    update_preference       │    - Item 1: Wantdo...   │
+│                                          │    - Item 2: SWISSWELL..│
+│  ► preference  Monitor                   │                           │
+│    "User needs weather-resistant..."    │  ▼ Taste Profile          │
+│                                          │    Pref Agent (updated)   │
+│  ── Turn 4 ──                            │    "Practical casual..."  │
+│  ...                                     │                           │
+│                                          │                           │
+│  ── Rating Prediction ──                 │                           │
+│  Predictions: {"1": 3, "2": 5, ...}    │                           │
+└──────────────────────────────────────────┴───────────────────────────┘
 ```
 
 ---
@@ -741,10 +760,10 @@ The event stream from Pi-mono provides real-time output:
 ### Phase 3: Multi-Agent Core
 - [ ] Implement `src/agents/preference-agent.ts` — separate `createAgentSession()` for cold start + live monitoring
 - [ ] Implement `src/agents/history-agent.ts` — separate `createAgentSession()` for historical context
-- [ ] Implement `src/agents/conversation-agent.ts` — main session with custom system prompt + 3 tools
-- [ ] Implement `src/orchestrator.ts` — coordinates agents per simulation turn:
+- [ ] Implement `src/agents/conversation-agent.ts` — observer session with system prompt + 4 tools
+- [ ] Implement `src/orchestrator.ts` — coordinates agents per simulation:
   - Pre-loop: run Preference Agent (cold start) → inject taste profile into Conversation Agent context
-  - Per-turn: replay Seeker utterance → Conversation Agent responds (may call recall_history) → Preference Agent monitors the full exchange → injects updated preferences for next turn
+  - Per-exchange: replay both sides from DB → Conversation Agent observes + uses tools → Preference Agent monitors → injects updated preferences for next exchange
   - Post-loop: Conversation Agent predicts ratings
 - [ ] Implement rating prediction prompt (after final turn)
 
@@ -765,7 +784,7 @@ The event stream from Pi-mono provides real-time output:
 |----------|--------|-----------|
 | Language | TypeScript | Pi-mono SDK is TS-native; TUI, tools, sessions all come free |
 | Agent framework | Pi-mono SDK | InteractiveMode TUI, ToolDefinition, multi-model, session mgmt — all built-in |
-| User simulation | Replay human Seeker utterances | Clean evaluation — same inputs, controlled comparison |
+| Conversation replay | Replay both Seeker + Assistant verbatim | Coherent conversation — Seeker utterances were written in response to the original Assistant; generating different responses breaks coherence |
 | Same-catalogue history | Allowed (not contamination) | Realistic — a stylist who's worked with you before remembers your preferences |
 | Image handling | Multimodal (MLLM reads item images) | The LLM backbone is a multimodal model — item images are provided alongside text metadata for richer understanding |
 | Storage format | SQLite (`better-sqlite3`) | Surgical exclusion queries, progressive disclosure, single file |

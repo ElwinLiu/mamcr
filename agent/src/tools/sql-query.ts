@@ -3,6 +3,7 @@ import type { ToolDefinition } from "@mariozechner/pi-coding-agent";
 import { getDb } from "../db/schema.js";
 
 const BLOCKED_TABLES = ["ratings", "item_embeddings"];
+const BLOCKED_COLUMNS = ["gt_items"];
 
 function validateQuery(query: string): string | null {
 	const trimmed = query.trim().toUpperCase();
@@ -12,10 +13,16 @@ function validateQuery(query: string): string | null {
 	}
 
 	for (const table of BLOCKED_TABLES) {
-		// Check for table name in the query (case-insensitive, word boundary)
 		const pattern = new RegExp(`\\b${table}\\b`, "i");
 		if (pattern.test(query)) {
 			return `Access to the '${table}' table is not allowed.`;
+		}
+	}
+
+	for (const col of BLOCKED_COLUMNS) {
+		const pattern = new RegExp(`\\b${col}\\b`, "i");
+		if (pattern.test(query)) {
+			return `Access to the '${col}' column is not allowed (ground truth is hidden).`;
 		}
 	}
 

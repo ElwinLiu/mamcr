@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAMCR &mdash; SQLite Database Explorer</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script>
+    (function() {
+      var t = Date.now();
+      var css = document.createElement('link');
+      css.rel = 'stylesheet';
+      css.href = 'style.css?t=' + t;
+      document.head.appendChild(css);
+      window.__cacheBust = t;
+    })();
+  </script>
+</head>
+<body>
+  <nav id="nav">
+    <div class="nav-brand">MAMCR <span class="db-badge">SQLite</span></div>
+    <div class="nav-links">
+      <a href="#overview" class="active" data-section="overview">Overview</a>
+      <a href="#catalogue" data-section="catalogue">Catalogue</a>
+      <a href="#users" data-section="users">Users</a>
+      <a href="#conversations" data-section="conversations">Conversations</a>
+      <a href="#preferences" data-section="preferences">Preferences</a>
+      <a href="#analysis" data-section="analysis">Analysis</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- OVERVIEW -->
+    <section id="overview" class="section active">
+      <div class="section-header">
+        <h1>SQLite Database</h1>
+        <p class="subtitle">Relational view of the VOGUE dataset &mdash; users, items, conversations, ratings &amp; extracted preferences</p>
+      </div>
+      <div class="stats-grid" id="stats-grid"></div>
+      <div class="chart-row">
+        <div class="chart-card">
+          <h3>Conversation Lengths</h3>
+          <canvas id="chart-conv-lengths"></canvas>
+        </div>
+        <div class="chart-card">
+          <h3>Top Dialogue Acts</h3>
+          <canvas id="chart-dialogue-acts"></canvas>
+        </div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-card">
+          <h3>Rating Distribution</h3>
+          <canvas id="chart-rating-dist"></canvas>
+        </div>
+        <div class="chart-card">
+          <h3>Average Rating per User</h3>
+          <canvas id="chart-user-avg-rating"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATALOGUE -->
+    <section id="catalogue" class="section">
+      <div class="section-header">
+        <h1>Item Catalogue</h1>
+        <p class="subtitle">36 items across 3 catalogues: Outerwear, Layering, Shoes</p>
+      </div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-cat="all">All</button>
+        <button class="filter-btn" data-cat="a">A &mdash; Outerwear</button>
+        <button class="filter-btn" data-cat="b">B &mdash; Layering</button>
+        <button class="filter-btn" data-cat="c">C &mdash; Shoes</button>
+      </div>
+      <div class="items-grid" id="items-grid"></div>
+    </section>
+
+    <!-- USERS -->
+    <section id="users" class="section">
+      <div class="section-header">
+        <h1>Users</h1>
+        <p class="subtitle">10 Seekers (s1&ndash;s10) with fashion profiles and preference weights</p>
+      </div>
+      <div class="users-grid" id="users-grid"></div>
+    </section>
+
+    <!-- CONVERSATIONS -->
+    <section id="conversations" class="section">
+      <div class="section-header">
+        <h1>Conversations</h1>
+        <p class="subtitle">60 conversational recommendation sessions with summaries</p>
+      </div>
+      <div class="conv-layout">
+        <div class="conv-sidebar" id="conv-sidebar"></div>
+        <div class="conv-main" id="conv-main">
+          <div class="conv-placeholder">Select a conversation to view the transcript</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREFERENCES -->
+    <section id="preferences" class="section">
+      <div class="section-header">
+        <h1>Extracted Preferences</h1>
+        <p class="subtitle">User preference signals extracted from conversations</p>
+      </div>
+      <div class="prefs-layout">
+        <div class="prefs-sidebar" id="prefs-sidebar"></div>
+        <div class="prefs-main" id="prefs-main">
+          <div class="conv-placeholder">Select a user to view extracted preferences</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANALYSIS -->
+    <section id="analysis" class="section">
+      <div class="section-header">
+        <h1>Analysis</h1>
+        <p class="subtitle">Rating patterns, item popularity, and dialogue analysis</p>
+      </div>
+      <div class="chart-row">
+        <div class="chart-card">
+          <h3>Item Mention Frequency</h3>
+          <canvas id="chart-item-mentions"></canvas>
+        </div>
+        <div class="chart-card">
+          <h3>Ground Truth Selection Frequency</h3>
+          <canvas id="chart-gt-freq"></canvas>
+        </div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-card">
+          <h3>Dialogue Acts by Role</h3>
+          <canvas id="chart-tags-role"></canvas>
+        </div>
+        <div class="chart-card">
+          <h3>Scenarios</h3>
+          <div id="scenarios-list" class="scenarios-list"></div>
+        </div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-card wide">
+          <h3>Per-User Rating Heatmap (Avg Rating per Item)</h3>
+          <canvas id="chart-heatmap"></canvas>
+        </div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-card wide">
+          <h3>Preferences Extracted per User</h3>
+          <canvas id="chart-prefs-per-user"></canvas>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>MAMCR &mdash; Multi-Agent Multimodal Conversational Recommendation &bull; CSI5389 &bull; SQLite Database View</p>
+  </footer>
+
+  <script>document.write('<script src="app.js?t=' + window.__cacheBust + '"><\/script>');</script>
+</body>
+</html>

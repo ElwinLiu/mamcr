@@ -7,7 +7,7 @@ const updatePreferenceParams = Type.Object({
 	conv_id: Type.Number({ description: "Current conversation ID (used as source_conv_id)" }),
 	description: Type.String({
 		description:
-			'Natural language preference, e.g. "Prefers lightweight, slim-fit jackets — disliked Item 7 for being too bulky"',
+			'A high-level, transferable taste signal, e.g. "Prioritizes function over aesthetics when forced to choose" or "Gravitates toward earth tones and muted palettes"',
 	}),
 });
 

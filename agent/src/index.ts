@@ -1,5 +1,5 @@
 /**
- * MAMCR TUI — Multi-Agent Multimodal Conversational Recommendation
+ * MAMCR Agent — Multi-Agent Multimodal Conversational Recommendation
  *
  * Entry point: sets up the Pi-mono InteractiveMode with custom tools,
  * prompt templates (slash commands), and the MAMCR system prompt.
@@ -28,7 +28,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // GEMINI_API_KEY must be set in the environment (e.g. via .env file)
 if (!process.env.GEMINI_API_KEY) {
-	console.error("Error: GEMINI_API_KEY environment variable is required. Set it in tui/.env or your shell.");
+	console.error("Error: GEMINI_API_KEY environment variable is required. Set it in agent/.env or your shell.");
 	process.exit(1);
 }
 

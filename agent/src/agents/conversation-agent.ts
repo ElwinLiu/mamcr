@@ -1,8 +1,12 @@
 /**
- * Conversation Agent: Plays the Assistant role in conversations.
+ * Conversation Agent: Observes replayed human conversations and predicts ratings.
  *
  * Receives injected context from the Preference Agent and has access to
  * catalogue_search, compare_items, sql_query, and recall_history tools.
+ *
+ * Does NOT generate assistant responses — both Seeker and Assistant turns are
+ * replayed from the dataset. The agent observes, gathers context via tools,
+ * and predicts ratings at the end.
  */
 import { getDb } from "../db/schema.js";
 
@@ -16,22 +20,26 @@ interface ScenarioRow {
 	body: string;
 }
 
-/** Build the system prompt for the Conversation Agent */
+export interface SystemPromptComponents {
+	prompt: string;
+	scenario: string;
+	itemList: string;
+}
+
+/** Build the system prompt for the Conversation Agent (observer mode) */
 export function buildSystemPrompt(
 	convId: number,
 	userId: string,
 	scenarioId: number,
 	catalogue: string,
 	tasteProfile: string,
-): string {
+): SystemPromptComponents {
 	const db = getDb();
 
-	// Get scenario
 	const scenario = db.prepare("SELECT body FROM scenarios WHERE scenario_id = ?").get(scenarioId) as
 		| ScenarioRow
 		| undefined;
 
-	// Get basic item metadata (names + categories only — progressive disclosure)
 	const items = db
 		.prepare("SELECT item_id, name, categories FROM items WHERE catalogue = ?")
 		.all(catalogue) as ItemRow[];
@@ -48,9 +56,11 @@ export function buildSystemPrompt(
 		})
 		.join("\n");
 
-	return `You are an expert fashion shopping assistant conducting a conversation with a customer (the Seeker).
-Your goal is to understand the seeker's needs, recommend items from the catalogue, handle critiques,
-and help them find the best items for their situation.
+	const scenarioText = scenario?.body ?? "(Unknown scenario)";
+
+	const prompt = `You are an expert fashion recommendation analyst observing a conversation between a Seeker (customer) and an Assistant (human stylist).
+
+Your task is to observe the conversation exchange by exchange, gather context using your tools, and at the end predict how the Seeker would rate each item on a 1-5 scale.
 
 ## Context
 - Conversation ID: ${convId}
@@ -59,13 +69,12 @@ and help them find the best items for their situation.
 - Catalogue: ${catalogue}
 
 ## Scenario
-${scenario?.body ?? "(Unknown scenario)"}
+${scenarioText}
 
 ## Available Items (Catalogue ${catalogue})
 ${itemList}
 
-Note: You only see basic item info above. Use the sql_query tool to get full details (description, features,
-reviews) for specific items when needed. Use catalogue_search for semantic retrieval.
+Note: You only see basic item info above. Use the sql_query tool to get full details (description, features, reviews) for specific items when needed. Use catalogue_search for semantic retrieval.
 
 ## Tools Available
 - **catalogue_search**: Find items matching a natural language query (semantic search)
@@ -77,15 +86,28 @@ reviews) for specific items when needed. Use catalogue_search for semantic retri
 ${tasteProfile}
 
 ## Guidelines
-- Follow the natural 5-stage conversation flow: Preference Elicitation → Recommendation → Critique → Refinement → Final Agreement
-- Ground your recommendations in actual item data (use tools, don't hallucinate)
-- When the seeker critiques an item, use compare_items to suggest alternatives
-- Use recall_history when past context would help (same catalogue, cross-catalogue insights)
-- Be conversational and helpful, not robotic
-- Refer to items as "Item X" to match the dataset format`;
+- Observe each exchange carefully for preference signals, item mentions, and critiques
+- Use tools proactively to gather relevant context about mentioned items
+- Use recall_history when past context would help understand the user's preferences
+- After observing all exchanges, you will be asked to predict ratings
+- Do NOT generate conversational responses — you are an observer, not a participant
+- Keep your analysis notes brief and focused`;
+
+	return { prompt, scenario: scenarioText, itemList };
 }
 
-/** Build the rating prediction prompt (sent after final conversation turn) */
+/** Build an observation prompt for a single exchange */
+export function buildObservePrompt(turn: number, seekerContent: string, assistantContent: string): string {
+	return `## Exchange — Turn ${turn}
+
+**Seeker:** ${seekerContent}
+
+**Assistant:** ${assistantContent}
+
+Analyze this exchange. Note preference signals, item reactions, and requirements. Use tools to gather context about mentioned items if needed. Keep your notes brief.`;
+}
+
+/** Build the rating prediction prompt (sent after all exchanges observed) */
 export function buildRatingPrompt(catalogue: string): string {
 	const db = getDb();
 	const items = db.prepare("SELECT item_id, name FROM items WHERE catalogue = ?").all(catalogue) as Array<{
@@ -95,7 +117,7 @@ export function buildRatingPrompt(catalogue: string): string {
 
 	const itemList = items.map((i) => `  - Item ${i.item_id}: ${i.name}`).join("\n");
 
-	return `Now that the conversation is complete, predict how likely the seeker would be to purchase each item.
+	return `Now that you have observed the full conversation, predict how likely the seeker would be to purchase each item.
 
 Rate each item on a 1-5 scale:
   1 = Not at all likely to purchase

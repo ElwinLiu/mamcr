@@ -1,10 +1,21 @@
 /**
- * Taste Extraction Pipeline: Pre-experiment step.
+ * Taste Extraction Pipeline — Pre-experiment preprocessing step.
  *
- * For each conversation, an LLM reads the full transcript and:
- * 1. Extracts structured preference signals → user_preferences table
- * 2. Generates a conversation summary → conversations.summary column
+ * Reads each conversation transcript and distills high-level, transferable
+ * taste signals (not scenario-specific details). These preferences power the
+ * Preference Agent's cold-start phase during simulation.
  *
+ * What it produces:
+ *   - user_preferences table: 3-5 enduring taste signals per conversation
+ *     (aesthetic sensibility, material affinities, decision-making style, etc.)
+ *   - conversations.summary column: one-line neutral summary (no item names)
+ *
+ * What it does NOT produce:
+ *   - Scenario-bound preferences ("needs a jacket for farm visit")
+ *   - Item-specific choices ("chose Item 02 over Item 07")
+ *   - Activity/weather-specific needs
+ *
+ * Intended to be run via Claude Code with haiku subagents, not from the web UI.
  * Run with: npm run extract
  */
 import {
@@ -36,22 +47,32 @@ interface ScenarioRow {
 }
 
 const EXTRACT_SYSTEM_PROMPT = `You are a preference extraction agent. Your job is to analyze a conversation transcript
-and extract user preference signals.
+and distill the seeker's **enduring taste profile** — the kind of signals that would be useful
+in a completely different shopping scenario with a different catalogue.
 
 For each preference signal you identify, call the update_preference tool with:
 - user_id: the seeker's ID
 - conv_id: the conversation ID
-- description: a clear, natural language description of the preference
+- description: a high-level, transferable taste signal
 
-Types of signals to extract:
-- Explicit preferences: "I like lightweight jackets", "I prefer earth tones"
-- Implicit preferences: choosing one item over another reveals priorities
-- Contextual needs: occasion requirements, weather needs, activity constraints
-- Rejections: items dismissed and the reasons why
-- Style patterns: recurring themes in what the user gravitates toward
+GOOD signals (transferable across contexts):
+- Aesthetic sensibility: "Gravitates toward minimalist, clean lines over busy patterns"
+- Material affinities: "Prefers natural fibers — wool, cotton, leather — over synthetics"
+- Decision-making style: "Prioritizes function over appearance when forced to choose"
+- Comfort vs style: "Willing to sacrifice some style for practical comfort"
+- Color/tone preferences: "Drawn to earth tones and muted palettes"
+- Fit preferences: "Prefers relaxed/oversized fits, avoids anything too fitted"
 
-After extracting all preferences, output a brief conversation summary (2-3 sentences)
-capturing what happened and what the seeker decided.`;
+BAD signals (too scenario-specific, do NOT extract these):
+- "Needs a jacket for a fall farm visit" (occasion-bound)
+- "Chose Item 02 over Item 07" (item-bound, meaningless in other catalogues)
+- "Wants waterproof outerwear for light rain" (weather-specific)
+- "Seeking outerwear for apple picking" (activity-bound)
+
+Aim for 3-5 signals per conversation. Each should be a standalone insight about who this person is
+as a shopper, not what they needed in this particular moment.
+
+After extracting preferences, output a one-line neutral summary (no item names, no specific choices).`;
 
 async function extractFromConversation(convId: number): Promise<string> {
 	const db = getDb();

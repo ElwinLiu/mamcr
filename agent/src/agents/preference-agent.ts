@@ -14,6 +14,11 @@ import {
 import { getModel } from "@mariozechner/pi-ai";
 import { preferenceTools } from "../tools/index.js";
 
+export interface SubAgentResult {
+	text: string;
+	toolCalls: Array<{ tool: string; args: any; result: string }>;
+}
+
 const COLD_START_PROMPT = `You are a preference analysis agent. Your job is to load and organize a user's taste profile.
 
 Call the load_taste_profile tool with the provided user_id and exclude_conv_id to get their profile and prior preferences.
@@ -51,12 +56,34 @@ ${existingPrefs}
 Only record genuinely new information. Do not duplicate existing preferences.`;
 }
 
-/** Run a headless sub-agent session and collect its text response */
+/** Extract readable text from a tool result (which may be an MCP-style object) */
+function extractToolResult(result: any): string {
+	if (typeof result === "string") return result;
+	if (Array.isArray(result)) {
+		return result
+			.filter((b: any) => b.type === "text")
+			.map((b: any) => b.text)
+			.join("\n");
+	}
+	if (result?.content && Array.isArray(result.content)) {
+		return result.content
+			.filter((b: any) => b.type === "text")
+			.map((b: any) => b.text)
+			.join("\n");
+	}
+	try {
+		return JSON.stringify(result, null, 2);
+	} catch {
+		return String(result);
+	}
+}
+
+/** Run a headless sub-agent session and collect its text response + tool calls */
 async function runSubAgent(
 	systemPrompt: string,
 	userPrompt: string,
 	tools: typeof preferenceTools,
-): Promise<string> {
+): Promise<SubAgentResult> {
 	const loader = new DefaultResourceLoader({
 		systemPromptOverride: () => systemPrompt,
 	});
@@ -73,10 +100,19 @@ async function runSubAgent(
 		sessionManager: SessionManager.inMemory(),
 	});
 
-	return new Promise<string>((resolve) => {
+	return new Promise<SubAgentResult>((resolve) => {
 		const textParts: string[] = [];
+		const toolCalls: SubAgentResult["toolCalls"] = [];
 
 		session.subscribe((event: AgentSessionEvent) => {
+			if (event.type === "tool_execution_end") {
+				const e = event as any;
+				toolCalls.push({
+					tool: e.toolName,
+					args: e.input ?? e.arguments ?? {},
+					result: extractToolResult(e.result),
+				});
+			}
 			if (event.type === "message_end" && "role" in event.message && event.message.role === "assistant") {
 				const msg = event.message as any;
 				for (const block of msg.content ?? []) {
@@ -86,7 +122,7 @@ async function runSubAgent(
 				}
 			}
 			if (event.type === "agent_end") {
-				resolve(textParts.join("\n"));
+				resolve({ text: textParts.join("\n"), toolCalls });
 				session.dispose();
 			}
 		});
@@ -96,7 +132,7 @@ async function runSubAgent(
 }
 
 /** Cold start: load taste profile from DB, produce summary text */
-export async function coldStart(userId: string, excludeConvId: number): Promise<string> {
+export async function coldStart(userId: string, excludeConvId: number): Promise<SubAgentResult> {
 	const prompt = `Load the taste profile for user "${userId}", excluding conversation ${excludeConvId}. Then provide a clean summary.`;
 	return runSubAgent(COLD_START_PROMPT, prompt, preferenceTools);
 }
@@ -108,7 +144,7 @@ export async function monitorExchange(
 	seekerUtterance: string,
 	agentResponse: string,
 	existingPrefs: string,
-): Promise<string> {
+): Promise<SubAgentResult> {
 	const systemPrompt = buildMonitorPrompt(userId, convId, seekerUtterance, agentResponse, existingPrefs);
 	return runSubAgent(
 		systemPrompt,

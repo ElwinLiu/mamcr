@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MAMCR</title>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<nav id="nav">
+		<span class="nav-brand">MAMCR <span class="db-badge">WEB</span></span>
+		<div class="nav-links">
+			<a href="#" class="active" data-tab="browse">Browse</a>
+			<a href="#" data-tab="simulate">Simulate</a>
+			<a href="#" data-tab="evaluate">Evaluate</a>
+			<a href="#" data-tab="profile">Profile</a>
+		</div>
+	</nav>
+
+	<main>
+		<section id="browse" class="section active">
+			<div class="section-header">
+				<h1>Browse Data</h1>
+				<p class="subtitle">Explore conversations, items, and users</p>
+			</div>
+			<div id="browse-content"><p class="placeholder">Loading...</p></div>
+		</section>
+
+		<section id="simulate" class="section">
+			<div class="section-header">
+				<h1>Simulation</h1>
+				<p class="subtitle">Run conversation simulations with the multi-agent system</p>
+			</div>
+			<div id="simulate-content"><p class="placeholder">Loading...</p></div>
+		</section>
+
+		<section id="evaluate" class="section">
+			<div class="section-header">
+				<h1>Evaluation</h1>
+				<p class="subtitle">Evaluate prediction accuracy against ground truth</p>
+			</div>
+			<div id="evaluate-content"><p class="placeholder">Loading...</p></div>
+		</section>
+
+		<section id="profile" class="section">
+			<div class="section-header">
+				<h1>Taste Profiles</h1>
+				<p class="subtitle">View user taste profiles and extracted preferences</p>
+			</div>
+			<div id="profile-content"><p class="placeholder">Loading...</p></div>
+		</section>
+	</main>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+	<script src="api.js"></script>
+	<script src="app.js"></script>
+	<script src="tabs/browse.js"></script>
+	<script src="tabs/simulate.js"></script>
+	<script src="tabs/evaluate.js"></script>
+	<script src="tabs/profile.js"></script>
+</body>
+</html>
