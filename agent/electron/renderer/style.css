@@ -230,6 +230,22 @@ main {
 .action-btn:hover { opacity: 0.85; }
 .action-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
+/* HISTORY BAR */
+.history-bar {
+	display: flex;
+	gap: 1rem;
+	margin-bottom: 1rem;
+	flex-wrap: wrap;
+	align-items: flex-end;
+}
+
+.action-btn--secondary {
+	background: var(--surface);
+	color: var(--text);
+	border: 1px solid var(--border);
+}
+.action-btn--secondary:hover { background: var(--surface-2); opacity: 1; }
+
 /* LOG AREA */
 .log-area {
 	background: #1a1a1a;

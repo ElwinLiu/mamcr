@@ -19,6 +19,14 @@
 			</div>
 		</div>
 
+		<div class="history-bar" id="sim-history-bar" style="display:none">
+			<div class="action-group">
+				<label for="sim-history-select">Past runs:</label>
+				<select id="sim-history-select"></select>
+				<button class="action-btn action-btn--secondary" id="sim-load-run-btn">Load Run</button>
+			</div>
+		</div>
+
 		<div class="sim-layout" id="sim-layout" style="display:none">
 			<div class="sim-main" id="sim-main">
 				<div class="sim-timeline" id="sim-timeline"></div>
@@ -60,7 +68,69 @@
 	const batchBtn = document.getElementById("sim-batch-btn");
 	const batchLog = document.getElementById("sim-batch-log");
 
+	const historyBar = document.getElementById("sim-history-bar");
+	const historySelect = document.getElementById("sim-history-select");
+	const loadRunBtn = document.getElementById("sim-load-run-btn");
+
 	let unsub = null;
+
+	// ── History ──
+
+	function formatTimestamp(ts) {
+		// Parse "20260314T123000Z" → readable date
+		const m = ts.match(/^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})Z$/);
+		if (!m) return ts;
+		return `${m[1]}-${m[2]}-${m[3]} ${m[4]}:${m[5]}:${m[6]} UTC`;
+	}
+
+	async function refreshHistory() {
+		const convId = parseInt(document.getElementById("sim-conv-select").value);
+		try {
+			const runs = await window.mamcr.listSimRuns(convId);
+			if (runs.length === 0) {
+				historyBar.style.display = "none";
+				return;
+			}
+			historySelect.innerHTML = runs
+				.map((r) => `<option value="${r.runId}">${formatTimestamp(r.timestamp)}</option>`)
+				.join("");
+			historyBar.style.display = "";
+		} catch {
+			historyBar.style.display = "none";
+		}
+	}
+
+	document.getElementById("sim-conv-select").addEventListener("change", refreshHistory);
+	refreshHistory();
+
+	loadRunBtn.addEventListener("click", async () => {
+		const convId = parseInt(document.getElementById("sim-conv-select").value);
+		const runId = historySelect.value;
+		if (!runId) return;
+
+		loadRunBtn.disabled = true;
+		loadRunBtn.textContent = "Loading...";
+
+		try {
+			const { events, result } = await window.mamcr.loadSimRun(convId, runId);
+
+			timeline.innerHTML = "";
+			contextCards.innerHTML = "";
+			layout.style.display = "";
+			resultsEl.style.display = "none";
+
+			for (const event of events) {
+				handleSimEvent(event);
+			}
+
+			renderResults(result);
+		} catch (err) {
+			addEvent(`<div class="sim-ev sim-ev-status" style="color:var(--assistant)">Error loading run: ${escapeHtml(err.message)}</div>`);
+		} finally {
+			loadRunBtn.disabled = false;
+			loadRunBtn.textContent = "Load Run";
+		}
+	});
 
 	// ── Helpers ──
 
@@ -192,6 +262,32 @@
 		}
 	}
 
+	// ── Results rendering ──
+
+	function renderResults(result) {
+		resultsEl.style.display = "";
+		resultsContent.innerHTML = `
+			<div class="stats-grid">
+				<div class="stat-card"><div class="label">Conv ID</div><div class="value">${result.convId}</div></div>
+				<div class="stat-card"><div class="label">User</div><div class="value">${escapeHtml(result.userId)}</div></div>
+				<div class="stat-card"><div class="label">Turns</div><div class="value">${result.transcript.length}</div></div>
+				<div class="stat-card"><div class="label">Tool Calls</div><div class="value">${result.toolCalls.length}</div></div>
+			</div>
+
+			<h4 class="results-title">Predictions</h4>
+			<div class="metrics-table">
+				<table>
+					<thead><tr><th>Item ID</th><th>Predicted Rating</th></tr></thead>
+					<tbody>
+						${Object.entries(result.predictions)
+							.map(([id, r]) => `<tr><td>${escapeHtml(String(id))}</td><td>${Number(r)}</td></tr>`)
+							.join("")}
+					</tbody>
+				</table>
+			</div>
+		`;
+	}
+
 	// ── Single simulation ──
 
 	runBtn.addEventListener("click", async () => {
@@ -208,28 +304,7 @@
 
 		try {
 			const result = await window.mamcr.runSimulation(convId);
-
-			resultsEl.style.display = "";
-			resultsContent.innerHTML = `
-				<div class="stats-grid">
-					<div class="stat-card"><div class="label">Conv ID</div><div class="value">${result.convId}</div></div>
-					<div class="stat-card"><div class="label">User</div><div class="value">${result.userId}</div></div>
-					<div class="stat-card"><div class="label">Turns</div><div class="value">${result.transcript.length}</div></div>
-					<div class="stat-card"><div class="label">Tool Calls</div><div class="value">${result.toolCalls.length}</div></div>
-				</div>
-
-				<h4 class="results-title">Predictions</h4>
-				<div class="metrics-table">
-					<table>
-						<thead><tr><th>Item ID</th><th>Predicted Rating</th></tr></thead>
-						<tbody>
-							${Object.entries(result.predictions)
-								.map(([id, r]) => `<tr><td>${id}</td><td>${r}</td></tr>`)
-								.join("")}
-						</tbody>
-					</table>
-				</div>
-			`;
+			renderResults(result);
 		} catch (err) {
 			addEvent(`<div class="sim-ev sim-ev-status" style="color:var(--assistant)">Error: ${escapeHtml(err.message)}</div>`);
 		} finally {
@@ -239,6 +314,7 @@
 				unsub();
 				unsub = null;
 			}
+			refreshHistory();
 		}
 	});
 

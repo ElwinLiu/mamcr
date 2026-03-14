@@ -8,7 +8,6 @@ import {
 	createAgentSession,
 	SessionManager,
 	DefaultResourceLoader,
-	type AgentSessionEvent,
 	type ToolDefinition,
 } from "@mariozechner/pi-coding-agent";
 import { getModel } from "@mariozechner/pi-ai";
@@ -16,6 +15,7 @@ import { Type } from "@sinclair/typebox";
 import { getConversationTool } from "../tools/index.js";
 import { getDb } from "../db/schema.js";
 import { scopedTable } from "../db/scope.js";
+import { runPromptToCompletion } from "../session-utils.js";
 import type { SubAgentResult } from "./preference-agent.js";
 
 const HISTORY_SYSTEM_PROMPT = `You are a history research agent. Your job is to search a user's past conversations
@@ -33,28 +33,6 @@ interface ConvMetaRow {
 	conv_id: number;
 	scenario_id: number;
 	catalogue: string;
-}
-
-/** Extract readable text from a tool result */
-function extractToolResult(result: any): string {
-	if (typeof result === "string") return result;
-	if (Array.isArray(result)) {
-		return result
-			.filter((b: any) => b.type === "text")
-			.map((b: any) => b.text)
-			.join("\n");
-	}
-	if (result?.content && Array.isArray(result.content)) {
-		return result.content
-			.filter((b: any) => b.type === "text")
-			.map((b: any) => b.text)
-			.join("\n");
-	}
-	try {
-		return JSON.stringify(result, null, 2);
-	} catch {
-		return String(result);
-	}
 }
 
 /** Run the history agent and return its response + tool calls.
@@ -100,42 +78,11 @@ Search the relevant conversations and provide a concise historical context summa
 		sessionManager: SessionManager.inMemory(),
 	});
 
-	return new Promise<SubAgentResult>((resolve) => {
-		const textParts: string[] = [];
-		const toolCalls: SubAgentResult["toolCalls"] = [];
-		const pendingArgs = new Map<string, any>();
-
-		session.subscribe((event: AgentSessionEvent) => {
-			if (event.type === "tool_execution_start") {
-				const e = event as any;
-				pendingArgs.set(e.toolCallId, e.args ?? {});
-			}
-			if (event.type === "tool_execution_end") {
-				const e = event as any;
-				const args = pendingArgs.get(e.toolCallId) ?? {};
-				pendingArgs.delete(e.toolCallId);
-				toolCalls.push({
-					tool: e.toolName,
-					args,
-					result: extractToolResult(e.result),
-				});
-			}
-			if (event.type === "message_end" && "role" in event.message && event.message.role === "assistant") {
-				const msg = event.message as any;
-				for (const block of msg.content ?? []) {
-					if (block.type === "text") {
-						textParts.push(block.text);
-					}
-				}
-			}
-			if (event.type === "agent_end") {
-				resolve({ text: textParts.join("\n"), toolCalls });
-				session.dispose();
-			}
-		});
-
-		session.prompt(userPrompt);
-	});
+	try {
+		return await runPromptToCompletion(session, userPrompt);
+	} finally {
+		session.dispose();
+	}
 }
 
 const recallHistoryParams = Type.Object({

@@ -21,29 +21,33 @@ export function enterSimulationScope(excludeConvId: number): void {
 	db.exec("DROP VIEW IF EXISTS v_conversations");
 	db.exec("DROP VIEW IF EXISTS v_conversation_turns");
 
+	// SQLite views cannot use parameters — inline the integer directly
+	const id = Number(excludeConvId);
+	if (!Number.isFinite(id)) throw new Error(`Invalid conv ID: ${excludeConvId}`);
+
 	// Preferences from other conversations only
-	db.prepare(`
+	db.exec(`
 		CREATE TEMP VIEW v_user_preferences AS
 		SELECT id, user_id, source_conv_id, description
 		FROM user_preferences
-		WHERE source_conv_id != ?
-	`).run(excludeConvId);
+		WHERE source_conv_id != ${id}
+	`);
 
 	// Other conversations (full metadata minus gt_items)
-	db.prepare(`
+	db.exec(`
 		CREATE TEMP VIEW v_conversations AS
 		SELECT conv_id, user_id, scenario_id, catalogue, mentioned_items, summary
 		FROM conversations
-		WHERE conv_id != ?
-	`).run(excludeConvId);
+		WHERE conv_id != ${id}
+	`);
 
 	// Other conversation turns only
-	db.prepare(`
+	db.exec(`
 		CREATE TEMP VIEW v_conversation_turns AS
 		SELECT conv_id, turn, role, content, tags
 		FROM conversation_turns
-		WHERE conv_id != ?
-	`).run(excludeConvId);
+		WHERE conv_id != ${id}
+	`);
 
 	activeScope = excludeConvId;
 }
