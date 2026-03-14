@@ -1,7 +1,7 @@
 /**
  * Preference Agent: Tracks user preferences via cold start + live monitoring.
  *
- * - Cold start: loads taste profile from prior conversations (excluding test conv)
+ * - Cold start: programmatically loads taste profile from DB (no LLM needed)
  * - Live monitoring: extracts preference signals after each exchange
  * - Produces a preference summary text block for injection into Conversation Agent context
  */
@@ -13,16 +13,12 @@ import {
 } from "@mariozechner/pi-coding-agent";
 import { getModel } from "@mariozechner/pi-ai";
 import { preferenceTools } from "../tools/index.js";
+import { loadTasteProfile } from "../tools/load-taste-profile.js";
 
 export interface SubAgentResult {
 	text: string;
 	toolCalls: Array<{ tool: string; args: any; result: string }>;
 }
-
-const COLD_START_PROMPT = `You are a preference analysis agent. Your job is to load and organize a user's taste profile.
-
-Call the load_taste_profile tool with the provided user_id and exclude_conv_id to get their profile and prior preferences.
-Then output a clean, organized summary of their taste profile that can be used by a conversation agent.`;
 
 function buildMonitorPrompt(
 	userId: string,
@@ -131,10 +127,14 @@ async function runSubAgent(
 	});
 }
 
-/** Cold start: load taste profile from DB, produce summary text */
-export async function coldStart(userId: string, excludeConvId: number): Promise<SubAgentResult> {
-	const prompt = `Load the taste profile for user "${userId}", excluding conversation ${excludeConvId}. Then provide a clean summary.`;
-	return runSubAgent(COLD_START_PROMPT, prompt, preferenceTools);
+/** Cold start: load taste profile directly from DB (no LLM needed).
+ *  Exclusion is handled by the simulation scope — no conv ID needed here. */
+export function coldStart(userId: string): SubAgentResult {
+	const text = loadTasteProfile(userId);
+	return {
+		text,
+		toolCalls: [{ tool: "load_taste_profile", args: { user_id: userId }, result: text }],
+	};
 }
 
 /** Live monitoring: analyze exchange, extract and persist new signals, return updated summary */

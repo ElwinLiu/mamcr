@@ -21,6 +21,7 @@ import { getModel } from "@mariozechner/pi-ai";
 import { mkdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { getDb, PROJECT_ROOT } from "./db/schema.js";
+import { enterSimulationScope, exitSimulationScope } from "./db/scope.js";
 import { conversationTools } from "./tools/index.js";
 import { createRecallHistoryTool } from "./agents/history-agent.js";
 import { coldStart, monitorExchange } from "./agents/preference-agent.js";
@@ -132,77 +133,131 @@ export async function simulateConversation(
 	const toolCalls: ToolCallRecord[] = [];
 	const transcript: Array<{ turn: number; role: string; content: string }> = [];
 
-	// ── Step 1: Cold start — Preference Agent loads taste profile ──
+	// ── Set up simulation scope — all DB access is now filtered ──
+	enterSimulationScope(convId);
 
-	emit({ type: "status", message: "[PREF AGENT] Running cold start..." });
-	const coldStartResult = await coldStart(conv.user_id, convId);
-	let preferenceState = coldStartResult.text;
+	try {
+		// ── Step 1: Cold start — Preference Agent loads taste profile ──
 
-	for (const tc of coldStartResult.toolCalls) {
-		emit({ type: "tool_call", agent: "preference", tool: tc.tool, args: tc.args, result: tc.result });
-		toolCalls.push({ agent: "preference", ...tc });
-	}
-	emit({ type: "agent_output", agent: "preference", phase: "cold_start", content: preferenceState });
-	emit({ type: "status", message: "[PREF AGENT] Cold start complete" });
+		emit({ type: "status", message: "[PREF AGENT] Running cold start..." });
+		const coldStartResult = coldStart(conv.user_id);
+		let preferenceState = coldStartResult.text;
 
-	// ── Step 2: Create Conversation Agent session (observer mode) ──
+		for (const tc of coldStartResult.toolCalls) {
+			emit({ type: "tool_call", agent: "preference", tool: tc.tool, args: tc.args, result: tc.result });
+			toolCalls.push({ agent: "preference", ...tc });
+		}
+		emit({ type: "agent_output", agent: "preference", phase: "cold_start", content: preferenceState });
+		emit({ type: "status", message: "[PREF AGENT] Cold start complete" });
 
-	const { prompt: systemPrompt, scenario, itemList } = buildSystemPrompt(
-		convId, conv.user_id, conv.scenario_id, conv.catalogue, preferenceState,
-	);
+		// ── Step 2: Create Conversation Agent session (observer mode) ──
 
-	emit({ type: "context", label: "Scenario", source: `scenarios (id: ${conv.scenario_id})`, content: scenario });
-	emit({ type: "context", label: "Catalogue Items", source: `items (catalogue: ${conv.catalogue})`, content: itemList });
-	emit({ type: "context", label: "Taste Profile", source: "Preference Agent (cold start)", content: preferenceState });
+		const { prompt: systemPrompt, scenario, itemList } = buildSystemPrompt(
+			convId, conv.user_id, conv.scenario_id, conv.catalogue, preferenceState,
+		);
 
-	const loader = new DefaultResourceLoader({
-		systemPromptOverride: () => systemPrompt,
-	});
-	await loader.reload();
+		emit({ type: "context", label: "Scenario", source: `scenarios (id: ${conv.scenario_id})`, content: scenario });
+		emit({ type: "context", label: "Catalogue Items", source: `items (catalogue: ${conv.catalogue})`, content: itemList });
+		emit({ type: "context", label: "Taste Profile", source: "Preference Agent (cold start)", content: preferenceState });
 
-	const model = getModel("google", "gemini-3-flash-preview");
+		const loader = new DefaultResourceLoader({
+			systemPromptOverride: () => systemPrompt,
+		});
+		await loader.reload();
 
-	const recallTool = createRecallHistoryTool((tc) => {
-		emit({ type: "tool_call", agent: "history", tool: tc.tool, args: tc.args, result: tc.result });
-		toolCalls.push({ agent: "history", ...tc });
-	});
+		const model = getModel("google", "gemini-3-flash-preview");
 
-	const allConvTools: ToolDefinition<any>[] = [...conversationTools, recallTool];
+		const recallTool = createRecallHistoryTool((tc) => {
+			emit({ type: "tool_call", agent: "history", tool: tc.tool, args: tc.args, result: tc.result });
+			toolCalls.push({ agent: "history", ...tc });
+		});
 
-	const { session } = await createAgentSession({
-		model,
-		thinkingLevel: "off",
-		tools: [],
-		customTools: allConvTools,
-		resourceLoader: loader,
-		sessionManager: SessionManager.inMemory(),
-	});
+		const allConvTools: ToolDefinition<any>[] = [...conversationTools, recallTool];
 
-	// ── Step 3: Conversation loop — observe original exchanges ──
+		const { session } = await createAgentSession({
+			model,
+			thinkingLevel: "off",
+			tools: [],
+			customTools: allConvTools,
+			resourceLoader: loader,
+			sessionManager: SessionManager.inMemory(),
+		});
 
-	for (const exchange of exchanges) {
-		emit({ type: "turn_start", turn: exchange.turn });
-		emit({ type: "seeker", turn: exchange.turn, content: exchange.seeker });
-		emit({ type: "assistant", turn: exchange.turn, content: exchange.assistant });
+		// ── Step 3: Conversation loop — observe original exchanges ──
 
-		transcript.push({ turn: exchange.turn, role: "Seeker", content: exchange.seeker });
-		transcript.push({ turn: exchange.turn, role: "Assistant", content: exchange.assistant });
+		for (const exchange of exchanges) {
+			emit({ type: "turn_start", turn: exchange.turn });
+			emit({ type: "seeker", turn: exchange.turn, content: exchange.seeker });
+			emit({ type: "assistant", turn: exchange.turn, content: exchange.assistant });
 
-		// Conversation Agent observes and may call tools to gather context
-		const observePrompt = buildObservePrompt(exchange.turn, exchange.seeker, exchange.assistant);
+			transcript.push({ turn: exchange.turn, role: "Seeker", content: exchange.seeker });
+			transcript.push({ turn: exchange.turn, role: "Assistant", content: exchange.assistant });
 
-		const observation = await new Promise<string>((resolveObs) => {
+			// Conversation Agent observes and may call tools to gather context
+			const observePrompt = buildObservePrompt(exchange.turn, exchange.seeker, exchange.assistant);
+
+			const observation = await new Promise<string>((resolveObs) => {
+				const textParts: string[] = [];
+
+				const unsub = session.subscribe((event: AgentSessionEvent) => {
+					if (event.type === "tool_execution_end") {
+						const e = event as any;
+						const args = e.input ?? e.arguments ?? {};
+						const result = extractToolResult(e.result);
+
+						toolCalls.push({ agent: "conversation", tool: e.toolName, args, result });
+						emit({ type: "tool_call", agent: "conversation", tool: e.toolName, args, result });
+					}
+					if (event.type === "message_end" && "role" in event.message && event.message.role === "assistant") {
+						const msg = event.message as any;
+						for (const block of msg.content ?? []) {
+							if (block.type === "text") {
+								textParts.push(block.text);
+							}
+						}
+					}
+					if (event.type === "agent_end") {
+						unsub();
+						resolveObs(textParts.join("\n"));
+					}
+				});
+
+				session.prompt(observePrompt);
+			});
+
+			if (observation.trim()) {
+				emit({ type: "agent_output", agent: "conversation", phase: "observe", content: observation });
+			}
+
+			// ── Preference Agent monitors the exchange ──
+
+			emit({ type: "status", message: "[PREF AGENT] Monitoring exchange..." });
+			const monitorResult = await monitorExchange(
+				conv.user_id,
+				convId,
+				exchange.seeker,
+				exchange.assistant,
+				preferenceState,
+			);
+			preferenceState = monitorResult.text;
+
+			for (const tc of monitorResult.toolCalls) {
+				emit({ type: "tool_call", agent: "preference", tool: tc.tool, args: tc.args, result: tc.result });
+				toolCalls.push({ agent: "preference", ...tc });
+			}
+			emit({ type: "agent_output", agent: "preference", phase: "monitor", content: monitorResult.text });
+			emit({ type: "context", label: "Taste Profile", source: "Preference Agent (updated)", content: preferenceState });
+		}
+
+		// ── Step 4: Rating prediction ──
+
+		emit({ type: "status", message: "── Rating Prediction ──" });
+		const ratingPrompt = buildRatingPrompt(conv.catalogue);
+
+		const predictions = await new Promise<Record<string, number>>((resolveRatings) => {
 			const textParts: string[] = [];
 
 			const unsub = session.subscribe((event: AgentSessionEvent) => {
-				if (event.type === "tool_execution_end") {
-					const e = event as any;
-					const args = e.input ?? e.arguments ?? {};
-					const result = extractToolResult(e.result);
-
-					toolCalls.push({ agent: "conversation", tool: e.toolName, args, result });
-					emit({ type: "tool_call", agent: "conversation", tool: e.toolName, args, result });
-				}
 				if (event.type === "message_end" && "role" in event.message && event.message.role === "assistant") {
 					const msg = event.message as any;
 					for (const block of msg.content ?? []) {
@@ -213,87 +268,40 @@ export async function simulateConversation(
 				}
 				if (event.type === "agent_end") {
 					unsub();
-					resolveObs(textParts.join("\n"));
+					const fullText = textParts.join("\n");
+					try {
+						const jsonMatch = fullText.match(/\{[\s\S]*\}/);
+						resolveRatings(jsonMatch ? JSON.parse(jsonMatch[0]) : {});
+					} catch {
+						emit({ type: "status", message: `Warning: Could not parse ratings: ${fullText}` });
+						resolveRatings({});
+					}
 				}
 			});
 
-			session.prompt(observePrompt);
+			session.prompt(ratingPrompt);
 		});
 
-		if (observation.trim()) {
-			emit({ type: "agent_output", agent: "conversation", phase: "observe", content: observation });
-		}
+		emit({ type: "status", message: `Predictions: ${JSON.stringify(predictions)}` });
 
-		// ── Preference Agent monitors the exchange ──
+		session.dispose();
 
-		emit({ type: "status", message: "[PREF AGENT] Monitoring exchange..." });
-		const monitorResult = await monitorExchange(
-			conv.user_id,
+		const result: SimulationResult = {
 			convId,
-			exchange.seeker,
-			exchange.assistant,
-			preferenceState,
-		);
-		preferenceState = monitorResult.text;
+			userId: conv.user_id,
+			catalogue: conv.catalogue,
+			scenarioId: conv.scenario_id,
+			transcript,
+			predictions,
+			preferences: preferenceState,
+			toolCalls,
+		};
 
-		for (const tc of monitorResult.toolCalls) {
-			emit({ type: "tool_call", agent: "preference", tool: tc.tool, args: tc.args, result: tc.result });
-			toolCalls.push({ agent: "preference", ...tc });
-		}
-		emit({ type: "agent_output", agent: "preference", phase: "monitor", content: monitorResult.text });
-		emit({ type: "context", label: "Taste Profile", source: "Preference Agent (updated)", content: preferenceState });
+		saveResults(result);
+		return result;
+	} finally {
+		exitSimulationScope();
 	}
-
-	// ── Step 4: Rating prediction ──
-
-	emit({ type: "status", message: "── Rating Prediction ──" });
-	const ratingPrompt = buildRatingPrompt(conv.catalogue);
-
-	const predictions = await new Promise<Record<string, number>>((resolveRatings) => {
-		const textParts: string[] = [];
-
-		const unsub = session.subscribe((event: AgentSessionEvent) => {
-			if (event.type === "message_end" && "role" in event.message && event.message.role === "assistant") {
-				const msg = event.message as any;
-				for (const block of msg.content ?? []) {
-					if (block.type === "text") {
-						textParts.push(block.text);
-					}
-				}
-			}
-			if (event.type === "agent_end") {
-				unsub();
-				const fullText = textParts.join("\n");
-				try {
-					const jsonMatch = fullText.match(/\{[\s\S]*\}/);
-					resolveRatings(jsonMatch ? JSON.parse(jsonMatch[0]) : {});
-				} catch {
-					emit({ type: "status", message: `Warning: Could not parse ratings: ${fullText}` });
-					resolveRatings({});
-				}
-			}
-		});
-
-		session.prompt(ratingPrompt);
-	});
-
-	emit({ type: "status", message: `Predictions: ${JSON.stringify(predictions)}` });
-
-	session.dispose();
-
-	const result: SimulationResult = {
-		convId,
-		userId: conv.user_id,
-		catalogue: conv.catalogue,
-		scenarioId: conv.scenario_id,
-		transcript,
-		predictions,
-		preferences: preferenceState,
-		toolCalls,
-	};
-
-	saveResults(result);
-	return result;
 }
 
 function saveResults(result: SimulationResult): void {

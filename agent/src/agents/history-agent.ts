@@ -15,6 +15,7 @@ import { getModel } from "@mariozechner/pi-ai";
 import { Type } from "@sinclair/typebox";
 import { getConversationTool } from "../tools/index.js";
 import { getDb } from "../db/schema.js";
+import { scopedTable } from "../db/scope.js";
 import type { SubAgentResult } from "./preference-agent.js";
 
 const HISTORY_SYSTEM_PROMPT = `You are a history research agent. Your job is to search a user's past conversations
@@ -56,44 +57,32 @@ function extractToolResult(result: any): string {
 	}
 }
 
-/** Run the history agent and return its response + tool calls */
+/** Run the history agent and return its response + tool calls.
+ *  Exclusion is handled by the simulation scope — queries automatically
+ *  use v_conversations which excludes the test conversation. */
 async function runHistorySearch(
 	userId: string,
-	excludeConvId: number,
 	query: string,
 ): Promise<SubAgentResult> {
-	// Pre-fetch conversation list for context
+	// Pre-fetch conversation list from scoped view
 	const db = getDb();
+	const table = scopedTable("conversations");
 	const convs = db
-		.prepare("SELECT conv_id, scenario_id, catalogue FROM conversations WHERE user_id = ? AND conv_id != ?")
-		.all(userId, excludeConvId) as ConvMetaRow[];
+		.prepare(`SELECT conv_id, scenario_id, catalogue FROM ${table} WHERE user_id = ?`)
+		.all(userId) as ConvMetaRow[];
 
 	const convList = convs
 		.map((c) => `  - Conv ${c.conv_id}: scenario ${c.scenario_id}, catalogue ${c.catalogue}`)
 		.join("\n");
 
 	const userPrompt = `## History Query
-User: ${userId} (exclude conversation ${excludeConvId})
+User: ${userId}
 Query: ${query}
 
 ## Available Conversations
 ${convList || "(No other conversations found)"}
 
 Search the relevant conversations and provide a concise historical context summary.`;
-
-	// Create a restricted get_conversation that blocks the excluded conv
-	const restrictedGetConv: ToolDefinition<any> = {
-		...getConversationTool,
-		async execute(toolCallId, params, onUpdate, ctx, signal) {
-			if (params.conv_id === excludeConvId) {
-				return {
-					content: [{ type: "text" as const, text: `Error: Conversation ${excludeConvId} is the one being simulated — you cannot access it.` }],
-					details: {},
-				};
-			}
-			return getConversationTool.execute(toolCallId, params, onUpdate, ctx, signal);
-		},
-	};
 
 	const loader = new DefaultResourceLoader({
 		systemPromptOverride: () => HISTORY_SYSTEM_PROMPT,
@@ -106,7 +95,7 @@ Search the relevant conversations and provide a concise historical context summa
 		model,
 		thinkingLevel: "off",
 		tools: [],
-		customTools: [restrictedGetConv],
+		customTools: [getConversationTool as ToolDefinition<any>],
 		resourceLoader: loader,
 		sessionManager: SessionManager.inMemory(),
 	});
@@ -148,7 +137,6 @@ const recallHistoryParams = Type.Object({
 			'What historical context to search for, e.g. "Has this user bought outerwear before?" or "What items did they reject and why?"',
 	}),
 	user_id: Type.String({ description: "The seeker's ID" }),
-	exclude_conv_id: Type.Number({ description: "Current conversation ID (to exclude from search)" }),
 });
 
 /** Create a recall_history tool with an optional callback for sub-agent tool calls */
@@ -163,7 +151,7 @@ Use this when you want to know what the user liked/disliked in previous interact
 their behavior patterns, or any relevant past context that could inform current recommendations.`,
 		parameters: recallHistoryParams,
 		async execute(_toolCallId, params) {
-			const { text, toolCalls } = await runHistorySearch(params.user_id, params.exclude_conv_id, params.query);
+			const { text, toolCalls } = await runHistorySearch(params.user_id, params.query);
 			if (onSubAgentToolCall) {
 				for (const tc of toolCalls) onSubAgentToolCall(tc);
 			}

@@ -1,6 +1,7 @@
 import { Type } from "@sinclair/typebox";
 import type { ToolDefinition } from "@mariozechner/pi-coding-agent";
 import { getDb } from "../db/schema.js";
+import { scopedTable } from "../db/scope.js";
 
 interface ConvRow {
 	conv_id: number;
@@ -38,8 +39,11 @@ export const getConversationTool: ToolDefinition<typeof getConversationParams> =
 	parameters: getConversationParams,
 	async execute(_toolCallId, params) {
 		const db = getDb();
+		const convsTable = scopedTable("conversations");
+		const turnsTable = scopedTable("conversation_turns");
+		const prefsTable = scopedTable("user_preferences");
 
-		const conv = db.prepare("SELECT * FROM conversations WHERE conv_id = ?").get(params.conv_id) as
+		const conv = db.prepare(`SELECT * FROM ${convsTable} WHERE conv_id = ?`).get(params.conv_id) as
 			| ConvRow
 			| undefined;
 		if (!conv) {
@@ -50,11 +54,11 @@ export const getConversationTool: ToolDefinition<typeof getConversationParams> =
 		}
 
 		const turns = db
-			.prepare("SELECT turn, role, content, tags FROM conversation_turns WHERE conv_id = ? ORDER BY turn")
+			.prepare(`SELECT turn, role, content, tags FROM ${turnsTable} WHERE conv_id = ? ORDER BY turn`)
 			.all(params.conv_id) as TurnRow[];
 
 		const prefs = db
-			.prepare("SELECT description FROM user_preferences WHERE source_conv_id = ?")
+			.prepare(`SELECT description FROM ${prefsTable} WHERE source_conv_id = ?`)
 			.all(params.conv_id) as PrefRow[];
 
 		const scenario = db.prepare("SELECT body FROM scenarios WHERE scenario_id = ?").get(conv.scenario_id) as

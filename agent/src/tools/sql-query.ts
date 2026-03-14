@@ -2,7 +2,12 @@ import { Type } from "@sinclair/typebox";
 import type { ToolDefinition } from "@mariozechner/pi-coding-agent";
 import { getDb } from "../db/schema.js";
 
-const BLOCKED_TABLES = ["ratings", "item_embeddings"];
+import { getActiveScope, scopedTable } from "../db/scope.js";
+
+/** Tables/views the agent is allowed to query. */
+const ALWAYS_ALLOWED = ["users", "items", "scenarios"];
+const SCOPED_VIEWS = ["v_user_preferences", "v_conversations", "v_conversation_turns"];
+const UNSCOPED_FALLBACKS = ["user_preferences", "conversations", "conversation_turns"];
 const BLOCKED_COLUMNS = ["gt_items"];
 
 function validateQuery(query: string): string | null {
@@ -12,18 +17,35 @@ function validateQuery(query: string): string | null {
 		return "Only SELECT queries are allowed (read-only access).";
 	}
 
-	for (const table of BLOCKED_TABLES) {
-		const pattern = new RegExp(`\\b${table}\\b`, "i");
-		if (pattern.test(query)) {
-			return `Access to the '${table}' table is not allowed.`;
+	// Block ground-truth columns regardless of scope
+	for (const col of BLOCKED_COLUMNS) {
+		if (new RegExp(`\\b${col}\\b`, "i").test(query)) {
+			return `Access to the '${col}' column is not allowed (ground truth is hidden).`;
 		}
 	}
 
-	for (const col of BLOCKED_COLUMNS) {
-		const pattern = new RegExp(`\\b${col}\\b`, "i");
-		if (pattern.test(query)) {
-			return `Access to the '${col}' column is not allowed (ground truth is hidden).`;
+	const inScope = getActiveScope() !== null;
+	const allowed = inScope
+		? [...ALWAYS_ALLOWED, ...SCOPED_VIEWS]
+		: [...ALWAYS_ALLOWED, ...UNSCOPED_FALLBACKS];
+
+	// Extract all table identifiers: after FROM/JOIN and comma-separated lists
+	const tables: string[] = [];
+	const tablePattern = /\b(?:FROM|JOIN)\s+([\w]+(?:\s*,\s*[\w]+)*)/gi;
+	let match;
+	while ((match = tablePattern.exec(query)) !== null) {
+		for (const name of match[1].split(",")) {
+			tables.push(name.trim().toLowerCase());
 		}
+	}
+
+	for (const table of tables) {
+		if (!table || allowed.includes(table)) continue;
+		if (inScope && UNSCOPED_FALLBACKS.includes(table)) {
+			const view = `v_${table}`;
+			return `During simulation, use '${view}' instead of '${table}' to prevent data contamination.`;
+		}
+		return `Access to '${table}' is not allowed.`;
 	}
 
 	return null;
@@ -63,8 +85,9 @@ export const sqlQueryTool: ToolDefinition<typeof sqlQueryParams> = {
 	name: "sql_query",
 	label: "SQL Query",
 	description: `Execute a read-only SQL query against the database.
-Available tables: users, items, scenarios, conversations, conversation_turns, user_preferences.
-The 'ratings' table is NOT accessible (ground truth is hidden from agents).
+Always-available tables: users, items, scenarios.
+During simulation, use scoped views: v_user_preferences, v_conversations, v_conversation_turns.
+These views automatically exclude the test conversation's data to prevent contamination.
 Use this for progressive disclosure: start with basic queries, drill into details as needed.`,
 	parameters: sqlQueryParams,
 	async execute(_toolCallId, params) {
