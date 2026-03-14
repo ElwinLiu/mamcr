@@ -13,6 +13,8 @@ const RENDERER_DIR = resolve(__dirname, "..", "electron", "renderer");
 let getDb: () => any;
 let simulateConversation: (convId: number, onEvent?: (event: any) => void) => Promise<any>;
 let batchSimulate: (userId?: string) => Promise<any[]>;
+let listRuns: (convId: number) => any[];
+let loadRun: (convId: number, runId: string) => any;
 let evaluateConversation: (convId: number) => any;
 let evaluateAll: () => any;
 
@@ -54,6 +56,8 @@ async function loadBackend(): Promise<void> {
 	const orch = await import(mod("orchestrator.js"));
 	simulateConversation = orch.simulateConversation;
 	batchSimulate = orch.batchSimulate;
+	listRuns = orch.listRuns;
+	loadRun = orch.loadRun;
 
 	const metrics = await import(mod("eval/metrics.js"));
 	evaluateConversation = metrics.evaluateConversation;
@@ -237,7 +241,8 @@ async function handleApi(req: IncomingMessage, res: ServerResponse, url: URL): P
 			});
 			res.write(`event: result\ndata: ${JSON.stringify(result)}\n\n`);
 		} catch (err: any) {
-			res.write(`event: error\ndata: ${err.message}\n\n`);
+			console.error(`Simulation error (conv ${convId}):`, err);
+			res.write(`event: sim_error\ndata: ${JSON.stringify(err.message || String(err))}\n\n`);
 		}
 		res.end();
 		return;
@@ -247,6 +252,17 @@ async function handleApi(req: IncomingMessage, res: ServerResponse, url: URL): P
 		const body = await readBody(req);
 		const results = await batchSimulate(body.userId || undefined);
 		return json(res, results);
+	}
+
+	if (path === "/api/sim/runs") {
+		const convId = parseInt(url.searchParams.get("convId") || "0");
+		return json(res, listRuns(convId));
+	}
+
+	if (path === "/api/sim/runs/load") {
+		const convId = parseInt(url.searchParams.get("convId") || "0");
+		const runId = url.searchParams.get("runId") || "";
+		return json(res, loadRun(convId, runId));
 	}
 
 	// ── Evaluation ──

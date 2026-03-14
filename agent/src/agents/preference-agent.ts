@@ -9,16 +9,13 @@ import {
 	createAgentSession,
 	SessionManager,
 	DefaultResourceLoader,
-	type AgentSessionEvent,
 } from "@mariozechner/pi-coding-agent";
 import { getModel } from "@mariozechner/pi-ai";
 import { preferenceTools } from "../tools/index.js";
 import { loadTasteProfile } from "../tools/load-taste-profile.js";
+import { runPromptToCompletion, type PromptResult } from "../session-utils.js";
 
-export interface SubAgentResult {
-	text: string;
-	toolCalls: Array<{ tool: string; args: any; result: string }>;
-}
+export type SubAgentResult = PromptResult;
 
 function buildMonitorPrompt(
 	userId: string,
@@ -51,28 +48,6 @@ ${existingPrefs}
 Only include genuinely new information. Do not duplicate existing preferences.`;
 }
 
-/** Extract readable text from a tool result (which may be an MCP-style object) */
-function extractToolResult(result: any): string {
-	if (typeof result === "string") return result;
-	if (Array.isArray(result)) {
-		return result
-			.filter((b: any) => b.type === "text")
-			.map((b: any) => b.text)
-			.join("\n");
-	}
-	if (result?.content && Array.isArray(result.content)) {
-		return result.content
-			.filter((b: any) => b.type === "text")
-			.map((b: any) => b.text)
-			.join("\n");
-	}
-	try {
-		return JSON.stringify(result, null, 2);
-	} catch {
-		return String(result);
-	}
-}
-
 /** Run a headless sub-agent session and collect its text response + tool calls */
 async function runSubAgent(
 	systemPrompt: string,
@@ -95,42 +70,11 @@ async function runSubAgent(
 		sessionManager: SessionManager.inMemory(),
 	});
 
-	return new Promise<SubAgentResult>((resolve) => {
-		const textParts: string[] = [];
-		const toolCalls: SubAgentResult["toolCalls"] = [];
-		const pendingArgs = new Map<string, any>();
-
-		session.subscribe((event: AgentSessionEvent) => {
-			if (event.type === "tool_execution_start") {
-				const e = event as any;
-				pendingArgs.set(e.toolCallId, e.args ?? {});
-			}
-			if (event.type === "tool_execution_end") {
-				const e = event as any;
-				const args = pendingArgs.get(e.toolCallId) ?? {};
-				pendingArgs.delete(e.toolCallId);
-				toolCalls.push({
-					tool: e.toolName,
-					args,
-					result: extractToolResult(e.result),
-				});
-			}
-			if (event.type === "message_end" && "role" in event.message && event.message.role === "assistant") {
-				const msg = event.message as any;
-				for (const block of msg.content ?? []) {
-					if (block.type === "text") {
-						textParts.push(block.text);
-					}
-				}
-			}
-			if (event.type === "agent_end") {
-				resolve({ text: textParts.join("\n"), toolCalls });
-				session.dispose();
-			}
-		});
-
-		session.prompt(userPrompt);
-	});
+	try {
+		return await runPromptToCompletion(session, userPrompt);
+	} finally {
+		session.dispose();
+	}
 }
 
 /** Cold start: load taste profile directly from DB (no LLM needed).

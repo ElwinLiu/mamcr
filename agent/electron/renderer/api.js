@@ -24,6 +24,7 @@
 		runSimulation: (convId) => {
 			return new Promise((resolve, reject) => {
 				const es = new EventSource("/api/sim/run?convId=" + convId);
+				let settled = false;
 				es.addEventListener("sim", (e) => {
 					try {
 						const event = JSON.parse(e.data);
@@ -31,13 +32,22 @@
 					} catch {}
 				});
 				es.addEventListener("result", (e) => {
+					settled = true;
 					es.close();
 					resolve(JSON.parse(e.data));
 				});
-				es.addEventListener("error", (e) => {
+				es.addEventListener("sim_error", (e) => {
+					settled = true;
 					es.close();
-					reject(new Error("Simulation failed or connection lost"));
+					const msg = JSON.parse(e.data);
+					reject(new Error(msg));
 				});
+				es.onerror = () => {
+					if (!settled) {
+						es.close();
+						reject(new Error("Simulation failed or connection lost"));
+					}
+				};
 			});
 		},
 		onSimEvent: (callback) => {
@@ -54,6 +64,12 @@
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify({ userId }),
 			}).then((r) => r.json()),
+
+		// History
+		listSimRuns: (convId) =>
+			fetch("/api/sim/runs?convId=" + convId).then((r) => r.json()),
+		loadSimRun: (convId, runId) =>
+			fetch("/api/sim/runs/load?convId=" + convId + "&runId=" + encodeURIComponent(runId)).then((r) => r.json()),
 
 		// Evaluation
 		evaluateConversation: (convId) =>

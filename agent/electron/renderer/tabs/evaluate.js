@@ -22,7 +22,7 @@
 
 	root.innerHTML = `
 		<div class="action-bar">
-			<button class="action-btn" id="eval-all-btn">Evaluate All</button>
+			<button class="action-btn" id="eval-all-btn" title="Refresh evaluation">&#x21bb; Refresh</button>
 		</div>
 
 		<div id="eval-aggregate" style="display:none"></div>
@@ -58,9 +58,9 @@
 	let maeChart = null;
 	let classChart = null;
 
-	evalBtn.addEventListener("click", async () => {
+	async function runEvaluation() {
 		evalBtn.disabled = true;
-		evalBtn.textContent = "Evaluating...";
+		evalBtn.innerHTML = "&#x21bb; Evaluating...";
 
 		try {
 			const { perConv, aggregate } = await window.mamcr.evaluateAll();
@@ -227,9 +227,12 @@
 			aggEl.innerHTML = `<p class="error">Error: ${err.message}</p>`;
 		} finally {
 			evalBtn.disabled = false;
-			evalBtn.textContent = "Evaluate All";
+			evalBtn.innerHTML = "&#x21bb; Refresh";
 		}
-	});
+	}
+
+	evalBtn.addEventListener("click", runEvaluation);
+	runEvaluation();
 
 	// ── Helpers ──
 
