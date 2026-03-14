@@ -18,7 +18,7 @@ import {
 	type ToolDefinition,
 } from "@mariozechner/pi-coding-agent";
 import { getModel } from "@mariozechner/pi-ai";
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, writeFileSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { resolve } from "node:path";
 import { getDb, PROJECT_ROOT } from "./db/schema.js";
 import { enterSimulationScope, exitSimulationScope } from "./db/scope.js";
@@ -101,9 +101,12 @@ export async function simulateConversation(
 	convId: number,
 	onEvent?: (event: SimEvent) => void,
 ): Promise<SimulationResult> {
-	const emit = onEvent ?? ((e: SimEvent) => {
-		if (e.type === "status") console.log(e.message);
-	});
+	const events: SimEvent[] = [];
+	const emit = (e: SimEvent) => {
+		events.push(e);
+		if (onEvent) onEvent(e);
+		else if (e.type === "status") console.log(e.message);
+	};
 
 	const db = getDb();
 
@@ -198,11 +201,17 @@ export async function simulateConversation(
 
 			const observation = await new Promise<string>((resolveObs) => {
 				const textParts: string[] = [];
+				const pendingArgs = new Map<string, any>();
 
 				const unsub = session.subscribe((event: AgentSessionEvent) => {
+					if (event.type === "tool_execution_start") {
+						const e = event as any;
+						pendingArgs.set(e.toolCallId, e.args ?? {});
+					}
 					if (event.type === "tool_execution_end") {
 						const e = event as any;
-						const args = e.input ?? e.arguments ?? {};
+						const args = pendingArgs.get(e.toolCallId) ?? {};
+						pendingArgs.delete(e.toolCallId);
 						const result = extractToolResult(e.result);
 
 						toolCalls.push({ agent: "conversation", tool: e.toolName, args, result });
@@ -297,7 +306,7 @@ export async function simulateConversation(
 			toolCalls,
 		};
 
-		saveResults(result);
+		saveRun(result, events);
 		return result;
 	} finally {
 		exitSimulationScope();

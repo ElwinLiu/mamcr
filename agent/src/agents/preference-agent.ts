@@ -98,13 +98,20 @@ async function runSubAgent(
 	return new Promise<SubAgentResult>((resolve) => {
 		const textParts: string[] = [];
 		const toolCalls: SubAgentResult["toolCalls"] = [];
+		const pendingArgs = new Map<string, any>();
 
 		session.subscribe((event: AgentSessionEvent) => {
+			if (event.type === "tool_execution_start") {
+				const e = event as any;
+				pendingArgs.set(e.toolCallId, e.args ?? {});
+			}
 			if (event.type === "tool_execution_end") {
 				const e = event as any;
+				const args = pendingArgs.get(e.toolCallId) ?? {};
+				pendingArgs.delete(e.toolCallId);
 				toolCalls.push({
 					tool: e.toolName,
-					args: e.input ?? e.arguments ?? {},
+					args,
 					result: extractToolResult(e.result),
 				});
 			}
