@@ -46,10 +46,9 @@ ${existingPrefs}
    - Implicit preferences (reactions, follow-up questions suggesting interest)
    - Critiques or rejections (items dismissed and why)
    - Contextual requirements (occasion, weather, activity needs)
-2. For each NEW signal not already captured, call update_preference with a clear description.
-3. After recording preferences, output an updated preference summary combining existing and new signals.
+2. Output an updated preference summary combining existing and new signals.
 
-Only record genuinely new information. Do not duplicate existing preferences.`;
+Only include genuinely new information. Do not duplicate existing preferences.`;
 }
 
 /** Extract readable text from a tool result (which may be an MCP-style object) */

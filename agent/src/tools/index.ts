@@ -20,7 +20,7 @@ type AnyTool = ToolDefinition<any>;
 export const conversationTools: AnyTool[] = [catalogueSearchTool, compareItemsTool, sqlQueryTool];
 
 /** Tools available to the Preference Agent */
-export const preferenceTools: AnyTool[] = [loadTasteProfileTool, updatePreferenceTool, sqlQueryTool];
+export const preferenceTools: AnyTool[] = [loadTasteProfileTool, sqlQueryTool];
 
 /** Tools available to the History Agent */
 export const historyTools: AnyTool[] = [getConversationTool, sqlQueryTool];
