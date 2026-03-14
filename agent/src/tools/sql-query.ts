@@ -29,6 +29,11 @@ function validateQuery(query: string): string | null {
 		? [...ALWAYS_ALLOWED, ...SCOPED_VIEWS]
 		: [...ALWAYS_ALLOWED, ...UNSCOPED_FALLBACKS];
 
+	// Reject identifier quoting that could bypass table validation
+	if (/[`"[\]]/.test(query)) {
+		return "Quoted identifiers (backticks, double quotes, brackets) are not allowed.";
+	}
+
 	// Extract all table identifiers: after FROM/JOIN and comma-separated lists
 	const tables: string[] = [];
 	const tablePattern = /\b(?:FROM|JOIN)\s+([\w]+(?:\s*,\s*[\w]+)*)/gi;

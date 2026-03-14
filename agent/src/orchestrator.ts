@@ -23,7 +23,7 @@ import { getDb, PROJECT_ROOT } from "./db/schema.js";
 import { enterSimulationScope, exitSimulationScope } from "./db/scope.js";
 import { conversationTools } from "./tools/index.js";
 import { createRecallHistoryTool } from "./agents/history-agent.js";
-import { coldStart, monitorExchange } from "./agents/preference-agent.js";
+import { coldStart, monitorExchange, type Exchange } from "./agents/preference-agent.js";
 import { buildSystemPrompt, buildObservePrompt, buildRatingPrompt } from "./agents/conversation-agent.js";
 import { runPromptToCompletion } from "./session-utils.js";
 
@@ -167,6 +167,8 @@ export async function simulateConversation(
 
 		// ── Step 3: Conversation loop — observe original exchanges ──
 
+		const replayedExchanges: Exchange[] = [];
+
 		for (const exchange of exchanges) {
 			emit({ type: "turn_start", turn: exchange.turn });
 			emit({ type: "seeker", turn: exchange.turn, content: exchange.seeker });
@@ -174,6 +176,8 @@ export async function simulateConversation(
 
 			transcript.push({ turn: exchange.turn, role: "Seeker", content: exchange.seeker });
 			transcript.push({ turn: exchange.turn, role: "Assistant", content: exchange.assistant });
+
+			replayedExchanges.push({ turn: exchange.turn, seeker: exchange.seeker, assistant: exchange.assistant });
 
 			// Conversation Agent observes and may call tools to gather context
 			const observePrompt = buildObservePrompt(exchange.turn, exchange.seeker, exchange.assistant);
@@ -195,11 +199,12 @@ export async function simulateConversation(
 			const monitorResult = await monitorExchange(
 				conv.user_id,
 				convId,
-				exchange.seeker,
-				exchange.assistant,
+				replayedExchanges,
 				preferenceState,
 			);
-			preferenceState = monitorResult.text;
+
+			// Accumulate: append new signals to the running analysis
+			preferenceState = preferenceState + "\n\n" + `### Turn ${exchange.turn} Analysis\n` + monitorResult.text;
 
 			for (const tc of monitorResult.toolCalls) {
 				emit({ type: "tool_call", agent: "preference", tool: tc.tool, args: tc.args, result: tc.result });
@@ -207,6 +212,11 @@ export async function simulateConversation(
 			}
 			emit({ type: "agent_output", agent: "preference", phase: "monitor", content: monitorResult.text });
 			emit({ type: "context", label: "Taste Profile", source: "Preference Agent (updated)", content: preferenceState });
+
+			// Inject updated preference analysis into conversation agent context
+			await runPromptToCompletion(session,
+				`## Preference Agent Analysis (Turn ${exchange.turn})\n\n${monitorResult.text}\n\nAcknowledge briefly and incorporate into your understanding.`,
+			);
 		}
 
 		// ── Step 4: Rating prediction ──

@@ -17,35 +17,44 @@ import { runPromptToCompletion, type PromptResult } from "../session-utils.js";
 
 export type SubAgentResult = PromptResult;
 
+export interface Exchange {
+	turn: number;
+	seeker: string;
+	assistant: string;
+}
+
+function formatConversationHistory(exchanges: Exchange[]): string {
+	return exchanges
+		.map((ex) => `**Turn ${ex.turn}**\n**Seeker:** ${ex.seeker}\n**Assistant:** ${ex.assistant}`)
+		.join("\n\n");
+}
+
 function buildMonitorPrompt(
 	userId: string,
 	convId: number,
-	seekerUtterance: string,
-	agentResponse: string,
-	existingPrefs: string,
+	exchanges: Exchange[],
+	previousAnalysis: string,
 ): string {
-	return `You are a preference monitoring agent. Analyze the following exchange and extract any new preference signals.
+	return `You are a preference monitoring agent. Analyze the conversation so far and extract preference signals from the latest exchange.
 
 ## User: ${userId} | Conversation: ${convId}
 
-## Existing Preferences
-${existingPrefs}
+## Conversation History
+${formatConversationHistory(exchanges)}
 
-## Latest Exchange
-
-**Seeker:** ${seekerUtterance}
-
-**Assistant:** ${agentResponse}
+## Previous Preference Analysis
+${previousAnalysis}
 
 ## Instructions
-1. Identify new preference signals from BOTH the seeker's utterance and the assistant's response:
+1. Review the full conversation above, focusing on the latest exchange (Turn ${exchanges[exchanges.length - 1].turn}).
+2. Identify **new** preference signals not already captured in the previous analysis:
    - Explicit preferences (stated likes/dislikes)
    - Implicit preferences (reactions, follow-up questions suggesting interest)
    - Critiques or rejections (items dismissed and why)
    - Contextual requirements (occasion, weather, activity needs)
-2. Output an updated preference summary combining existing and new signals.
-
-Only include genuinely new information. Do not duplicate existing preferences.`;
+   - Evolving or contradicting preferences (e.g., earlier interest now reversed)
+3. Output only **additional** findings from this turn. Do not repeat what is already in the previous analysis.
+   If there are no new signals, say so briefly.`;
 }
 
 /** Run a headless sub-agent session and collect its text response + tool calls */
@@ -87,18 +96,17 @@ export function coldStart(userId: string): SubAgentResult {
 	};
 }
 
-/** Live monitoring: analyze exchange, extract and persist new signals, return updated summary */
+/** Live monitoring: analyze conversation history, extract new signals from the latest exchange */
 export async function monitorExchange(
 	userId: string,
 	convId: number,
-	seekerUtterance: string,
-	agentResponse: string,
-	existingPrefs: string,
+	exchanges: Exchange[],
+	previousAnalysis: string,
 ): Promise<SubAgentResult> {
-	const systemPrompt = buildMonitorPrompt(userId, convId, seekerUtterance, agentResponse, existingPrefs);
+	const systemPrompt = buildMonitorPrompt(userId, convId, exchanges, previousAnalysis);
 	return runSubAgent(
 		systemPrompt,
-		"Analyze the exchange above. Extract and persist any new preference signals, then output the updated summary.",
+		"Analyze the latest exchange in context of the full conversation. Output only additional preference signals not already in the previous analysis.",
 		preferenceTools,
 	);
 }
