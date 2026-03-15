@@ -98,14 +98,17 @@ export async function simulateConversation(
 		.prepare("SELECT turn, role, content, tags FROM conversation_turns WHERE conv_id = ? ORDER BY turn")
 		.all(convId) as TurnRow[];
 
-	const exchanges: Array<{ turn: number; seeker: string; assistant: string }> = [];
+	const exchanges: Array<{ turn: number; seeker: string; assistant: string; seekerTags: string; assistantTags: string }> = [];
+	let exchangeNum = 0;
 	for (let i = 0; i < allTurns.length; i++) {
 		const t = allTurns[i];
 		if (t.role === "Seeker") {
+			exchangeNum++;
 			// Look for the next Assistant turn
 			const next = allTurns[i + 1];
 			const assistantContent = next && next.role === "Assistant" ? next.content : "";
-			exchanges.push({ turn: t.turn, seeker: t.content, assistant: assistantContent });
+			const assistantTags = next && next.role === "Assistant" ? next.tags : "[]";
+			exchanges.push({ turn: exchangeNum, seeker: t.content, assistant: assistantContent, seekerTags: t.tags, assistantTags });
 		}
 	}
 
@@ -167,7 +170,21 @@ export async function simulateConversation(
 
 		// ── Step 3: Conversation loop — observe original exchanges ──
 
+		// Load catalogue item images for multimodal context (sent with first prompt)
+		const catalogueImages = db.prepare(
+			"SELECT item_id, image FROM items WHERE catalogue = ? AND image IS NOT NULL ORDER BY item_id",
+		).all(conv.catalogue) as Array<{ item_id: number; image: Buffer }>;
+
+		const itemImages = catalogueImages.map((row) => ({
+			type: "image" as const,
+			data: row.image.toString("base64"),
+			mimeType: "image/png",
+		}));
+
+		emit({ type: "status", message: `[CONV AGENT] Loaded ${itemImages.length} item images for catalogue ${conv.catalogue}` });
+
 		const replayedExchanges: Exchange[] = [];
+		let isFirstExchange = true;
 
 		for (const exchange of exchanges) {
 			emit({ type: "turn_start", turn: exchange.turn });
@@ -180,14 +197,21 @@ export async function simulateConversation(
 			replayedExchanges.push({ turn: exchange.turn, seeker: exchange.seeker, assistant: exchange.assistant });
 
 			// Conversation Agent observes and may call tools to gather context
-			const observePrompt = buildObservePrompt(exchange.turn, exchange.seeker, exchange.assistant);
+			const observePrompt = buildObservePrompt(exchange.turn, exchange.seeker, exchange.assistant, exchange.seekerTags, exchange.assistantTags);
 
-			const { text: observation } = await runPromptToCompletion(session, observePrompt, {
-				onToolCall: (tc) => {
+			// Attach catalogue item images on the first exchange only
+			const promptOpts: any = {
+				onToolCall: (tc: { tool: string; args: any; result: string }) => {
 					toolCalls.push({ agent: "conversation", ...tc });
 					emit({ type: "tool_call", agent: "conversation", ...tc });
 				},
-			});
+			};
+			if (isFirstExchange && itemImages.length > 0) {
+				promptOpts.images = itemImages;
+				isFirstExchange = false;
+			}
+
+			const { text: observation } = await runPromptToCompletion(session, observePrompt, promptOpts);
 
 			if (observation.trim()) {
 				emit({ type: "agent_output", agent: "conversation", phase: "observe", content: observation });

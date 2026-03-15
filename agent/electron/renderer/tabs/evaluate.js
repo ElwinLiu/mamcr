@@ -2,15 +2,18 @@
 (async function initEvaluateTab() {
 	const root = document.getElementById("evaluate-content");
 
-	// Baselines from the VOGUE paper (Table 5)
+	// Baselines from the VOGUE paper (Table 5) + our calibrated runs
 	const BASELINES = {
-		human:       { label: "Human Assistants", mae: 0.896, pc: 0.636, accuracy: 0.397, mMae: 0.849, maeByClass: { 1: 0.746, 2: 0.891, 3: 1.171, 4: 1.284, 5: 0.597 } },
-		gpt5mini:    { label: "GPT-5-mini",       mae: 1.296, pc: 0.083, accuracy: 0.344, mMae: 1.543, maeByClass: { 1: 1.041, 2: 0.845, 3: 1.209, 4: 2.222, 5: 2.516 } },
-		gpt4omini:   { label: "GPT-4o-mini",      mae: 1.619, pc: 0.000, accuracy: 0.156, mMae: 1.491, maeByClass: { 1: 2.160, 2: 1.186, 3: 0.953, 4: 1.160, 5: 1.726 } },
-		gemini25:    { label: "Gemini-2.5-Flash",  mae: 1.356, pc: 0.057, accuracy: 0.406, mMae: 1.681, maeByClass: { 1: 0.853, 2: 0.930, 3: 1.628, 4: 2.444, 5: 2.839 } },
-		gemini20:    { label: "Gemini-2.0-Flash",  mae: 1.356, pc: 0.041, accuracy: 0.402, mMae: 1.772, maeByClass: { 1: 0.693, 2: 1.031, 3: 1.736, 4: 2.568, 5: 3.065 } },
-		random:      { label: "Random",            mae: 1.713, pc:-0.005, accuracy: 0.240, mMae: 1.730, maeByClass: { 1: 1.997, 2: 1.403, 3: 1.147, 4: 1.469, 5: 2.387 } },
-		mode:        { label: "Mode Rating",       mae: 1.219, pc: null,  accuracy: 0.443, mMae: 1.932, maeByClass: { 1: 0.000, 2: 1.000, 3: 2.000, 4: 3.000, 5: 4.000 } },
+		human:       { label: "Human Assistants",            mae: 0.896, pc: 0.636, accuracy: 0.397, mMae: 0.849, maeByClass: { 1: 0.746, 2: 0.891, 3: 1.171, 4: 1.284, 5: 0.597 } },
+		gpt5mini:    { label: "GPT-5-mini",                  mae: 1.296, pc: 0.083, accuracy: 0.344, mMae: 1.543, maeByClass: { 1: 1.041, 2: 0.845, 3: 1.209, 4: 2.222, 5: 2.516 } },
+		gpt4omini:   { label: "GPT-4o-mini",                 mae: 1.619, pc: 0.000, accuracy: 0.156, mMae: 1.491, maeByClass: { 1: 2.160, 2: 1.186, 3: 0.953, 4: 1.160, 5: 1.726 } },
+		gemini25:    { label: "Gemini-2.5-Flash",            mae: 1.356, pc: 0.057, accuracy: 0.406, mMae: 1.681, maeByClass: { 1: 0.853, 2: 0.930, 3: 1.628, 4: 2.444, 5: 2.839 } },
+		gemini20:    { label: "Gemini-2.0-Flash",            mae: 1.356, pc: 0.041, accuracy: 0.402, mMae: 1.772, maeByClass: { 1: 0.693, 2: 1.031, 3: 1.736, 4: 2.568, 5: 3.065 } },
+		random:      { label: "Random",                      mae: 1.713, pc:-0.005, accuracy: 0.240, mMae: 1.730, maeByClass: { 1: 1.997, 2: 1.403, 3: 1.147, 4: 1.469, 5: 2.387 } },
+		mode:        { label: "Mode Rating",                 mae: 1.219, pc: null,  accuracy: 0.443, mMae: 1.932, maeByClass: { 1: 0.000, 2: 1.000, 3: 2.000, 4: 3.000, 5: 4.000 } },
+		calMamcr:    { label: "MAMCR (calibrated)",   mae: 0.903, pc: 0.519, accuracy: 0.421, mMae: 0.938, maeByClass: { 1: 0.781, 2: 0.822, 3: 1.178, 4: 1.296, 5: 0.613 } },
+		calSingle:   { label: "Gemini-3.0-Flash (calibrated)", mae: 0.783, pc: 0.606, accuracy: 0.444, mMae: 0.865, maeByClass: { 1: 0.583, 2: 0.659, 3: 1.116, 4: 1.432, 5: 0.532 } },
+		gemini30:    { label: "Gemini-3.0-Flash", mae: 0.826, pc: 0.591, accuracy: 0.418, mMae: 0.851, maeByClass: { 1: 0.721, 2: 0.837, 3: 0.992, 4: 1.235, 5: 0.468 } },
 	};
 
 	const METRIC_HELP = {
@@ -38,6 +41,28 @@
 			</div>
 		</div>
 
+		<div id="eval-compare-section" style="display:none">
+			<div class="chart-card wide" style="margin-bottom:1.5rem">
+				<h3>Per-Conversation Baseline Comparison</h3>
+				<div style="display:flex;gap:1rem;margin-bottom:1rem;flex-wrap:wrap;align-items:center">
+					<label style="font-size:0.8rem;color:var(--text-muted)">Metric:
+						<select id="eval-compare-metric" style="margin-left:0.3rem;padding:0.3rem 0.5rem;border-radius:var(--radius);border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:0.8rem">
+							<option value="mae">MAE ↓</option>
+							<option value="pc">Pearson ↑</option>
+							<option value="accuracy">Accuracy ↑</option>
+							<option value="mMae">M-MAE ↓</option>
+						</select>
+					</label>
+					<label style="font-size:0.8rem;color:var(--text-muted)">Conversation:
+						<select id="eval-compare-conv" style="margin-left:0.3rem;padding:0.3rem 0.5rem;border-radius:var(--radius);border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:0.8rem">
+							<option value="all">All Conversations</option>
+						</select>
+					</label>
+				</div>
+				<canvas id="eval-compare-chart"></canvas>
+			</div>
+		</div>
+
 		<div id="eval-baseline-table" style="display:none">
 			<h3 class="results-title">VOGUE Paper Baselines (Table 5)</h3>
 			<div class="metrics-table" id="eval-baseline-body"></div>
@@ -57,6 +82,8 @@
 
 	let maeChart = null;
 	let classChart = null;
+	let compareChart = null;
+	let cachedPerConv = null;   // saved after evaluation for re-rendering the compare chart
 
 	async function runEvaluation() {
 		evalBtn.disabled = true;
@@ -222,6 +249,25 @@
 					plugins: { legend: { display: true, position: "bottom", labels: { boxWidth: 12, font: { size: 11 } } } },
 				},
 			});
+			// ── Per-conversation baseline comparison chart ──
+			cachedPerConv = { entries, aggregate };
+			const compareSection = document.getElementById("eval-compare-section");
+			compareSection.style.display = "";
+
+			// Populate conversation dropdown
+			const convSelect = document.getElementById("eval-compare-conv");
+			const currentVal = convSelect.value;
+			convSelect.innerHTML = '<option value="all">All Conversations</option>';
+			for (const [id] of entries) {
+				const opt = document.createElement("option");
+				opt.value = id;
+				opt.textContent = "Conv " + id;
+				convSelect.appendChild(opt);
+			}
+			convSelect.value = currentVal && convSelect.querySelector(`option[value="${currentVal}"]`) ? currentVal : "all";
+
+			renderCompareChart();
+
 		} catch (err) {
 			aggEl.style.display = "";
 			aggEl.innerHTML = `<p class="error">Error: ${err.message}</p>`;
@@ -232,6 +278,120 @@
 	}
 
 	evalBtn.addEventListener("click", runEvaluation);
+
+	// Wire up compare chart controls (re-render on dropdown change)
+	document.getElementById("eval-compare-metric").addEventListener("change", renderCompareChart);
+	document.getElementById("eval-compare-conv").addEventListener("change", renderCompareChart);
+
+	function renderCompareChart() {
+		if (!cachedPerConv) return;
+		const { entries, aggregate } = cachedPerConv;
+
+		const metricKey = document.getElementById("eval-compare-metric").value;
+		const convVal = document.getElementById("eval-compare-conv").value;
+
+		const metricLabels = { mae: "MAE", pc: "Pearson Correlation", accuracy: "Accuracy", mMae: "M-MAE" };
+		const lowerIsBetter = metricKey === "mae" || metricKey === "mMae";
+
+		// Baseline colors
+		const COLORS = {
+			mamcr:    { bg: "rgba(176, 138, 46, 0.7)",  border: "#b08a2e" },
+			human:    { bg: "rgba(46, 122, 184, 0.6)",   border: "#2e7ab8" },
+			gpt5mini: { bg: "rgba(126, 87, 194, 0.5)",   border: "#7e57c2" },
+			gpt4omini:{ bg: "rgba(233, 30, 99, 0.4)",    border: "#e91e63" },
+			gemini25: { bg: "rgba(56, 142, 60, 0.5)",    border: "#388e3c" },
+			gemini20: { bg: "rgba(0, 150, 136, 0.4)",    border: "#009688" },
+			random:   { bg: "rgba(158, 158, 158, 0.4)",  border: "#9e9e9e" },
+			mode:     { bg: "rgba(121, 85, 72, 0.4)",    border: "#795548" },
+		};
+
+		if (convVal === "all") {
+			// Show all conversations as bars, with baseline reference lines
+			const labels = entries.map(([id]) => "Conv " + id);
+			const mamcrData = entries.map(([, m]) => m[metricKey]);
+
+			// Compute MAMCR average for reference line
+			const mamcrValid = mamcrData.filter(v => v != null && !isNaN(v));
+			const mamcrAvg = mamcrValid.length > 0 ? mamcrValid.reduce((a, b) => a + b, 0) / mamcrValid.length : null;
+
+			// Build baseline datasets as flat lines for reference
+			const baselineKeys = Object.keys(BASELINES).filter(k => {
+				const val = BASELINES[k][metricKey];
+				return val != null && !isNaN(val);
+			});
+
+			// Build reference lines: MAMCR average + paper baselines
+			const refLines = [];
+			if (mamcrAvg != null) {
+				refLines.push({ value: mamcrAvg, color: COLORS.mamcr.border, label: "MAMCR Avg (" + mamcrAvg.toFixed(3) + ")" });
+			}
+			for (const k of baselineKeys) {
+				refLines.push({ value: BASELINES[k][metricKey], color: COLORS[k]?.border || "#888", label: BASELINES[k].label + " (" + BASELINES[k][metricKey].toFixed(3) + ")" });
+			}
+
+			const datasets = [
+				{
+					label: "MAMCR Agent",
+					data: mamcrData,
+					backgroundColor: COLORS.mamcr.bg,
+					borderColor: COLORS.mamcr.border,
+					borderWidth: 1,
+				},
+			];
+
+			if (compareChart) compareChart.destroy();
+			compareChart = new Chart(document.getElementById("eval-compare-chart"), {
+				type: "bar",
+				data: { labels, datasets },
+				options: {
+					responsive: true,
+					scales: { y: { beginAtZero: metricKey !== "pc", title: { display: true, text: metricLabels[metricKey] + (lowerIsBetter ? " (lower is better)" : " (higher is better)") } } },
+					plugins: {
+						legend: { display: false },
+						annotation: refLines.length > 0 ? { lines: refLines } : undefined,
+					},
+				},
+				plugins: [multiLinePlugin],
+			});
+		} else {
+			// Single conversation: grouped bar comparing MAMCR vs all baselines
+			const convMetrics = entries.find(([id]) => String(id) === convVal);
+			if (!convMetrics) return;
+			const mamcrVal = convMetrics[1][metricKey];
+
+			const models = [
+				{ key: "mamcr", label: "MAMCR Agent", value: mamcrVal },
+				...Object.entries(BASELINES)
+					.filter(([, b]) => b[metricKey] != null && !isNaN(b[metricKey]))
+					.map(([k, b]) => ({ key: k, label: b.label, value: b[metricKey] })),
+			];
+
+			const labels = models.map(m => m.label);
+			const data = models.map(m => m.value);
+			const bgColors = models.map(m => COLORS[m.key]?.bg || "rgba(100,100,100,0.4)");
+			const borderColors = models.map(m => COLORS[m.key]?.border || "#666");
+
+			if (compareChart) compareChart.destroy();
+			compareChart = new Chart(document.getElementById("eval-compare-chart"), {
+				type: "bar",
+				data: {
+					labels,
+					datasets: [{
+						data,
+						backgroundColor: bgColors,
+						borderColor: borderColors,
+						borderWidth: 1,
+					}],
+				},
+				options: {
+					responsive: true,
+					scales: { y: { beginAtZero: metricKey !== "pc", title: { display: true, text: metricLabels[metricKey] + (lowerIsBetter ? " (lower is better)" : " (higher is better)") } } },
+					plugins: { legend: { display: false } },
+				},
+			});
+		}
+	}
+
 	runEvaluation();
 
 	// ── Helpers ──
@@ -292,4 +452,69 @@
 	function humanLine(val) {
 		return { value: val, color: "#2e7ab8", label: "Human Asst. (" + val.toFixed(3) + ")" };
 	}
+
+	/** Plugin to draw multiple horizontal reference lines with label collision avoidance */
+	const multiLinePlugin = {
+		id: "multiBaseline",
+		afterDraw(chart) {
+			const opts = chart.options.plugins.annotation;
+			if (!opts || !opts.lines) return;
+			const { ctx, scales: { y } } = chart;
+			ctx.save();
+
+			const FONT = "600 10px Inter, sans-serif";
+			const LABEL_H = 13; // line height for collision detection
+
+			const items = opts.lines.map(line => ({
+				text: line.label || "",
+				color: line.color || "#888",
+				lineY: y.getPixelForValue(line.value),
+			}));
+
+			// 1. Draw all dashed reference lines at true positions
+			for (const item of items) {
+				ctx.strokeStyle = item.color;
+				ctx.lineWidth = 1.5;
+				ctx.setLineDash([5, 3]);
+				ctx.beginPath();
+				ctx.moveTo(chart.chartArea.left, item.lineY);
+				ctx.lineTo(chart.chartArea.right, item.lineY);
+				ctx.stroke();
+			}
+
+			// 2. Resolve label positions — sort top-to-bottom, push apart on overlap
+			items.sort((a, b) => a.lineY - b.lineY);
+			for (const item of items) item.labelY = item.lineY - 4;
+
+			for (let i = 1; i < items.length; i++) {
+				if (items[i].labelY - items[i - 1].labelY < LABEL_H) {
+					items[i].labelY = items[i - 1].labelY + LABEL_H;
+				}
+			}
+
+			// 3. Draw labels + thin connector when a label was displaced
+			const rightEdge = chart.chartArea.right;
+			ctx.font = FONT;
+			ctx.textAlign = "right";
+			ctx.setLineDash([]);
+
+			for (const item of items) {
+				const displaced = Math.abs(item.labelY - (item.lineY - 4));
+				if (displaced > 3) {
+					ctx.strokeStyle = item.color;
+					ctx.lineWidth = 0.7;
+					ctx.globalAlpha = 0.45;
+					ctx.beginPath();
+					ctx.moveTo(rightEdge - 3, item.labelY + 1);
+					ctx.lineTo(rightEdge - 1, item.lineY);
+					ctx.stroke();
+					ctx.globalAlpha = 1;
+				}
+				ctx.fillStyle = item.color;
+				ctx.fillText(item.text, rightEdge - 4, item.labelY);
+			}
+
+			ctx.restore();
+		},
+	};
 })();

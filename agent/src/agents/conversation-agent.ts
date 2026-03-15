@@ -85,6 +85,13 @@ Note: You only see basic item info above. Use the sql_query tool to get full det
 ## User Taste Profile
 ${tasteProfile}
 
+## Dialogue Intent Tags
+Each utterance is annotated with intent tags in brackets. Key:
+
+Seeker tags: IQ (Initial Query), CON (Continue), PCT (Provide Context), PEP (Explicit Preference), PIP (Implicit Preference), RP (Refine Preference), ANS (Answer), ACK (Acknowledgement), INT (Interest), ACT (Accept), RJT (Reject), NR (Neutral Response), IF (Inquire Factual), IA (Inquire Opinion), CF (Critique Feature), CC (Critique Compare), EXP (Explain), AC (Ask Clarification)
+
+Assistant tags: RTI (Request Task Initiation), RP (Request Preferences), RC (Request Context), CQ (Clarify Question), A (Ask Opinion), EF (Ensure Fulfillment), IP (Inform Progress), ACK (Acknowledgement), ANS (Answer), RS (Recommend Show), RC (Recommend Combine), EP (Explain Preference), EAI (Explain Additional Info), PCM (Comparison), PER (Persuasion), PEX (Prior Experience), PCN (Context Opinion)
+
 ## Guidelines
 - Observe each exchange carefully for preference signals, item mentions, and critiques
 - Use tools proactively to gather relevant context about mentioned items
@@ -96,13 +103,26 @@ ${tasteProfile}
 	return { prompt, scenario: scenarioText, itemList };
 }
 
+/** Format intent tags from JSON array, e.g. [["PCT"],["IQ"]] → "[PCT] [IQ]" */
+function formatTags(tagsJson: string): string {
+	try {
+		const parsed = JSON.parse(tagsJson) as string[][];
+		return parsed.map((group) => `[${group.join(",")}]`).join(" ");
+	} catch {
+		return "";
+	}
+}
+
 /** Build an observation prompt for a single exchange */
-export function buildObservePrompt(turn: number, seekerContent: string, assistantContent: string): string {
+export function buildObservePrompt(turn: number, seekerContent: string, assistantContent: string, seekerTags?: string, assistantTags?: string): string {
+	const sTags = seekerTags ? " " + formatTags(seekerTags) : "";
+	const aTags = assistantTags ? " " + formatTags(assistantTags) : "";
+
 	return `## Exchange — Turn ${turn}
 
-**Seeker:** ${seekerContent}
+**Seeker:** "${seekerContent}" ${sTags}
 
-**Assistant:** ${assistantContent}
+**Assistant:** "${assistantContent}" ${aTags}
 
 Analyze this exchange. Note preference signals, item reactions, and requirements. Use tools to gather context about mentioned items if needed. Keep your notes brief.`;
 }
@@ -126,12 +146,7 @@ Rate each item on a 1-5 scale:
   4 = Likely to purchase
   5 = Very likely to purchase
 
-Consider:
-- Items explicitly discussed positively should rate higher
-- Items that match the seeker's stated preferences and requirements
-- Items rejected or criticized should rate lower
-- Items not discussed: infer from the seeker's taste profile and conversation context
-- Be calibrated: most items should rate low (1-2) since seekers are selective
+Criteria: Rate the items based on how likely you think the Seeker is to purchase them, given the conversation and scenario that just concluded.
 
 Items to rate:
 ${itemList}

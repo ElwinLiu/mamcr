@@ -90,10 +90,13 @@ export const sqlQueryTool: ToolDefinition<typeof sqlQueryParams> = {
 	name: "sql_query",
 	label: "SQL Query",
 	description: `Execute a read-only SQL query against the database.
-Always-available tables: users, items, scenarios.
-During simulation, use scoped views: v_user_preferences, v_conversations, v_conversation_turns.
-These views automatically exclude the test conversation's data to prevent contamination.
-Use this for progressive disclosure: start with basic queries, drill into details as needed.`,
+
+Available tables and their columns:
+- items (item_id, catalogue, name, brand, rating, categories, description, about, details, reviews)
+- users (user_id, style_preferences, style_vibes, purchase_frequency, monthly_spend, best_colors, clothing_feel, comfort, style, practicality, trends, brand, self_expression, sustainability, price, color_importance)
+- scenarios (scenario_id, body)
+
+Use this for progressive disclosure: query item details, user profile, or scenario info on demand.`,
 	parameters: sqlQueryParams,
 	async execute(_toolCallId, params) {
 		const error = validateQuery(params.query);

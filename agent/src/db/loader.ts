@@ -2,7 +2,7 @@
  * Load VOGUE dataset from CSV/JSON files into SQLite.
  * Run with: npm run load-db
  */
-import { readFileSync, readdirSync } from "node:fs";
+import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
 import { parse } from "csv-parse/sync";
 import { getDb, initSchema, DATASET_PATH } from "./schema.js";
@@ -89,6 +89,19 @@ function loadItems(db: ReturnType<typeof getDb>): void {
 		count++;
 	}
 	console.log(`Loaded ${count} items`);
+
+	// Load item images from PNG files
+	const imgStmt = db.prepare("UPDATE items SET image = ? WHERE item_id = ?");
+	let imgCount = 0;
+	for (let i = 1; i <= 76; i++) {
+		const imgPath = resolve(metadataDir, `item_${i}.png`);
+		if (existsSync(imgPath)) {
+			const imgBuffer = readFileSync(imgPath);
+			imgStmt.run(imgBuffer, i);
+			imgCount++;
+		}
+	}
+	console.log(`Loaded ${imgCount} item images`);
 }
 
 function loadProfiles(db: ReturnType<typeof getDb>): void {
