@@ -56,7 +56,8 @@ export function initSchema(database: Database.Database): void {
 			description TEXT,
 			about TEXT,
 			details TEXT,
-			reviews TEXT
+			reviews TEXT,
+			image BLOB
 		);
 
 		CREATE TABLE IF NOT EXISTS scenarios (

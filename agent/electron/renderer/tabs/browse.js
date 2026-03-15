@@ -93,7 +93,8 @@
 		for (const t of data.turns) {
 			let tags = [];
 			try {
-				tags = t.tags ? JSON.parse(t.tags) : [];
+				const parsed = t.tags ? JSON.parse(t.tags) : [];
+				tags = parsed.map((tag) => (Array.isArray(tag) ? tag.join(", ") : String(tag)));
 			} catch {
 				/* ignore */
 			}

@@ -11,9 +11,17 @@ export interface PromptResult {
 	toolCalls: Array<{ tool: string; args: any; result: string }>;
 }
 
+interface ImageInput {
+	type: "image";
+	data: string;      // base64 encoded
+	mimeType: string;   // e.g. "image/png"
+}
+
 interface RunPromptOptions {
 	/** Called when a tool execution completes. Use for side-effects like logging/emitting. */
 	onToolCall?: (tc: { tool: string; args: any; result: string }) => void;
+	/** Images to attach to the prompt (multimodal input). */
+	images?: ImageInput[];
 }
 
 /** Extract readable text from a tool result (MCP-style object or plain string) */
@@ -38,6 +46,13 @@ export function extractToolResult(result: any): string {
 	}
 }
 
+/** Wait until the session is no longer streaming (polls with microtask yields). */
+async function waitForIdle(session: { isStreaming: boolean }): Promise<void> {
+	while (session.isStreaming) {
+		await new Promise((r) => setTimeout(r, 10));
+	}
+}
+
 /**
  * Run a prompt on a session and collect the full response (text + tool calls).
  *
@@ -45,7 +60,7 @@ export function extractToolResult(result: any): string {
  * tool call records, resolves on `agent_end`, rejects on prompt error.
  */
 export function runPromptToCompletion(
-	session: { subscribe: (cb: (event: AgentSessionEvent) => void) => () => void; prompt: (text: string) => Promise<void> },
+	session: { subscribe: (cb: (event: AgentSessionEvent) => void) => () => void; prompt: (text: string, options?: { images?: ImageInput[] }) => Promise<void>; isStreaming: boolean },
 	prompt: string,
 	opts?: RunPromptOptions,
 ): Promise<PromptResult> {
@@ -81,9 +96,12 @@ export function runPromptToCompletion(
 			}
 		});
 
-		session.prompt(prompt).catch((err) => {
-			unsub();
-			reject(err);
+		waitForIdle(session).then(() => {
+			const promptOpts = opts?.images ? { images: opts.images } : undefined;
+			session.prompt(prompt, promptOpts).catch((err) => {
+				unsub();
+				reject(err);
+			});
 		});
 	});
 }
