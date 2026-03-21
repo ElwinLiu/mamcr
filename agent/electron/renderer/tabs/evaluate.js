@@ -23,9 +23,37 @@
 		mMae:     "Macro-averaged MAE — MAE computed per rating class (1\u20135) then averaged, giving equal weight to rare and common ratings. Lower is better. More robust than MAE when classes are imbalanced.",
 	};
 
+	// Measured averages from 60 simulation runs (chars of text context).
+	// Single-agent assumes access to ALL available information in one prompt.
+	const CONTEXT_CATEGORIES = [
+		{ key: "scenario",      label: "Scenario",                color: "#9e9e9e" },
+		{ key: "transcript",    label: "Transcript",              color: "#2e7ab8" },
+		{ key: "metaFull",      label: "Full Item Metadata",      color: "#c4593a" },
+		{ key: "catBasic",      label: "Basic Catalogue",         color: "#e07a5f" },
+		{ key: "onDemand",      label: "On-demand Retrieval",     color: "#b08a2e" },
+		{ key: "taste",         label: "Taste Profile",           color: "#388e3c" },
+		{ key: "prefAnalysis",  label: "Preference Analysis",     color: "#66bb6a" },
+		{ key: "history",       label: "Historical Context",      color: "#7e57c2" },
+	];
+
+	const CONTEXT_BARS = [
+		{ label: "Single-Agent",       values: { scenario: 498, transcript: 1944, metaFull: 11928, catBasic: 0,    onDemand: 0,    taste: 2225, prefAnalysis: 0,    history: 17950 } },
+		{ label: "Conversation Agent", values: { scenario: 498, transcript: 1944, metaFull: 0,     catBasic: 1364, onDemand: 8774, taste: 2225, prefAnalysis: 4411, history: 0 } },
+		{ label: "Preference Agent",   values: { scenario: 0,   transcript: 1944, metaFull: 0,     catBasic: 0,    onDemand: 0,    taste: 0,    prefAnalysis: 6158, history: 0 } },
+		{ label: "History Agent*",     values: { scenario: 0,   transcript: 0,    metaFull: 0,     catBasic: 0,    onDemand: 0,    taste: 0,    prefAnalysis: 0,    history: 17950 } },
+	];
+
 	root.innerHTML = `
 		<div class="action-bar">
 			<button class="action-btn" id="eval-all-btn" title="Refresh evaluation">&#x21bb; Refresh</button>
+		</div>
+
+		<div class="chart-row">
+			<div class="chart-card wide">
+				<h3>Text Context Composition — Measured from 60 Simulation Runs</h3>
+				<p class="context-chart-subtitle">Measured averages across 60 runs. The single-agent must load all available context in one prompt (~34.5K chars). The multi-agent decomposes this so no individual agent exceeds 56% of that total — the Conversation Agent uses on-demand tool retrieval instead of full metadata, and the Preference Agent operates with just 23%. Both architectures also load 12 item images (~12 MB) for the rating agent. *History Agent invoked in 43% of conversations.</p>
+				<canvas id="eval-context-chart"></canvas>
+			</div>
 		</div>
 
 		<div id="eval-aggregate" style="display:none"></div>
@@ -392,7 +420,50 @@
 		}
 	}
 
+	renderContextChart();
 	runEvaluation();
+
+	function renderContextChart() {
+		const datasets = CONTEXT_CATEGORIES.map(cat => ({
+			label: cat.label,
+			data: CONTEXT_BARS.map(bar => bar.values[cat.key] || 0),
+			backgroundColor: cat.color,
+		}));
+
+		new Chart(document.getElementById("eval-context-chart"), {
+			type: "bar",
+			data: {
+				labels: CONTEXT_BARS.map(b => b.label),
+				datasets,
+			},
+			options: {
+				indexAxis: "y",
+				responsive: true,
+				aspectRatio: 2.5,
+				scales: {
+					x: {
+						stacked: true,
+						title: { display: true, text: "Average chars of text context" },
+						ticks: { callback: v => v >= 1000 ? (v / 1000).toFixed(0) + "K" : v },
+					},
+					y: { stacked: true },
+				},
+				plugins: {
+					legend: { position: "bottom", labels: { boxWidth: 12, font: { size: 11 }, padding: 12 } },
+					tooltip: {
+						filter: ctx => ctx.raw > 0,
+						callbacks: {
+							label: ctx => {
+								const total = Object.values(CONTEXT_BARS[ctx.dataIndex].values).reduce((a, b) => a + b, 0);
+								const pct = ((ctx.raw / total) * 100).toFixed(0);
+								return `${ctx.dataset.label}: ${ctx.raw.toLocaleString()} chars (${pct}%)`;
+							},
+						},
+					},
+				},
+			},
+		});
+	}
 
 	// ── Helpers ──
 

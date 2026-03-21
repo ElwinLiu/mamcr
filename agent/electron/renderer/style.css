@@ -982,6 +982,13 @@ main {
 	font-weight: 600;
 }
 
+.context-chart-subtitle {
+	font-size: 0.8rem;
+	color: var(--text-muted);
+	margin: -0.5rem 0 1rem;
+	line-height: 1.5;
+}
+
 /* SCROLLBAR */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
